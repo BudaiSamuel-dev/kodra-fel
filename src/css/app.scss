@@ -65,3 +65,41 @@ a.xp-chip {
   stroke-width: 2.6;
   vertical-align: middle;
 }
+
+// Szakmakártyák gombjai: a szerep színe a gombon is, mindkét témában ugyanúgy (a gomb világos, sötét és
+// világos háttéren is jól mutat). Fejlesztő: lime → zöld; tesztelő: barack → korall. A felirat kontrasztja
+// az átmenet sötétebb végén is legalább 5,8:1.
+body[data-theme] .profession-card .button {
+  border: 1px solid transparent;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+    filter: saturate(1.1);
+  }
+}
+body[data-theme] .profession-card:not(.peach) .button {
+  background: linear-gradient(135deg, #dcf9a3 0%, #a6d46a 100%);
+  border-color: #86b351;
+  color: #183512;
+  box-shadow: 0 4px 14px -6px rgba(110, 160, 60, 0.55);
+  &:hover {
+    box-shadow: 0 8px 20px -8px rgba(110, 160, 60, 0.75);
+  }
+}
+body[data-theme] .profession-card.peach .button {
+  background: linear-gradient(135deg, #ffdcc2 0%, #f0a070 100%);
+  border-color: #dc8a5c;
+  color: #4f240c;
+  box-shadow: 0 4px 14px -6px rgba(220, 120, 70, 0.55);
+  &:hover {
+    box-shadow: 0 8px 20px -8px rgba(220, 120, 70, 0.75);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body[data-theme] .profession-card .button:hover {
+    transform: none;
+  }
+}
