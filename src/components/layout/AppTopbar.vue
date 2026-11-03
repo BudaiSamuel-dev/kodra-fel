@@ -1,5 +1,6 @@
 <template>
-  <header class="topbar">
+  <!-- Lefelé görgetéskor elbújik, felfelé megjelenik; billentyűzettel belelépve is előjön -->
+  <header class="topbar" :class="{ 'is-hidden': hidden, 'is-floating': floating }" @focusin="show">
     <div class="topbar-left">
       <span class="live-dot"></span>PÁLYAORIENTÁCIÓS NAP <span class="topbar-separator">/</span><span class="topbar-sub">A jövőd itt kezdődik</span>
     </div>
@@ -20,8 +21,14 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { useGameStore } from 'stores/game'
+import { useHeadroom } from 'src/composables/useHeadroom'
 
 const store = useGameStore()
 const dark = computed(() => store.game.theme === 'dark')
+const { hidden, floating, show } = useHeadroom()
+
+// Oldalváltáskor mindig látszódjon
+useRouter().afterEach(show)
 </script>

@@ -56,7 +56,7 @@ body:not([data-theme='dark']) {
     border-right: 1px solid $line;
   }
   .topbar {
-    background: rgba(248, 248, 240, 0.94);
+    background: $surface; // teljesen fedő: ragadós fejlécként a tartalom fölött lebeg
     border-bottom: 1px solid $line;
   }
 

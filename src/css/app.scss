@@ -26,3 +26,31 @@ a.xp-chip {
     scroll-margin-top: 56px;
   }
 }
+
+// Fejléc (XP, témaváltó): ragadós, lefelé görgetéskor elbújik, felfelé megjelenik (useHeadroom).
+// Mobilon a rögzített logós sáv (64 px, z-index 30) alá tapad, és elbújáskor mögé csúszik.
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  will-change: transform;
+}
+.topbar.is-hidden {
+  transform: translateY(-100%);
+}
+.topbar.is-floating:not(.is-hidden) {
+  box-shadow: 0 8px 20px -14px rgba(20, 35, 25, 0.45);
+}
+@media (max-width: 760px) {
+  .topbar {
+    top: 64px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .topbar {
+    transition: none;
+  }
+}
