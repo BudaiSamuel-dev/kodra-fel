@@ -14,9 +14,13 @@
 $page: #e3e9d9; // oldalháttér
 $surface: #f8f8f0; // kártyák, sávok (elefántcsont)
 $surface-sunken: #eef2e4; // kártyán belüli dobozok
-$line: #c4ceb4; // kártyák kerete
-$line-soft: #d2dac4; // belső dobozok kerete
-$line-strong: #9db085; // hover
+// Keretek a mért kontraszt alapján (a sötét téma kereteinek mediánja 1,97:1 a környezetéhez)
+$line: #98aa8a; // kártyák kerete: 2:1 a lapon
+$line-soft: #b0bfa6; // kártyán belüli dobozok kerete: 1,8:1 az elefántcsonton
+$line-strong: #7f956d; // kártya hover
+// Kezelőelemek (amire kattintani/írni lehet) zöld keretet kapnak, mint a sötét témában — WCAG 1.4.11: 3:1
+$control-line: #6a8e50; // 3:1 a lapon, 3,5:1 az elefántcsonton
+$control-hover: #57793e; // 4:1
 $shadow: 0 1px 2px rgba(38, 56, 30, 0.07), 0 8px 22px -12px rgba(38, 56, 30, 0.22);
 $shadow-hover: 0 2px 4px rgba(38, 56, 30, 0.09), 0 16px 30px -14px rgba(38, 56, 30, 0.3);
 
@@ -94,14 +98,54 @@ body:not([data-theme='dark']) {
     }
   }
 
-  // Fülek és választógombok (a kiválasztott állapotnak saját stílusa van lent)
+  // Kezelőelemek: zöld, jól látható keret (a kiválasztott állapotnak saját stílusa van lent)
+  .search-field,
+  .filter-buttons,
+  .app-name-input,
+  .app-field input,
+  .game-heading select,
+  .repeat-row select,
+  .rule-builder select,
   .game-step:not(.active),
   .level-tab:not(.active),
   .scenario-tab:not(.active),
   .template-tab:not(.active),
   .report-option:not(.selected),
+  .command-button,
+  .probe-chips button,
+  .mood-button {
+    border-color: $control-line;
+  }
+  // Színválasztó: az átlátszó 3 px-es keret adja a kiválasztott gyűrű hézagát, ezért kontúrt kap helyette
+  .swatch {
+    box-shadow: 0 0 0 1px rgba(40, 60, 30, 0.35);
+  }
+  .swatch.active {
+    border-color: $surface;
+    outline: 2px solid $dev-deep;
+  }
+  // Üres parancssor: szaggatott keret, de jól látható
+  .command-queue {
+    border-color: $line-strong;
+  }
+  .game-step:not(.active),
+  .level-tab:not(.active),
+  .scenario-tab:not(.active),
+  .template-tab:not(.active),
+  .report-option:not(.selected),
+  .command-button,
+  .probe-chips button {
+    &:hover {
+      border-color: $control-hover;
+    }
+  }
+  .search-field:focus-within {
+    border-color: $control-hover;
+    box-shadow: 0 0 0 3px rgba(106, 142, 80, 0.2);
+  }
+  // A nem kiválasztott szűrők szövege ne legyen szürke
   .filter-buttons button:not(.selected) {
-    border-color: $line-soft;
+    color: #2c4223;
   }
   .game-step:not(.active),
   .level-tab:not(.active),
@@ -113,15 +157,9 @@ body:not([data-theme='dark']) {
   // Kártyán belüli dobozok
   .robot-board-wrap,
   .repeat-row,
-  .command-queue,
   .test-app,
   .test-history,
   .rule-builder,
-  .app-name-input,
-  .search-field,
-  .filter-buttons,
-  .command-button,
-  .probe-chips button,
   .code-window {
     border-color: $line-soft;
   }
@@ -143,13 +181,13 @@ body:not([data-theme='dark']) {
   }
   .button.secondary {
     background: $surface;
-    border: 1px solid $line;
+    border: 1px solid $control-line;
     &:hover {
-      border-color: $line-strong;
+      border-color: $control-hover;
     }
   }
   .button.outline {
-    border-color: $line;
+    border-color: $control-line;
   }
   .phone-preview {
     border-color: $line;
