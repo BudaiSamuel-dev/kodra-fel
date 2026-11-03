@@ -5,7 +5,7 @@
     </router-link>
     <div class="sidebar-label">TECH LAB / 3.0</div>
     <nav class="main-nav" aria-label="Fő navigáció">
-      <button class="nav-item" :class="{ active: section === 'home' }" @click="router.push('/')">
+      <button class="nav-item" :class="{ active: section === 'home' }" @click="goHome">
         <AppIcon name="grid" />Felfedezés<span class="nav-dot"></span>
       </button>
       <button class="nav-item" :class="{ active: section === 'missions' }" @click="goMissions">
@@ -42,21 +42,34 @@
 </template>
 
 <script setup>
-import { computed, nextTick } from 'vue'
+import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useGameStore } from 'stores/game'
 import { openDialog, prefersReducedMotion } from 'src/composables/useUi'
+import { MISSIONS_HASH } from 'src/composables/useNavigation'
 
 const store = useGameStore()
 const route = useRoute()
 const router = useRouter()
 
-// A küldetés-, eredmény- és bónuszoldalak a "Küldetések" menüponthoz tartoznak.
-const section = computed(() => route.meta.section ?? route.name)
+// A küldetés-, eredmény- és bónuszoldalak a "Küldetések" menüponthoz tartoznak,
+// ahogy a főoldal küldetés-szekciója is (/#kuldetesek).
+const section = computed(() => {
+  if (route.name === 'home' && route.hash === MISSIONS_HASH) return 'missions'
+  return route.meta.section ?? route.name
+})
 
-async function goMissions() {
-  await router.push('/')
-  await nextTick()
-  document.getElementById('missions')?.scrollIntoView({ behavior: prefersReducedMotion() ? 'instant' : 'smooth' })
+const behavior = () => (prefersReducedMotion() ? 'instant' : 'smooth')
+
+// Ha már ott vagyunk, a router nem navigál újra (és nem görget), ezért kézzel görgetünk.
+function goMissions() {
+  if (route.name === 'home' && route.hash === MISSIONS_HASH)
+    document.getElementById(MISSIONS_HASH.slice(1))?.scrollIntoView({ behavior: behavior() })
+  else router.push({ path: '/', hash: MISSIONS_HASH })
+}
+
+function goHome() {
+  if (route.name === 'home' && !route.hash) window.scrollTo({ top: 0, behavior: behavior() })
+  else router.push('/')
 }
 </script>

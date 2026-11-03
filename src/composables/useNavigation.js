@@ -4,6 +4,8 @@ import { useGameStore } from 'stores/game'
 // A három küldetés sorrendben: 0 fejlesztő, 1 tesztelő, 2 alkotó.
 export const MISSION_SLUGS = ['robot', 'teszt', 'alkoto']
 export const missionPath = (n) => `/kuldetes/${MISSION_SLUGS[n]}`
+// A főoldal küldetés-szekciója; a „Küldetések” menüpont ide visz
+export const MISSIONS_HASH = '#kuldetesek'
 export const BONUS_SLUGS = { debug: 'kodnyomozo', quiz: 'techradar' }
 
 export function useNavigation() {

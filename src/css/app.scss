@@ -12,3 +12,17 @@ a.xp-chip {
 .difficulty-card {
   padding-bottom: 36px;
 }
+
+// Oldalváltáskor a fókuszt a címre tesszük (képernyőolvasóknak), de keretet ne rajzoljon köré:
+// a cím nem kezelőelem. Billentyűzetes használatnál a böngésző különben :focus-visible keretet mutatna.
+#main h1[tabindex='-1']:focus {
+  outline: none;
+}
+
+// A küldetés-szekcióhoz görgetésnél (menüpont ismételt kattintása) ugyanoda érkezzünk, mint a router
+// görgetésével (24 px, mobilon 84 px a rögzített fejléc miatt). A html scroll-padding-top: 28px hozzáadódik.
+@media (max-width: 760px) {
+  #kuldetesek {
+    scroll-margin-top: 56px;
+  }
+}

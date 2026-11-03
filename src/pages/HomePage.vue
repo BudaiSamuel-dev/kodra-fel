@@ -38,7 +38,7 @@
       <DifficultyPicker />
     </section>
 
-    <section id="missions" class="mission-section" aria-labelledby="missions-title">
+    <section id="kuldetesek" class="mission-section" aria-labelledby="missions-title">
       <div class="section-heading">
         <div>
           <div class="eyebrow small">PRÓBÁLD KI MAGAD</div>
