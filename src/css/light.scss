@@ -621,3 +621,11 @@ body:not([data-theme='dark']) {
 body:not([data-theme='dark']) .build-spark {
   color: $make-mid;
 }
+
+// Válaszok A/B/C betűjele: sötétben telt kitöltés (#3c542d a kártyán), világosban csak keret volt.
+// Tükörkép: a kártyánál egy lépéssel sötétebb telt zöld, zöld keret, mélyzöld betű.
+body:not([data-theme='dark']) .option-letter {
+  background: #b9d78f;
+  border-color: $control-line;
+  color: #1d3d15;
+}
