@@ -546,3 +546,45 @@ body:not([data-theme='dark']) {
     box-shadow: 2px 3px rgba(140, 80, 40, 0.35);
   }
 }
+
+// Menü számláló/pipa doboza: a #e2e7dd keret az aktív menüpont zöld hátterén szinte eltűnt.
+body:not([data-theme='dark']) {
+  .nav-count {
+    border-color: $control-line;
+    color: $dev-deep;
+  }
+  .nav-item.active .nav-count {
+    border-color: $control-hover; // 3,5:1 az aktív menüpont zöld hátterén
+    background: rgba(248, 248, 240, 0.6);
+  }
+}
+
+// Apró kör alakú jelzések (a mérés eleinte kiszűrte a 30×20 px alatti elemeket): sötétben jól látszanak,
+// világosban a keretük 1,0–1,4:1 volt.
+body:not([data-theme='dark']) {
+  .card-arrow,
+  .option-letter,
+  .progress-ring,
+  .game-step:not(.active) .step-num,
+  .difficulty-card:not(.selected) .difficulty-check,
+  .reflection-options button:not(.selected) {
+    border-color: $control-line;
+  }
+  .option-letter {
+    color: $dev-deep;
+  }
+  .card-arrow svg {
+    color: $dev-deep;
+  }
+  // Munkanap idővonala: telt pötty sötétzöld kontúrral
+  .timeline-dot {
+    background: $dev-mid;
+    border-color: $dev-deep;
+  }
+  .badge-card {
+    border-color: $line-strong;
+  }
+  .badge-card.earned {
+    border-color: $dev-mid;
+  }
+}
