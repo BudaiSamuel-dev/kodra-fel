@@ -1,0 +1,128 @@
+// Világos téma: erősebb kontúrok és rétegek.
+// A 2.0 világos módjában a fehér kártyák majdnem fehér háttéren ültek, alig látható (#e0e5d6) kerettel,
+// így minden egybefolyt. Ez a réteg csak a világos témára hat; a sötét témát nem érinti.
+
+$bg: #edf1e6; // oldalháttér: kicsit mélyebb, hogy a fehér kártyák kiemelkedjenek
+$surface: #fffffd;
+$card-border: #cdd6c0; // kártyák kerete (a régi #e0e5d6 helyett)
+$card-border-hover: #a9b896;
+$inner-border: #d3dcc6; // kártyán belüli dobozok kerete
+$shadow: 0 1px 2px rgba(31, 52, 38, 0.06), 0 8px 20px -10px rgba(31, 52, 38, 0.18);
+$shadow-hover: 0 2px 4px rgba(31, 52, 38, 0.08), 0 14px 28px -12px rgba(31, 52, 38, 0.24);
+
+body:not([data-theme='dark']) {
+  --bg: #{$bg};
+  --border: #{$card-border};
+  background: $bg;
+
+  // Keret: az oldalsáv és a felső sáv váljon el a tartalomtól
+  .sidebar {
+    background: $surface;
+    border-right: 1px solid $card-border;
+  }
+  .topbar {
+    background: rgba(255, 255, 253, 0.92);
+    border-bottom: 1px solid $card-border;
+  }
+
+  // Fő kártyák: kontúr + finom árnyék
+  .mission-card,
+  .difficulty-card,
+  .game-panel,
+  .puzzle-panel,
+  .glossary-card,
+  .badge-card,
+  .profession-card,
+  .bonus-card,
+  .knowledge-teaser,
+  .learning-panel,
+  .collection-overview,
+  .lab-stats,
+  .day-timeline,
+  .career-faq details,
+  .roadmap-grid article,
+  .project-grid article,
+  .completion-card,
+  .reflection,
+  .next-adventure,
+  .player-card {
+    border-color: $card-border;
+    box-shadow: $shadow;
+  }
+  .lab-stats {
+    background: $surface;
+  }
+
+  // Kattintható kártyák: hoverre kiemelkednek
+  .mission-card,
+  .bonus-card,
+  .difficulty-card:not(.selected) {
+    &:hover {
+      border-color: $card-border-hover;
+      box-shadow: $shadow-hover;
+    }
+  }
+
+  // Fülek és választógombok (a kiválasztott állapot marad a sajátja)
+  .game-step:not(.active),
+  .level-tab:not(.active),
+  .scenario-tab:not(.active),
+  .template-tab:not(.active),
+  .report-option:not(.selected),
+  .filter-buttons button:not(.selected) {
+    border-color: $inner-border;
+  }
+  .game-step:not(.active),
+  .level-tab:not(.active),
+  .scenario-tab:not(.active),
+  .template-tab:not(.active) {
+    background: $surface;
+  }
+
+  // Kártyán belüli dobozok
+  .robot-board-wrap,
+  .repeat-row,
+  .command-queue,
+  .learning-note,
+  .test-app,
+  .test-history,
+  .spec-box,
+  .rule-builder,
+  .app-name-input,
+  .search-field,
+  .filter-buttons,
+  .command-button,
+  .probe-chips button,
+  .code-window,
+  .glossary-example {
+    border-color: $inner-border;
+  }
+  .board-cell:not(.wall):not(.goal):not(.chip) {
+    border-color: $inner-border;
+  }
+  // Címkék és másodlagos gombok: kontúr nélkül beleolvadtak a háttérbe
+  .sublevel-pill,
+  .progress-pill {
+    border: 1px solid $inner-border;
+  }
+  .sublevel-pill {
+    background: $surface;
+  }
+  .button.secondary {
+    background: $surface;
+    border: 1px solid $card-border;
+    &:hover {
+      border-color: $card-border-hover;
+    }
+  }
+  .button.outline {
+    border-color: $card-border;
+  }
+
+  .phone-preview {
+    border-color: #c9d2bb;
+  }
+  .bottom-banner {
+    border-color: #bcc8ad;
+  }
+}
