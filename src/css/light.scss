@@ -587,3 +587,14 @@ body:not([data-theme='dark']) {
     border-color: $dev-mid;
   }
 }
+
+// Munkanap idővonala: az összekötő vonal #e2e9d7 volt az elefántcsont kártyán (láthatatlan), sötétben
+// jól látszik (#425934). Az időpontok sötétben kiemelő zöldek, itt is azok.
+body:not([data-theme='dark']) {
+  .day-timeline article:not(:last-child) .timeline-dot:after {
+    background: $dev-mid;
+  }
+  .day-timeline time {
+    color: $dev-deep;
+  }
+}
