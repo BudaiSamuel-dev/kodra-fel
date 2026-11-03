@@ -82,3 +82,43 @@ body[data-theme='dark'] {
     border-color: $dev-line;
   }
 }
+
+// TesztLab demóablak: a 2.0 sötét témában is világos ablakot mutatott (color-scheme: light), ami a sötét
+// panelen vakított és kilógott. Sötét demóablak zöld kerettel; csak a lime „Eset kipróbálása” gomb világos.
+body[data-theme='dark'] {
+  .test-app {
+    background: #16251c;
+    border: 1px solid #4f6b3a;
+    color: #dfe9d3;
+    color-scheme: dark;
+  }
+  .test-app-bar {
+    background: #1f3226;
+    border-bottom: 1px solid #34492b;
+    color: #a9c08f;
+  }
+  .demo-brand {
+    color: #b9dc8a;
+  }
+  .test-app-body > h3 {
+    color: #eef3e6;
+  }
+  .test-app-body > p,
+  .app-field {
+    color: #b3c6a0;
+  }
+  .app-field input,
+  .app-field select {
+    background: #1c2b20;
+    border-color: #55703f;
+    color: #eef3e6;
+  }
+  .app-field input::placeholder {
+    color: #8fa47d;
+  }
+  .demo-output {
+    background: #1c2b20;
+    border-color: #3c4d31;
+    color: #d4e4c0;
+  }
+}

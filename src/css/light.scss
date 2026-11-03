@@ -722,3 +722,25 @@ body:not([data-theme='dark']) {
     color: $make-deep;
   }
 }
+
+// Tesztelő jegyzetei: sötétben a mintabemenet-gombok telt zöldek, a válaszok enyhe tónust és jól látható
+// rádiókört kapnak; világosban halványak voltak (#f0f5e9 gomb, #cdd8be rádiókör, szürke szöveg).
+body:not([data-theme='dark']) {
+  .probe-chips button {
+    background: #dcebc6;
+    border-color: $control-line;
+    color: #1d3d15;
+  }
+  .probe-chips button.tried {
+    background: #bcd994;
+    border-color: $dev-deep;
+  }
+  .report-options .report-option:not(.selected) {
+    background: #f0f5e6;
+    color: #24361d;
+  }
+  .report-option:not(.selected)::before {
+    border-color: $control-hover;
+    background: $surface;
+  }
+}
