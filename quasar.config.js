@@ -3,8 +3,8 @@ import { fileURLToPath } from 'node:url'
 const dir = (path) => fileURLToPath(new URL(path, import.meta.url))
 export default () => ({
   boot: ['components'],
-  // Sorrend számít: reset → a 2.0 stílusai → saját kiegészítések
-  css: ['fonts.css', 'reset.scss', 'legacy/base.css', 'legacy/upgrade.css', 'app.scss'],
+  // Sorrend számít: reset → a Kódra fel! stílusa → saját kiegészítések
+  css: ['fonts.css', 'reset.scss', 'kodra.css', 'app.scss'],
   extras: [],
   build: {
     target: { browser: ['es2022', 'firefox115', 'chrome115', 'safari14'] },
