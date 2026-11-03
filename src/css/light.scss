@@ -525,3 +525,24 @@ body:not([data-theme='dark']) {
     border: 1px solid #8f9a7f;
   }
 }
+
+// Megszerzett jelvény: a sötét téma talapzat-árnyéka (0 7px 0 #14210f88) itt #cfdeb24a volt, láthatatlan.
+// Telt zöld talapzat + finom vetett árnyék, hogy a csempe ugyanúgy kiemelkedjen.
+body:not([data-theme='dark']) .earned .badge-emblem {
+  box-shadow:
+    0 7px 0 #93b366,
+    0 16px 22px -10px rgba(47, 93, 30, 0.45);
+}
+
+// Bit talapzata: a #96b56c sötét háttéren erős (5,7:1), a világos mezőn elhalványul (2,2:1).
+body:not([data-theme='dark']) {
+  .cell-bot {
+    box-shadow: 0 3px 0 #5f8a3c;
+  }
+  .robot-board[data-size='9'] .cell-bot {
+    box-shadow: 0 2px 0 #5f8a3c;
+  }
+  .bug-magnifier {
+    box-shadow: 2px 3px rgba(140, 80, 40, 0.35);
+  }
+}
