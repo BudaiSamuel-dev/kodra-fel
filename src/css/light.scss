@@ -616,3 +616,8 @@ body:not([data-theme='dark']) {
     box-shadow: 6px 6px 0 rgba(122, 61, 29, 0.45);
   }
 }
+
+// A miniapp kártya csillaga világos módban: a 2.0 #c0b1d7-je a lila kártyán halvány.
+body:not([data-theme='dark']) .build-spark {
+  color: $make-mid;
+}

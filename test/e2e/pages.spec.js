@@ -108,3 +108,14 @@ for (const theme of ['dark', 'light'])
     expect(clipped.length).toBeGreaterThan(0)
     expect(clipped.every((c) => c === 'text')).toBe(true)
   })
+
+// Regresszió: a ✳ karakter nincs a betűkészletekben, ezért a böngésző színes emojiként (zöld négyzet)
+// rajzolta ki. A díszítő csillagok SVG ikonok, nem karakterek.
+test('a díszítő csillagok SVG ikonok, nem emojiként kirajzolt karakterek', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.locator('#hero-title')).toBeVisible()
+  for (const sel of ['.title-spark', '.build-spark']) {
+    await expect(page.locator(`${sel} svg use`)).toHaveAttribute('href', '#i-asterisk')
+    expect((await page.locator(sel).textContent()).trim()).toBe('')
+  }
+})

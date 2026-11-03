@@ -54,3 +54,14 @@ a.xp-chip {
     transition: none;
   }
 }
+
+// A ✳ karakter helyett SVG csillag (i-asterisk): a karakter nincs a betűkészletekben, így a böngésző
+// színes emojiként (zöld négyzet) rajzolta ki, gépenként eltérően. Az ikon a régi font-size-t és colort
+// követi (1em, currentColor), így ugyanott és ugyanakkora, mint az eredetileg szánt jel.
+.title-spark svg,
+.build-spark svg {
+  width: 1em;
+  height: 1em;
+  stroke-width: 2.6;
+  vertical-align: middle;
+}

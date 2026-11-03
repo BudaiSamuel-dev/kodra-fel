@@ -10,6 +10,8 @@
   
     <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4c5-5 9 5 15 0v11c-6 5-10-5-15 0" /></symbol>
   
+    <!-- Nyolcágú csillag: a ✳ (U+2733) karakter helyett, ami betűkészlet híján színes emojiként jelent meg -->
+    <symbol id="i-asterisk" viewBox="0 0 24 24"><path d="M12 2.5v19M2.5 12h19M5.3 5.3l13.4 13.4M18.7 5.3 5.3 18.7"/></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.6 6.4L21 12l-6.4 2.6L12 21l-2.6-6.4L3 12l6.4-2.6L12 3Zm8-1v4m-2-2h4" /></symbol>
   
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></symbol>

@@ -4,7 +4,7 @@
       <div class="hero-copy">
         <div class="eyebrow"><span></span>BELÉPÉS A KULISSZÁK MÖGÉ // 0 ELŐISMERET</div>
         <h1 id="hero-title">
-          Válts játékosból<br /><span>alkotóvá.</span><span class="title-spark" aria-hidden="true">✳</span>
+          Válts játékosból<br /><span>alkotóvá.</span><span class="title-spark" aria-hidden="true"><AppIcon name="asterisk" /></span>
         </h1>
         <p>
           Irányíts robotot. Vadássz hibákra. Építs saját appot.<br />
@@ -75,7 +75,7 @@
                 <div class="mini-app-content"><span>✦</span><div><i></i><i></i></div></div>
                 <span class="mini-app-button"></span>
               </div>
-              <span class="build-spark">✳</span>
+              <span class="build-spark"><AppIcon name="asterisk" /></span>
               <span class="build-cursor">
                 <svg viewBox="0 0 32 38" aria-hidden="true">
                   <path d="M5 3v27l7-7 6 12 6-3-6-11h10L5 3Z" fill="currentColor" stroke="#fff" stroke-width="2" />
