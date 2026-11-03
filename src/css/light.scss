@@ -744,3 +744,23 @@ body:not([data-theme='dark']) {
     background: $surface;
   }
 }
+
+// Miniapp: a kipróbálandó esetek listája halvány szürke volt (#92a07e), a telefon képernyője a panellel
+// azonos színű. Sötétebb lista, zöld ikonok; a képernyő egy lépéssel mélyebb tónust kap.
+body:not([data-theme='dark']) {
+  .release-checks > span:not(.passed) {
+    color: #3a4834;
+  }
+  .release-checks > span:not(.passed) svg {
+    color: $control-line;
+  }
+  .release-checks .passed {
+    color: $dev-deep;
+  }
+  .phone-preview {
+    background: $surface;
+  }
+  .phone-screen {
+    background: #e9efdd;
+  }
+}

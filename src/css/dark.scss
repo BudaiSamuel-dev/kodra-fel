@@ -122,3 +122,35 @@ body[data-theme='dark'] {
     color: #d4e4c0;
   }
 }
+
+// Miniapp telefonos előnézet: a 2.0 a sötét témában is világos telefont mutatott, ami a sötét panelen
+// vakított (mint a TesztLab ablak). Sötét telefon; a diák által választott appszín (--app-color: logó,
+// kiválasztott gomb, eredménydoboz) megmarad, azokon sötét szöveggel.
+body[data-theme='dark'] {
+  .phone-preview {
+    background: #121e17;
+    border-color: #55703f;
+    color-scheme: dark;
+  }
+  .phone-notch {
+    background: #3c4d31;
+  }
+  .phone-screen {
+    background: #1a2a20;
+  }
+  .phone-screen h3 {
+    color: #eef3e6;
+  }
+  .phone-screen > p {
+    color: #a9bd96;
+  }
+  .mood-button:not(.active) {
+    background: #22362a;
+    border-color: #55703f;
+    color: #e2efca;
+  }
+  .mood-button.active,
+  .mood-output {
+    color: #1d2a17;
+  }
+}
