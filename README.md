@@ -39,7 +39,7 @@ npm run lint
 - [x] Váz, layout, téma, főoldal
 - [x] Adat- és logikaréteg + unit tesztek
 - [x] Robotjáték (+ E2E teszt mind a 9 pályára)
-- [ ] Tesztelő küldetés
+- [x] Tesztelő küldetés (+ E2E teszt mind a 9 helyzetre)
 - [ ] Miniapp-építő + export
 - [ ] Bónuszok, tudástár, szakma, jelvények
 - [ ] Playwright E2E tesztek

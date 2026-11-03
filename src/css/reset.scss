@@ -14,3 +14,10 @@ h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 p { margin: 0; }
+
+// A Quasar a pszeudo-elemekre is border-boxot örököltet. A 2.0 stílusa böngésző-alapra
+// (content-box) számol velük, pl. a válaszgombok rádiókörénél.
+*::before,
+*::after {
+  box-sizing: content-box;
+}
