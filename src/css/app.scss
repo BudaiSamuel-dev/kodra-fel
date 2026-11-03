@@ -175,3 +175,13 @@ body[data-theme] .mission-card {
     transform: none !important;
   }
 }
+
+// Miniapp szabály: a HA / AKKOR / EGYÉBKÉNT kulcsszavak mindkét témában címkék (színük a témafájlokban),
+// a kipróbált eset félkövér.
+.rule-builder .rule-keyword {
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+.release-checks .passed {
+  font-weight: 700;
+}

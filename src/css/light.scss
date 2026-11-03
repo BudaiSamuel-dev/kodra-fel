@@ -764,3 +764,31 @@ body:not([data-theme='dark']) {
     background: #e9efdd;
   }
 }
+
+// „Az ötleted műhelye”: összevetés a sötét témával (panelre szűkített mérés).
+// - HA / AKKOR / EGYÉBKÉNT: sötétben lime kiemelés (10:1), itt a szöveggel azonos sötét volt → zöld címke
+// - szabály-doboz kitöltés/keret (1,07 / 1,81 vs. 1,18 / 2,11), legördülő és névmező tónusa
+// - kipróbált eset kiemelése, színválasztó körök kontúrja
+body:not([data-theme='dark']) {
+  // (.rule-builder előtag: a régi body[data-theme='light'] .rule-keyword szabály specifikusabb lenne)
+  .rule-builder .rule-keyword {
+    color: #eaf7cf;
+    background: $selected-bg; // mint a kiválasztott szűrő: sötétzöld címke, világos betű
+  }
+  .rule-builder {
+    background: #e4ecd6;
+    border-color: $line-strong;
+    color: #24361d;
+  }
+  .rule-builder select {
+    background: $surface;
+    color: #1d3d15;
+  }
+  .app-name-input {
+    background: #eef3e4;
+    color: #1d3d15;
+  }
+  .swatch {
+    box-shadow: 0 0 0 1px rgba(40, 60, 30, 0.5);
+  }
+}
