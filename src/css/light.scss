@@ -233,3 +233,59 @@ body:not([data-theme='dark']) {
     color: #7f66ad;
   }
 }
+
+// Kiemelő színek a sötét téma mintájára: ahol a sötét téma zöldet használ, ott a világos is.
+// (A szöveg alapkontrasztját a generált light-text.css emeli.)
+$accent: #2f5a1c; // mély zöld kiemelés (kb. 8:1 fehéren, az apró címkék miatt)
+$accent-tint: #e6f0d6;
+$accent-line: #79a54b;
+$selected-bg: #1d4733; // teli kiválasztott állapot, mint az aktív küldetéslépés
+
+body:not([data-theme='dark']) {
+  --muted: #505651;
+
+  .eyebrow,
+  .page-intro .eyebrow,
+  .glossary-category,
+  .badge-tier,
+  .puzzle-category,
+  .spec-box strong,
+  .glossary-example span,
+  .difficulty-tag,
+  .section-heading .eyebrow {
+    color: $accent;
+  }
+
+  .demo-submit {
+    color: #24401a;
+  }
+
+  // Szűrők és szerepválasztók: a kiválasztott gomb teli sötétzöld
+  .filter-buttons button.selected {
+    background: $selected-bg;
+    color: #eaf7cf;
+    box-shadow: 0 2px 6px rgba(29, 71, 51, 0.25);
+  }
+
+  // Aktív fülek: határozott zöld kontúr és tónus
+  .level-tab.active,
+  .scenario-tab.active,
+  .template-tab.active {
+    background: #d9eabf;
+    border-color: #6f9a45;
+    color: #24451a;
+  }
+
+  // „Például” doboz: zöldes alap, zöld oldalcsík
+  .glossary-example {
+    background: $accent-tint;
+    border-left: 3px solid $accent-line;
+  }
+
+  // Tanulási jegyzet és specifikáció: enyhe zöld tónus
+  .learning-note,
+  .spec-box {
+    background: $accent-tint;
+    border-color: #c5d9a8;
+  }
+}

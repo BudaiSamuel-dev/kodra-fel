@@ -27,7 +27,7 @@ Futás közben nincs szükség internetre: a betűkészletek és az ikonok a pro
 | `src/logic/` | Tiszta játéklogika (útkeresés, labirintus, XP, mentés). Unit tesztekkel lefedve. |
 | `src/stores/game.js` | Pinia store: a teljes játékállapot, automatikus mentés a böngészőbe. |
 | `src/pages/`, `src/components/` | Vue oldalak és komponensek. |
-| `src/css/kodra.css` | A teljes stílus (a 2.0 két stíluslapja összevonva). `reset.scss` semlegesíti a Quasar ütköző alapstílusait, `light.scss` a világos téma kontúrjait és rétegeit adja. |
+| `src/css/kodra.css` | A teljes stílus (a 2.0 két stíluslapja összevonva). `reset.scss` semlegesíti a Quasar ütköző alapstílusait, `light.scss` a világos téma kontúrjait, kiemelő színeit és illusztrációit adja; `light-text.css` generált (`npm run css:light`): a világos téma szövegkontrasztját emeli. |
 | `legacy/` | A 2.0 teljes forrása referenciaként. |
 
 ## Tesztek
