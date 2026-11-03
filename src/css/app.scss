@@ -6,3 +6,9 @@ a.text-button,
 a.xp-chip {
   cursor: pointer;
 }
+
+// A „0 / 3 küldetés” abszolút pozícióval ül a kártya alján: helyet foglalunk neki,
+// hogy a (nagyobb betűs) leírás ne csússzon rá.
+.difficulty-card {
+  padding-bottom: 36px;
+}

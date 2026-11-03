@@ -1,0 +1,1450 @@
+/* GENERÁLT FÁJL — ne szerkeszd kézzel. Forrás: scripts/light-theme.mjs (npm run css:light). */
+
+body:not([data-theme='dark']) {
+background: var(--bg)
+}
+body:not([data-theme='dark']) {
+color: var(--ink)
+}
+body:not([data-theme='dark']) button {
+color: inherit
+}
+body:not([data-theme='dark']) a {
+color: inherit
+}
+body:not([data-theme='dark']) .skip-link {
+background: var(--lime)
+}
+body:not([data-theme='dark']) .sidebar {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .brand-icon {
+background: var(--dark)
+}
+body:not([data-theme='dark']) .brand-icon {
+color: var(--lime)
+}
+body:not([data-theme='dark']) .brand-dot {
+color: #709849
+}
+body:not([data-theme='dark']) .sidebar-label {
+color: #495344
+}
+body:not([data-theme='dark']) .nav-item {
+background: 0 0
+}
+body:not([data-theme='dark']) .nav-item {
+color: #495344
+}
+body:not([data-theme='dark']) .nav-item:hover {
+background: #f0f3e9
+}
+body:not([data-theme='dark']) .nav-item:hover {
+color: var(--green)
+}
+body:not([data-theme='dark']) .nav-item.active {
+background: #eaf0df
+}
+body:not([data-theme='dark']) .nav-item.active {
+color: #2d5235
+}
+body:not([data-theme='dark']) .nav-dot {
+background: #6f9955
+}
+body:not([data-theme='dark']) .nav-count {
+color: #485243
+}
+body:not([data-theme='dark']) .sidebar-foot {
+color: #485243
+}
+body:not([data-theme='dark']) .topbar {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .live-dot {
+background: #739e5d
+}
+body:not([data-theme='dark']) .topbar-separator {
+color: #bcc2b7
+}
+body:not([data-theme='dark']) .topbar-sub {
+color: #495344
+}
+body:not([data-theme='dark']) .duration {
+color: #495344
+}
+body:not([data-theme='dark']) .header-line {
+background: var(--border)
+}
+body:not([data-theme='dark']) .eyebrow {
+color: #4a5343
+}
+body:not([data-theme='dark']) .eyebrow > span {
+background: #8ba96f
+}
+body:not([data-theme='dark']) .hero h1 > span:first-child {
+color: #4d7043
+}
+body:not([data-theme='dark']) .title-spark {
+color: #a6bc7d
+}
+body:not([data-theme='dark']) .hero-copy > p {
+color: #7d8379
+}
+body:not([data-theme='dark']) .primary {
+background: var(--lime)
+}
+body:not([data-theme='dark']) .primary {
+color: #27422c
+}
+body:not([data-theme='dark']) .primary:hover {
+background: #c9ef7f
+}
+body:not([data-theme='dark']) .dark {
+background: var(--dark)
+}
+body:not([data-theme='dark']) .dark {
+color: #f6f9ec
+}
+body:not([data-theme='dark']) .dark:hover {
+background: #285b46
+}
+body:not([data-theme='dark']) .secondary {
+background: #edf0e6
+}
+body:not([data-theme='dark']) .secondary {
+color: #40543e
+}
+body:not([data-theme='dark']) .outline {
+background: 0 0
+}
+body:not([data-theme='dark']) .outline {
+color: #46533e
+}
+body:not([data-theme='dark']) .text-button {
+background: 0 0
+}
+body:not([data-theme='dark']) .text-button {
+color: #495344
+}
+body:not([data-theme='dark']) .hero-note {
+color: #919587
+}
+body:not([data-theme='dark']) .mini-check {
+color: #445535
+}
+body:not([data-theme='dark']) .hero-art {
+background: #193e35
+}
+body:not([data-theme='dark']) .hero-art {
+color: #d5e7c4
+}
+body:not([data-theme='dark']) .hero-art:after {
+background: #619e6b25
+}
+body:not([data-theme='dark']) .art-top {
+color: #9fb6a6
+}
+body:not([data-theme='dark']) .art-top svg {
+color: #96ba85
+}
+body:not([data-theme='dark']) .art-status {
+background: #bded81
+}
+body:not([data-theme='dark']) .code-float {
+color: #d2dfca
+}
+body:not([data-theme='dark']) .code-float {
+background: #15382fe6
+}
+body:not([data-theme='dark']) .code-purple {
+color: #c5b7e8
+}
+body:not([data-theme='dark']) .code-lime {
+color: #d9f394
+}
+body:not([data-theme='dark']) .iso-tiles {
+background: repeating-linear-gradient(0deg, transparent 0 47px, #7c9b823c 48px 49px),
+    repeating-linear-gradient(90deg, transparent 0 47px, #7c9b823c 48px 49px), #27544370
+}
+body:not([data-theme='dark']) .iso-path {
+background: #c8e3a32e
+}
+body:not([data-theme='dark']) .iso-path:after {
+color: #c3dfaa7a
+}
+body:not([data-theme='dark']) .iso-block {
+background: #b3b0d3
+}
+body:not([data-theme='dark']) .block-2 {
+background: #deb79c
+}
+body:not([data-theme='dark']) .iso-goal {
+background: #bddb8833
+}
+body:not([data-theme='dark']) .iso-goal {
+color: #e5fca2
+}
+body:not([data-theme='dark']) .bot-head {
+background: linear-gradient(135deg, #e3f8b3 0, #bbdf78 42%, #92b35a 100%)
+}
+body:not([data-theme='dark']) .bot-face {
+background: linear-gradient(145deg, #2b4942, #122f2b)
+}
+body:not([data-theme='dark']) .bot-face i {
+background: #d5f9a6
+}
+body:not([data-theme='dark']) .bot-face b {
+background: #a8ce85
+}
+body:not([data-theme='dark']) .bot-shine {
+background: #f6ffda7a
+}
+body:not([data-theme='dark']) .bot-aerial {
+background: #a6c67e
+}
+body:not([data-theme='dark']) .bot-aerial:before {
+background: var(--lime)
+}
+body:not([data-theme='dark']) .bot-ear {
+background: #a5c675
+}
+body:not([data-theme='dark']) .bot-body {
+background: linear-gradient(110deg, #cae89c, #8db160)
+}
+body:not([data-theme='dark']) .bot-body span {
+background: #446c41
+}
+body:not([data-theme='dark']) .bot-foot {
+background: #a6ca7b
+}
+body:not([data-theme='dark']) .art-tag {
+background: #e0e8cf
+}
+body:not([data-theme='dark']) .art-tag {
+color: #3e5a3c
+}
+body:not([data-theme='dark']) .art-bottom {
+color: #8da793
+}
+body:not([data-theme='dark']) .art-bottom strong {
+color: #d5e0cb
+}
+body:not([data-theme='dark']) .art-key {
+background: #ffffff0a
+}
+body:not([data-theme='dark']) .art-key {
+color: #b8cf9d
+}
+body:not([data-theme='dark']) .art-cursor {
+color: #a2bb8d
+}
+body:not([data-theme='dark']) .eyebrow.small {
+color: #485243
+}
+body:not([data-theme='dark']) .progress-pill {
+color: #485243
+}
+body:not([data-theme='dark']) .progress-pill {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .mission-card {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .mission-icon {
+background: #eaf2db
+}
+body:not([data-theme='dark']) .mission-icon {
+color: #415630
+}
+body:not([data-theme='dark']) .card-number {
+color: #495344
+}
+body:not([data-theme='dark']) .card-number > span {
+color: #b8bfae
+}
+body:not([data-theme='dark']) .card-peach .mission-icon {
+background: #fce9de
+}
+body:not([data-theme='dark']) .card-peach .mission-icon {
+color: #6c4732
+}
+body:not([data-theme='dark']) .card-purple .mission-icon {
+background: #eee8f8
+}
+body:not([data-theme='dark']) .card-purple .mission-icon {
+color: #5b4679
+}
+body:not([data-theme='dark']) .complete-tick {
+background: var(--green)
+}
+body:not([data-theme='dark']) .complete-tick {
+color: #fff
+}
+body:not([data-theme='dark']) .command-chip {
+background: #eef3e6
+}
+body:not([data-theme='dark']) .command-chip {
+color: #6a8656
+}
+body:not([data-theme='dark']) .command-chip:nth-child(2) {
+background: #f2f5ed
+}
+body:not([data-theme='dark']) .command-chip.small-play {
+background: #d6e6b8
+}
+body:not([data-theme='dark']) .visual-dots {
+color: #c4cbb8
+}
+body:not([data-theme='dark']) .test-line > span {
+background: #f0eae3
+}
+body:not([data-theme='dark']) .test-line:nth-child(2) > span {
+background: #f2d4c3
+}
+body:not([data-theme='dark']) .test-check {
+background: #eaf0df
+}
+body:not([data-theme='dark']) .test-check {
+color: #495436
+}
+body:not([data-theme='dark']) .test-error {
+background: #f9dfd0
+}
+body:not([data-theme='dark']) .test-error {
+color: #70452e
+}
+body:not([data-theme='dark']) .bug-magnifier {
+background: #fff8f0ee
+}
+body:not([data-theme='dark']) .bug-magnifier:after {
+background: #dfc5af
+}
+body:not([data-theme='dark']) .bug-magnifier svg {
+color: #bb8c67
+}
+body:not([data-theme='dark']) .mini-app {
+background: #f9f7fe
+}
+body:not([data-theme='dark']) .mini-app-dots {
+color: #b8a9d0
+}
+body:not([data-theme='dark']) .mini-app-content > span {
+background: #e9e0f3
+}
+body:not([data-theme='dark']) .mini-app-content > span {
+color: #a18abf
+}
+body:not([data-theme='dark']) .mini-app-content i {
+background: #e3dced
+}
+body:not([data-theme='dark']) .mini-app-button {
+background: #bca9d7
+}
+body:not([data-theme='dark']) .build-spark {
+color: #c0b1d7
+}
+body:not([data-theme='dark']) .build-cursor {
+color: #5b447f
+}
+body:not([data-theme='dark']) .mission-card > p {
+color: #495344
+}
+body:not([data-theme='dark']) .card-bottom {
+color: #495344
+}
+body:not([data-theme='dark']) .level-dot {
+background: #c2c7b7
+}
+body:not([data-theme='dark']) .card-arrow {
+color: #47533f
+}
+body:not([data-theme='dark']) .bottom-banner {
+background: #f0f3e8
+}
+body:not([data-theme='dark']) .banner-icon {
+background: #e6edd6
+}
+body:not([data-theme='dark']) .banner-icon {
+color: #485435
+}
+body:not([data-theme='dark']) .bottom-banner p {
+color: #485243
+}
+body:not([data-theme='dark']) footer {
+color: #495344
+}
+body:not([data-theme='dark']) footer svg {
+color: #4b533a
+}
+body:not([data-theme='dark']) .back-link {
+background: 0 0
+}
+body:not([data-theme='dark']) .back-link {
+color: #495344
+}
+body:not([data-theme='dark']) .game-timer {
+color: #495344
+}
+body:not([data-theme='dark']) .timer-note {
+color: #495344
+}
+body:not([data-theme='dark']) .game-step {
+background: #f1f3e9
+}
+body:not([data-theme='dark']) .game-step {
+color: #495344
+}
+body:not([data-theme='dark']) .game-step.active {
+background: var(--dark)
+}
+body:not([data-theme='dark']) .game-step.active {
+color: #e7efd8
+}
+body:not([data-theme='dark']) .active .step-num {
+background: var(--lime)
+}
+body:not([data-theme='dark']) .active .step-num {
+color: var(--dark)
+}
+body:not([data-theme='dark']) .game-title p {
+color: #485243
+}
+body:not([data-theme='dark']) .sublevel-pill {
+background: #edf1e4
+}
+body:not([data-theme='dark']) .sublevel-pill {
+color: #4b5342
+}
+body:not([data-theme='dark']) .game-panel {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .panel-tag {
+color: #4a523f
+}
+body:not([data-theme='dark']) .panel-tag > span {
+background: #83ab57
+}
+body:not([data-theme='dark']) .robot-board-wrap {
+background: #f2f5eb
+}
+body:not([data-theme='dark']) .board-cell {
+background: #fafcf6
+}
+body:not([data-theme='dark']) .board-cell.wall {
+background: repeating-linear-gradient(135deg, #d9ddcf 0 4px, #e1e5d8 4px 8px)
+}
+body:not([data-theme='dark']) .board-cell.goal {
+background: #e7e0f3
+}
+body:not([data-theme='dark']) .board-cell.goal {
+color: #9a7cb3
+}
+body:not([data-theme='dark']) .board-cell.visited {
+background: #e5f0cc
+}
+body:not([data-theme='dark']) .board-cell.start:after {
+color: #a4b28c
+}
+body:not([data-theme='dark']) .cell-bot {
+background: #c9e58f
+}
+body:not([data-theme='dark']) .cell-bot:before {
+background: #83a25d
+}
+body:not([data-theme='dark']) .cell-bot:after {
+background: #83a25d
+}
+body:not([data-theme='dark']) .cell-bot i {
+background: #2d4d34
+}
+body:not([data-theme='dark']) .board-legend {
+color: #4b5243
+}
+body:not([data-theme='dark']) .legend-box {
+background: #ddd8e8
+}
+body:not([data-theme='dark']) .legend-box.wall {
+background: #d5dbc9
+}
+body:not([data-theme='dark']) .legend-box.start {
+background: #c9e58f
+}
+body:not([data-theme='dark']) .panel-description {
+color: #495344
+}
+body:not([data-theme='dark']) .command-button {
+background: #f2f6eb
+}
+body:not([data-theme='dark']) .command-button {
+color: #425436
+}
+body:not([data-theme='dark']) .command-button:hover {
+background: #e1edcc
+}
+body:not([data-theme='dark']) .queue-label > span {
+color: #485243
+}
+body:not([data-theme='dark']) .command-queue {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .queue-empty {
+color: #4b5241
+}
+body:not([data-theme='dark']) .queue-item {
+background: #e8f0da
+}
+body:not([data-theme='dark']) .queue-item {
+color: #405631
+}
+body:not([data-theme='dark']) .queue-item:hover {
+background: #f5e3d7
+}
+body:not([data-theme='dark']) .queue-item:hover {
+color: #674a39
+}
+body:not([data-theme='dark']) .queue-item.running {
+background: var(--dark)
+}
+body:not([data-theme='dark']) .queue-item.running {
+color: #fff
+}
+body:not([data-theme='dark']) .feedback {
+background: #eef3e4
+}
+body:not([data-theme='dark']) .feedback {
+color: #435434
+}
+body:not([data-theme='dark']) .feedback.error {
+background: #fff0e4
+}
+body:not([data-theme='dark']) .feedback.error {
+color: #644a32
+}
+body:not([data-theme='dark']) .feedback.success {
+background: #eaf2d6
+}
+body:not([data-theme='dark']) .feedback.success {
+color: #40562d
+}
+body:not([data-theme='dark']) .learning-note {
+background: #f0f2e8
+}
+body:not([data-theme='dark']) .learning-note {
+color: #4c5342
+}
+body:not([data-theme='dark']) .learning-note svg {
+color: #475334
+}
+body:not([data-theme='dark']) .learning-note strong {
+color: #465438
+}
+body:not([data-theme='dark']) .test-app {
+background: #f4f5f1
+}
+body:not([data-theme='dark']) .test-app-bar {
+background: #e9ede1
+}
+body:not([data-theme='dark']) .test-app-bar {
+color: #49543d
+}
+body:not([data-theme='dark']) .demo-brand {
+color: #305745
+}
+body:not([data-theme='dark']) .test-app-body > p {
+color: #4c5342
+}
+body:not([data-theme='dark']) .app-field {
+color: #495241
+}
+body:not([data-theme='dark']) .app-field input,
+body:not([data-theme='dark']) .app-field select {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .app-field input,
+body:not([data-theme='dark']) .app-field select {
+color: #45543d
+}
+body:not([data-theme='dark']) .demo-submit {
+background: #bedc8a
+}
+body:not([data-theme='dark']) .demo-submit {
+color: #3e562d
+}
+body:not([data-theme='dark']) .demo-output {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .demo-output {
+color: #4a5341
+}
+body:not([data-theme='dark']) .spec-box {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .spec-box {
+color: #4a5341
+}
+body:not([data-theme='dark']) .spec-box strong {
+color: #435630
+}
+body:not([data-theme='dark']) .scenario-tab {
+background: #f1f3eb
+}
+body:not([data-theme='dark']) .scenario-tab {
+color: #49533b
+}
+body:not([data-theme='dark']) .scenario-tab.active {
+background: #e5edd8
+}
+body:not([data-theme='dark']) .scenario-tab.active {
+color: #55733a
+}
+body:not([data-theme='dark']) .report-option {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .report-option {
+color: #4a5340
+}
+body:not([data-theme='dark']) .report-option:hover {
+background: #eef3e4
+}
+body:not([data-theme='dark']) .report-option.selected {
+background: #eaf1dd
+}
+body:not([data-theme='dark']) .report-option.selected {
+color: #4c6c35
+}
+body:not([data-theme='dark']) .report-option.selected:before {
+background: #718f4f
+}
+body:not([data-theme='dark']) .test-count {
+color: #49523d
+}
+body:not([data-theme='dark']) .swatch {
+background: var(--swatch)
+}
+body:not([data-theme='dark']) .app-name-input {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .app-name-input {
+color: #435434
+}
+body:not([data-theme='dark']) .rule-builder {
+background: #f4f6ed
+}
+body:not([data-theme='dark']) .rule-builder {
+color: #48543c
+}
+body:not([data-theme='dark']) .rule-builder select {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .rule-builder select {
+color: #425634
+}
+body:not([data-theme='dark']) .phone-preview {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .phone-notch {
+background: #dbe0d2
+}
+body:not([data-theme='dark']) .phone-screen {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .phone-logo {
+background: var(--app-color)
+}
+body:not([data-theme='dark']) .phone-logo {
+color: #415039
+}
+body:not([data-theme='dark']) .phone-screen > p {
+color: #4c5241
+}
+body:not([data-theme='dark']) .mood-button {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .mood-button.active {
+background: var(--app-color)
+}
+body:not([data-theme='dark']) .mood-output {
+background: var(--app-color)
+}
+body:not([data-theme='dark']) .mood-output {
+color: #455439
+}
+body:not([data-theme='dark']) .preview-caption {
+color: #4a5240
+}
+body:not([data-theme='dark']) .release-checks {
+color: #4a523d
+}
+body:not([data-theme='dark']) .release-checks .passed {
+color: #3c5729
+}
+body:not([data-theme='dark']) .completion-card {
+background: var(--dark)
+}
+body:not([data-theme='dark']) .completion-card {
+color: #e2ebd8
+}
+body:not([data-theme='dark']) .completion-icon {
+background: #ddf5a7
+}
+body:not([data-theme='dark']) .completion-icon {
+color: #3c572c
+}
+body:not([data-theme='dark']) .completion-card > p {
+color: #a8bea1
+}
+body:not([data-theme='dark']) .earned-badge {
+background: #244d3d
+}
+body:not([data-theme='dark']) .earned-badge {
+color: #c3d9a8
+}
+body:not([data-theme='dark']) .reflection {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .reflection > p {
+color: #4a5241
+}
+body:not([data-theme='dark']) .reflection-options button {
+background: #f5f8ee
+}
+body:not([data-theme='dark']) .reflection-options button {
+color: #47543a
+}
+body:not([data-theme='dark']) .reflection-options button.selected {
+background: #dfebc9
+}
+body:not([data-theme='dark']) .reflection-options button.selected {
+color: #44632e
+}
+body:not([data-theme='dark']) .profession-intro h1 span {
+color: #3e5736
+}
+body:not([data-theme='dark']) .profession-intro p {
+color: #4a5242
+}
+body:not([data-theme='dark']) .profession-card {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .profession-card.peach {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .profession-card.peach > .mission-icon {
+color: #664a34
+}
+body:not([data-theme='dark']) .profession-card.peach > .mission-icon {
+background: #fae6d7
+}
+body:not([data-theme='dark']) .profession-card p {
+color: #4b5342
+}
+body:not([data-theme='dark']) .profession-card ul {
+color: #49523e
+}
+body:not([data-theme='dark']) .profession-card li::marker {
+color: #a9bc86
+}
+body:not([data-theme='dark']) .learning-panel {
+background: #eef2e5
+}
+body:not([data-theme='dark']) .learning-panel > div > span {
+color: #455538
+}
+body:not([data-theme='dark']) .learning-panel p {
+color: #4a5340
+}
+body:not([data-theme='dark']) dialog {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) dialog {
+color: var(--ink)
+}
+body:not([data-theme='dark']) dialog::backdrop {
+background: #17372dc7
+}
+body:not([data-theme='dark']) .icon-button {
+background: #f0f3e8
+}
+body:not([data-theme='dark']) .icon-button {
+color: #49543e
+}
+body:not([data-theme='dark']) dialog p {
+color: #4a5341
+}
+body:not([data-theme='dark']) dialog dt {
+color: #425634
+}
+body:not([data-theme='dark']) dialog dd {
+color: #4b5342
+}
+body:not([data-theme='dark']) .how-list li {
+color: #49533f
+}
+body:not([data-theme='dark']) .how-list li:before {
+background: #e9f1d8
+}
+body:not([data-theme='dark']) .how-list li:before {
+color: #445631
+}
+body:not([data-theme='dark']) .how-list strong {
+color: #40572f
+}
+body:not([data-theme='dark']) #toast {
+background: var(--dark)
+}
+body:not([data-theme='dark']) #toast {
+color: #e4edda
+}
+body:not([data-theme='dark']) .hero h1 > span:not(.title-spark) {
+color: #527347
+}
+body:not([data-theme='dark']) .hero-copy > p {
+color: #737e69
+}
+body:not([data-theme='dark']) .game-title p,
+body:not([data-theme='dark']) .mission-card > p,
+body:not([data-theme='dark']) .panel-description,
+body:not([data-theme='dark']) .profession-card p,
+body:not([data-theme='dark']) .profession-intro p {
+color: #485243
+}
+body:not([data-theme='dark']) .hero-note {
+color: #7c876e
+}
+body:not([data-theme='dark']) .bottom-banner p,
+body:not([data-theme='dark']) .card-bottom {
+color: #4b5242
+}
+body:not([data-theme='dark']) .eyebrow.small {
+color: #4b5242
+}
+body:not([data-theme='dark']) .card-number {
+color: #4b5341
+}
+body:not([data-theme='dark']) .progress-pill {
+color: #49523f
+}
+body:not([data-theme='dark']) .panel-tag,
+body:not([data-theme='dark']) .test-count {
+color: #4a5340
+}
+body:not([data-theme='dark']) .learning-note,
+body:not([data-theme='dark']) .report-option,
+body:not([data-theme='dark']) .spec-box {
+color: #49533c
+}
+body:not([data-theme='dark']) .command-button {
+color: #415632
+}
+body:not([data-theme='dark']) .preview-caption {
+color: #49523e
+}
+body:not([data-theme='dark']) .board-legend {
+color: #49533d
+}
+body:not([data-theme='dark']) .rule-builder {
+color: #48533b
+}
+body:not([data-theme='dark']) .phone-screen > p,
+body:not([data-theme='dark']) .test-app-body > p {
+color: #49533f
+}
+body:not([data-theme='dark']) .hero-copy > p,
+body:not([data-theme='dark']) .hero-note {
+color: #62715a
+}
+body:not([data-theme='dark']) .app-field,
+body:not([data-theme='dark']) .back-link,
+body:not([data-theme='dark']) .board-legend,
+body:not([data-theme='dark']) .bottom-banner p,
+body:not([data-theme='dark']) .card-bottom,
+body:not([data-theme='dark']) .card-number,
+body:not([data-theme='dark']) .demo-output,
+body:not([data-theme='dark']) .eyebrow,
+body:not([data-theme='dark']) .eyebrow.small,
+body:not([data-theme='dark']) .game-step:not(.active),
+body:not([data-theme='dark']) .game-title p,
+body:not([data-theme='dark']) .how-list,
+body:not([data-theme='dark']) .how-list span,
+body:not([data-theme='dark']) .learning-note,
+body:not([data-theme='dark']) .learning-note strong,
+body:not([data-theme='dark']) .learning-panel > div > span,
+body:not([data-theme='dark']) .learning-panel p,
+body:not([data-theme='dark']) .mission-card > p,
+body:not([data-theme='dark']) .nav-item:not(.active),
+body:not([data-theme='dark']) .panel-description,
+body:not([data-theme='dark']) .panel-tag,
+body:not([data-theme='dark']) .phone-screen > p,
+body:not([data-theme='dark']) .preview-caption,
+body:not([data-theme='dark']) .profession-card p,
+body:not([data-theme='dark']) .profession-card ul,
+body:not([data-theme='dark']) .profession-intro p,
+body:not([data-theme='dark']) .progress-pill,
+body:not([data-theme='dark']) .queue-empty,
+body:not([data-theme='dark']) .queue-label > span,
+body:not([data-theme='dark']) .reflection > p,
+body:not([data-theme='dark']) .release-checks,
+body:not([data-theme='dark']) .report-option,
+body:not([data-theme='dark']) .rule-builder,
+body:not([data-theme='dark']) .scenario-tab,
+body:not([data-theme='dark']) .sidebar-foot,
+body:not([data-theme='dark']) .sidebar-label,
+body:not([data-theme='dark']) .spec-box,
+body:not([data-theme='dark']) .sublevel-pill,
+body:not([data-theme='dark']) .test-app-bar,
+body:not([data-theme='dark']) .test-app-body > p,
+body:not([data-theme='dark']) .test-count,
+body:not([data-theme='dark']) .timer-note,
+body:not([data-theme='dark']) .topbar-sub,
+body:not([data-theme='dark']) dialog dd,
+body:not([data-theme='dark']) dialog p,
+body:not([data-theme='dark']) footer {
+color: #485342
+}
+body:not([data-theme='dark']) .scenario-tab.active {
+color: #47642f
+}
+body:not([data-theme='dark']) .feedback.error {
+color: #6b4927
+}
+body:not([data-theme='dark']) .feedback {
+color: #415631
+}
+body:not([data-theme='dark']) .release-checks .passed {
+color: #3b5826
+}
+body:not([data-theme='dark']) .command-chip {
+color: #536d3e
+}
+body:not([data-theme='dark']) .board-cell.start:after {
+color: #63764c
+}
+body:not([data-theme='dark']) .visual-dots {
+color: #62715a
+}
+body:not([data-theme='dark']) .test-app-bar {
+color: #475440
+}
+body:not([data-theme='dark']) .new-mark {
+background: #d4e9b8
+}
+body:not([data-theme='dark']) .new-mark {
+color: #3b5822
+}
+body:not([data-theme='dark']) .hero {
+background: radial-gradient(ellipse at 85% 30%, #8abf4e19, transparent 60%), linear-gradient(115deg, #182d23, #123a2d)
+}
+body:not([data-theme='dark']) .hero .eyebrow {
+color: #b3c7a0
+}
+body:not([data-theme='dark']) .hero h1 {
+color: #f3f6eb
+}
+body:not([data-theme='dark']) .hero h1 > span:not(.title-spark) {
+color: #d4f796
+}
+body:not([data-theme='dark']) .hero h1 > span:not(.title-spark) {
+background: linear-gradient(100deg, #e7f6c7, #a9df68)
+}
+body:not([data-theme='dark']) .hero .title-spark {
+color: #bad17c
+}
+body:not([data-theme='dark']) .hero-copy > p {
+color: #b7c5b0
+}
+body:not([data-theme='dark']) .hero .hero-note {
+color: #b2c8a4
+}
+body:not([data-theme='dark']) .hero-note .mini-check {
+color: #cef193
+}
+body:not([data-theme='dark']) .hero .text-button {
+color: #cfdbc3
+}
+body:not([data-theme='dark']) .hero-art {
+background: 0 0
+}
+body:not([data-theme='dark']) .hero-art .code-one {
+background: #173c2ce6
+}
+body:not([data-theme='dark']) .hero-art .art-tag {
+background: #e2eccc
+}
+body:not([data-theme='dark']) .hero-art .art-tag {
+color: #3e5d33
+}
+body:not([data-theme='dark']) .lab-stats {
+background: #ffffff88
+}
+body:not([data-theme='dark']) .lab-stats > span {
+color: #485342
+}
+body:not([data-theme='dark']) .lab-stats strong {
+color: #3e5531
+}
+body:not([data-theme='dark']) .bonus-note,
+body:not([data-theme='dark']) .difficulty-note {
+color: #485342
+}
+body:not([data-theme='dark']) .difficulty-card {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .difficulty-card.selected {
+background: #f0f6e5
+}
+body:not([data-theme='dark']) .difficulty-icon {
+background: #edf3e3
+}
+body:not([data-theme='dark']) .difficulty-icon {
+color: #40562d
+}
+body:not([data-theme='dark']) .difficulty-tag {
+color: #485342
+}
+body:not([data-theme='dark']) .difficulty-body > strong small {
+color: #475340
+}
+body:not([data-theme='dark']) .difficulty-body > span:last-child {
+color: #485342
+}
+body:not([data-theme='dark']) .difficulty-check {
+color: #46553a
+}
+body:not([data-theme='dark']) .selected .difficulty-check {
+background: #8baf5b
+}
+body:not([data-theme='dark']) .selected .difficulty-check {
+color: #102a15
+}
+body:not([data-theme='dark']) .difficulty-track {
+color: #485342
+}
+body:not([data-theme='dark']) .mission-card:before {
+background: linear-gradient(90deg, transparent, #c3df99, transparent)
+}
+body:not([data-theme='dark']) .card-peach:before {
+background: linear-gradient(90deg, transparent, #e1ac8e, transparent)
+}
+body:not([data-theme='dark']) .card-purple:before {
+background: linear-gradient(90deg, transparent, #c7b1e8, transparent)
+}
+body:not([data-theme='dark']) .bonus-card {
+background: #e8e9f7
+}
+body:not([data-theme='dark']) .quiz-bonus {
+background: #f7ecdb
+}
+body:not([data-theme='dark']) .bonus-art {
+color: #8e80b4
+}
+body:not([data-theme='dark']) .bonus-art > span {
+color: #ada0c8
+}
+body:not([data-theme='dark']) .quiz-bonus .bonus-art {
+color: #c39659
+}
+body:not([data-theme='dark']) .bonus-content .eyebrow {
+color: #564b69
+}
+body:not([data-theme='dark']) .bonus-content h3 {
+color: #383440
+}
+body:not([data-theme='dark']) .bonus-content > span:not(.eyebrow):not(.bonus-cta) {
+color: #495344
+}
+body:not([data-theme='dark']) .quiz-bonus .bonus-content .eyebrow {
+color: #614b2f
+}
+body:not([data-theme='dark']) .quiz-bonus .bonus-content h3 {
+color: #55442d
+}
+body:not([data-theme='dark']) .quiz-bonus .bonus-content > span:not(.eyebrow):not(.bonus-cta) {
+color: #5e4e38
+}
+body:not([data-theme='dark']) .bonus-cta {
+color: #5a4774
+}
+body:not([data-theme='dark']) .quiz-bonus .bonus-cta {
+color: #654a28
+}
+body:not([data-theme='dark']) .knowledge-teaser {
+background: #f0f4e9
+}
+body:not([data-theme='dark']) .teaser-icon {
+background: #dfeacb
+}
+body:not([data-theme='dark']) .teaser-icon {
+color: #43552b
+}
+body:not([data-theme='dark']) .knowledge-teaser p {
+color: #485342
+}
+body:not([data-theme='dark']) .bottom-banner {
+background: 0 0
+}
+body:not([data-theme='dark']) .player-card {
+background: #f3f7ed
+}
+body:not([data-theme='dark']) .player-emblem {
+background: #d7e8bf
+}
+body:not([data-theme='dark']) .player-emblem {
+color: #3d5826
+}
+body:not([data-theme='dark']) .player-caption {
+color: #485342
+}
+body:not([data-theme='dark']) .xp-bar {
+background: #dce5d0
+}
+body:not([data-theme='dark']) .xp-bar > span {
+background: #8db95a
+}
+body:not([data-theme='dark']) .xp-caption {
+color: #485342
+}
+body:not([data-theme='dark']) .xp-caption button {
+background: 0 0
+}
+body:not([data-theme='dark']) .xp-caption button {
+color: #445532
+}
+body:not([data-theme='dark']) .xp-chip {
+background: #ecf2e2
+}
+body:not([data-theme='dark']) .xp-chip {
+color: #3e5728
+}
+body:not([data-theme='dark']) .theme-toggle {
+background: #edf1e4
+}
+body:not([data-theme='dark']) .game-difficulty-label {
+color: #485342
+}
+body:not([data-theme='dark']) .game-difficulty-label select,
+body:not([data-theme='dark']) .repeat-row select {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .game-difficulty-label select,
+body:not([data-theme='dark']) .repeat-row select {
+color: #3f572d
+}
+body:not([data-theme='dark']) .step-xp {
+color: #485342
+}
+body:not([data-theme='dark']) .game-step.active .step-xp {
+color: #bdd58f
+}
+body:not([data-theme='dark']) .level-tab {
+background: #f0f3e9
+}
+body:not([data-theme='dark']) .level-tab {
+color: #485342
+}
+body:not([data-theme='dark']) .level-tab > span {
+background: #e3ebd6
+}
+body:not([data-theme='dark']) .level-tab > span {
+color: #42552b
+}
+body:not([data-theme='dark']) .level-tab.active {
+background: #e6efd8
+}
+body:not([data-theme='dark']) .level-tab.active {
+color: #4d6a35
+}
+body:not([data-theme='dark']) .repeat-row {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .repeat-row label {
+color: #485342
+}
+body:not([data-theme='dark']) .board-cell.chip {
+background: #dcd3f1
+}
+body:not([data-theme='dark']) .board-cell.chip {
+color: #8c6fb7
+}
+body:not([data-theme='dark']) .board-metrics > span {
+color: #485342
+}
+body:not([data-theme='dark']) .test-history h3 > span {
+color: #485342
+}
+body:not([data-theme='dark']) .test-history > div > p {
+color: #485342
+}
+body:not([data-theme='dark']) .history-entry {
+color: #485342
+}
+body:not([data-theme='dark']) .history-entry code {
+background: #edf2e3
+}
+body:not([data-theme='dark']) .history-entry code {
+color: #3e572c
+}
+body:not([data-theme='dark']) .probe-chips button {
+background: #f0f5e9
+}
+body:not([data-theme='dark']) .probe-chips button {
+color: #40552f
+}
+body:not([data-theme='dark']) .probe-chips button.tried {
+background: #e0edcd
+}
+body:not([data-theme='dark']) .probe-chips button.tried:before {
+color: #3b5826
+}
+body:not([data-theme='dark']) .template-tab {
+background: #f1f5e9
+}
+body:not([data-theme='dark']) .template-tab {
+color: #485342
+}
+body:not([data-theme='dark']) .template-tab svg {
+color: #455530
+}
+body:not([data-theme='dark']) .template-tab.active {
+background: #e7f0d8
+}
+body:not([data-theme='dark']) .template-tab.active {
+color: #486631
+}
+body:not([data-theme='dark']) .rule-keyword {
+color: #445529
+}
+body:not([data-theme='dark']) .phone-logo svg {
+color: #46542f
+}
+body:not([data-theme='dark']) .mood-button.numeric {
+color: #415534
+}
+body:not([data-theme='dark']) .miniapp-fact {
+color: #485342
+}
+body:not([data-theme='dark']) .earned-xp {
+background: #64874526
+}
+body:not([data-theme='dark']) .earned-xp {
+color: #d0eda7
+}
+body:not([data-theme='dark']) .completion-card .eyebrow {
+color: #b5d798
+}
+body:not([data-theme='dark']) .completion-card .outline {
+color: #d7e7c5
+}
+body:not([data-theme='dark']) .next-adventure {
+background: #f2f5eb
+}
+body:not([data-theme='dark']) .bonus-progress > span {
+background: #dce5d0
+}
+body:not([data-theme='dark']) .bonus-progress > span.active {
+background: #9cbc70
+}
+body:not([data-theme='dark']) .bonus-progress > span.done {
+background: #7c9c55
+}
+body:not([data-theme='dark']) .puzzle-panel {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .puzzle-category {
+color: #4c5140
+}
+body:not([data-theme='dark']) .code-window {
+background: #1b2a22
+}
+body:not([data-theme='dark']) .code-window {
+color: #d0dfbd
+}
+body:not([data-theme='dark']) .code-window-bar {
+color: #a6b698
+}
+body:not([data-theme='dark']) .code-window-bar > span {
+color: #a9c380
+}
+body:not([data-theme='dark']) .code-line > span {
+color: #8ea17e
+}
+body:not([data-theme='dark']) .option-letter {
+background: #eaf1df
+}
+body:not([data-theme='dark']) .option-letter {
+color: #425530
+}
+body:not([data-theme='dark']) .page-intro h1 span {
+color: #425531
+}
+body:not([data-theme='dark']) .page-intro p {
+color: #485342
+}
+body:not([data-theme='dark']) .search-field {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .search-field svg {
+color: #465431
+}
+body:not([data-theme='dark']) .search-field input {
+background: 0 0
+}
+body:not([data-theme='dark']) .search-field input {
+color: #415632
+}
+body:not([data-theme='dark']) .filter-buttons {
+background: #eff3e7
+}
+body:not([data-theme='dark']) .filter-buttons button {
+background: 0 0
+}
+body:not([data-theme='dark']) .filter-buttons button {
+color: #485342
+}
+body:not([data-theme='dark']) .filter-buttons button.selected {
+background: #fffefb
+}
+body:not([data-theme='dark']) .filter-buttons button.selected {
+color: #45672d
+}
+body:not([data-theme='dark']) .glossary-count {
+color: #485342
+}
+body:not([data-theme='dark']) .glossary-card {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .glossary-category {
+color: #485342
+}
+body:not([data-theme='dark']) .glossary-card > p {
+color: #485342
+}
+body:not([data-theme='dark']) .glossary-example {
+background: #f1f5e9
+}
+body:not([data-theme='dark']) .glossary-example {
+color: #485342
+}
+body:not([data-theme='dark']) .glossary-example > span {
+color: #42562f
+}
+body:not([data-theme='dark']) .empty-search {
+background: #f3f6ec
+}
+body:not([data-theme='dark']) .empty-search p {
+color: #485342
+}
+body:not([data-theme='dark']) .collection-overview {
+background: #eff4e7
+}
+body:not([data-theme='dark']) .collection-overview strong {
+color: #40562e
+}
+body:not([data-theme='dark']) .collection-overview strong > span {
+color: #47543b
+}
+body:not([data-theme='dark']) .collection-overview > div > span {
+color: #485342
+}
+body:not([data-theme='dark']) .badge-card {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .badge-emblem {
+background: #edf2e6
+}
+body:not([data-theme='dark']) .badge-emblem {
+color: #475339
+}
+body:not([data-theme='dark']) .earned .badge-emblem {
+background: linear-gradient(145deg, #e5f5bd, #afcc78)
+}
+body:not([data-theme='dark']) .earned .badge-emblem {
+color: #3d5623
+}
+body:not([data-theme='dark']) .badge-emblem > i {
+background: #6e9545
+}
+body:not([data-theme='dark']) .badge-emblem > i {
+color: #fff
+}
+body:not([data-theme='dark']) .badge-tier {
+color: #485342
+}
+body:not([data-theme='dark']) .badge-card p {
+color: #485342
+}
+body:not([data-theme='dark']) .badge-status {
+color: #3d5727
+}
+body:not([data-theme='dark']) .collection-note {
+color: #485342
+}
+body:not([data-theme='dark']) .day-timeline {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .day-timeline time {
+color: #465531
+}
+body:not([data-theme='dark']) .timeline-dot {
+background: #adc981
+}
+body:not([data-theme='dark']) .day-timeline article:not(:last-child) .timeline-dot:after {
+background: #e2e9d7
+}
+body:not([data-theme='dark']) .day-timeline p {
+color: #485342
+}
+body:not([data-theme='dark']) .section-note {
+color: #485342
+}
+body:not([data-theme='dark']) .roadmap-grid > article {
+background: #eef3e5
+}
+body:not([data-theme='dark']) .roadmap-grid > article > span {
+color: #43552c
+}
+body:not([data-theme='dark']) .roadmap-grid p {
+color: #485342
+}
+body:not([data-theme='dark']) .project-grid article {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .project-grid svg {
+color: #455430
+}
+body:not([data-theme='dark']) .project-grid p {
+color: #485342
+}
+body:not([data-theme='dark']) .career-faq details {
+background: #f8f8f0
+}
+body:not([data-theme='dark']) .career-faq summary > span {
+color: #465433
+}
+body:not([data-theme='dark']) .career-faq details p {
+color: #485342
+}
+@media (max-width: 760px) {
+body:not([data-theme='dark']) .sidebar .main-nav {
+background: #fffff4f5
+}
+}
+body:not([data-theme='dark']) .panel-tag > #run-status {
+background: 0 0
+}
+body:not([data-theme='dark'])[data-theme='light'] .collection-overview strong > span,
+body:not([data-theme='dark'])[data-theme='light'] .day-timeline time,
+body:not([data-theme='dark'])[data-theme='light'] .difficulty-body > strong small,
+body:not([data-theme='dark'])[data-theme='light'] .difficulty-card:not(.selected) .difficulty-check,
+body:not([data-theme='dark'])[data-theme='light'] .glossary-example > span,
+body:not([data-theme='dark'])[data-theme='light'] .level-tab > span,
+body:not([data-theme='dark'])[data-theme='light'] .probe-chips button,
+body:not([data-theme='dark'])[data-theme='light'] .rule-keyword {
+color: #425631
+}
+body:not([data-theme='dark'])[data-theme='light'] .roadmap-grid > article > span {
+color: #41562f
+}
+body:not([data-theme='dark'])[data-theme='light'] .puzzle-category,
+body:not([data-theme='dark'])[data-theme='light'] .reflection-options button:not(.selected) {
+color: #425631
+}

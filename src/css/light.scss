@@ -1,31 +1,62 @@
-// Világos téma: erősebb kontúrok és rétegek.
-// A 2.0 világos módjában a fehér kártyák majdnem fehér háttéren ültek, alig látható (#e0e5d6) kerettel,
-// így minden egybefolyt. Ez a réteg csak a világos témára hat; a sötét témát nem érinti.
+// Világos téma — kímélő, telt paletta.
+//
+// A 2.0 világos témája tiszta fehér felületekből, halvány keretekből és épp-hogy-olvasható szürke
+// szövegekből állt. Ez a réteg csak a világos témára hat (a sötétet nem érinti):
+//  - vakító fehér helyett elefántcsont felületek puha zsálya háttéren,
+//  - jól látható keretek és finom árnyékok, hogy a rétegek elváljanak,
+//  - a három szerepszín (zöld fejlesztő, barack tesztelő, lila alkotó) a kártyákon is megjelenik.
+// A szövegkontrasztot és a beégetett fehér háttereket a generált light-generated.css kezeli
+// (scripts/light-theme.mjs); a $surface értéke ott is szerepel (SURFACE).
 
-$bg: #edf1e6; // oldalháttér: kicsit mélyebb, hogy a fehér kártyák kiemelkedjenek
-$surface: #fffffd;
-$card-border: #cdd6c0; // kártyák kerete (a régi #e0e5d6 helyett)
-$card-border-hover: #a9b896;
-$inner-border: #d3dcc6; // kártyán belüli dobozok kerete
-$shadow: 0 1px 2px rgba(31, 52, 38, 0.06), 0 8px 20px -10px rgba(31, 52, 38, 0.18);
-$shadow-hover: 0 2px 4px rgba(31, 52, 38, 0.08), 0 14px 28px -12px rgba(31, 52, 38, 0.24);
+// --- Paletta ---------------------------------------------------------------
+
+// Semleges, zsályás alapok
+$page: #e3e9d9; // oldalháttér
+$surface: #f8f8f0; // kártyák, sávok (elefántcsont)
+$surface-sunken: #eef2e4; // kártyán belüli dobozok
+$line: #c4ceb4; // kártyák kerete
+$line-soft: #d2dac4; // belső dobozok kerete
+$line-strong: #9db085; // hover
+$shadow: 0 1px 2px rgba(38, 56, 30, 0.07), 0 8px 22px -12px rgba(38, 56, 30, 0.22);
+$shadow-hover: 0 2px 4px rgba(38, 56, 30, 0.09), 0 16px 30px -14px rgba(38, 56, 30, 0.3);
+
+// Szerepszínek: halvány tónus (háttér), keret, középtónus (illusztráció), mély (szöveg/ikon)
+$dev-tint: #e3efcf;
+$dev-line: #a9c784;
+$dev-mid: #86b351;
+$dev-deep: #2f5d1e;
+
+$test-tint: #fbe3d1;
+$test-line: #e5ad86;
+$test-mid: #dc8a5c;
+$test-deep: #8a4421;
+
+$make-tint: #ebe2f8;
+$make-line: #bba6e0;
+$make-mid: #9a7cd2;
+$make-deep: #573a91;
+
+$accent: $dev-deep; // kiemelő szín: címkék, linkek
+$selected-bg: #1d4733; // teli kiválasztott állapot (mint az aktív küldetéslépés)
+
+// --- Alapok és keretek -----------------------------------------------------
 
 body:not([data-theme='dark']) {
-  --bg: #{$bg};
-  --border: #{$card-border};
-  background: $bg;
+  --bg: #{$page};
+  --border: #{$line};
+  --muted: #4b5745;
+  background: $page;
 
-  // Keret: az oldalsáv és a felső sáv váljon el a tartalomtól
   .sidebar {
     background: $surface;
-    border-right: 1px solid $card-border;
+    border-right: 1px solid $line;
   }
   .topbar {
-    background: rgba(255, 255, 253, 0.92);
-    border-bottom: 1px solid $card-border;
+    background: rgba(248, 248, 240, 0.94);
+    border-bottom: 1px solid $line;
   }
 
-  // Fő kártyák: kontúr + finom árnyék
+  // Fő kártyák: elefántcsont felület, kontúr, finom árnyék
   .mission-card,
   .difficulty-card,
   .game-panel,
@@ -46,7 +77,7 @@ body:not([data-theme='dark']) {
   .reflection,
   .next-adventure,
   .player-card {
-    border-color: $card-border;
+    border-color: $line;
     box-shadow: $shadow;
   }
   .lab-stats {
@@ -58,19 +89,19 @@ body:not([data-theme='dark']) {
   .bonus-card,
   .difficulty-card:not(.selected) {
     &:hover {
-      border-color: $card-border-hover;
+      border-color: $line-strong;
       box-shadow: $shadow-hover;
     }
   }
 
-  // Fülek és választógombok (a kiválasztott állapot marad a sajátja)
+  // Fülek és választógombok (a kiválasztott állapotnak saját stílusa van lent)
   .game-step:not(.active),
   .level-tab:not(.active),
   .scenario-tab:not(.active),
   .template-tab:not(.active),
   .report-option:not(.selected),
   .filter-buttons button:not(.selected) {
-    border-color: $inner-border;
+    border-color: $line-soft;
   }
   .game-step:not(.active),
   .level-tab:not(.active),
@@ -83,167 +114,129 @@ body:not([data-theme='dark']) {
   .robot-board-wrap,
   .repeat-row,
   .command-queue,
-  .learning-note,
   .test-app,
   .test-history,
-  .spec-box,
   .rule-builder,
   .app-name-input,
   .search-field,
   .filter-buttons,
   .command-button,
   .probe-chips button,
-  .code-window,
-  .glossary-example {
-    border-color: $inner-border;
+  .code-window {
+    border-color: $line-soft;
+  }
+  .robot-board-wrap,
+  .repeat-row,
+  .rule-builder,
+  .filter-buttons {
+    background: $surface-sunken;
   }
   .board-cell:not(.wall):not(.goal):not(.chip) {
-    border-color: $inner-border;
+    border-color: $line-soft;
   }
-  // Címkék és másodlagos gombok: kontúr nélkül beleolvadtak a háttérbe
+
+  // Címkék és másodlagos gombok
   .sublevel-pill,
   .progress-pill {
-    border: 1px solid $inner-border;
-  }
-  .sublevel-pill {
+    border: 1px solid $line-soft;
     background: $surface;
   }
   .button.secondary {
     background: $surface;
-    border: 1px solid $card-border;
+    border: 1px solid $line;
     &:hover {
-      border-color: $card-border-hover;
+      border-color: $line-strong;
     }
   }
   .button.outline {
-    border-color: $card-border;
+    border-color: $line;
   }
-
   .phone-preview {
-    border-color: #c9d2bb;
+    border-color: $line;
   }
   .bottom-banner {
-    border-color: #bcc8ad;
+    border-color: $line-strong;
   }
 }
 
-// Illusztrációk és ikonok világos módban.
-// A 2.0 itt halvány pasztell színeket használt fehér alapon (pl. #f0eae3 tesztsor, #9d89bb ikon #eee8f8-on),
-// ezért a kártyák rajzai kifakultak. Ugyanazok az árnyalatok, de telítettebben és sötétebb vonalakkal,
-// a sötét mód kontrasztjához igazítva. Zöld = fejlesztő, barack = tesztelő, lila = alkotó.
+// --- Szerepszínek a kártyákon ------------------------------------------------
+
 body:not([data-theme='dark']) {
-  // Ikoncsempék
-  .mission-icon,
-  .profession-card > .mission-icon {
-    background: #dcebc4;
-    color: #3f6b2a;
+  // Küldetéskártyák: a szerep színe felülről halványan beúszik, a keret is színezett
+  .mission-card.card-green {
+    background: linear-gradient(180deg, $dev-tint 0, $surface 58%);
+    border-color: $dev-line;
   }
-  .card-peach .mission-icon,
-  .profession-card.peach > .mission-icon {
-    background: #f8d6c0;
-    color: #94532f;
+  .mission-card.card-peach {
+    background: linear-gradient(180deg, $test-tint 0, $surface 58%);
+    border-color: $test-line;
   }
-  .card-purple .mission-icon {
-    background: #e3d8f5;
-    color: #66509a;
-  }
-  .difficulty-icon {
-    background: #e2eed0;
-    border-color: #bfd3a3;
-    color: #3f6b2a;
-  }
-  .teaser-icon {
-    border-color: #b8cc9a;
-    color: #4f7a2c;
-  }
-  .badge-emblem {
-    border-color: #c9d6b8;
-    color: #6f8559;
+  .mission-card.card-purple {
+    background: linear-gradient(180deg, $make-tint 0, $surface 58%);
+    border-color: $make-line;
   }
 
-  // 01 / Fejlesztő: parancsgombok
-  .command-chip {
-    background: #e2edd2;
-    border-color: #b5c99a;
-    box-shadow: 0 3px 0 #b5c99a;
-    color: #3a5c2b;
+  // Szakmakártyák: fejlesztő zöld, tesztelő barack
+  .profession-card {
+    background: linear-gradient(180deg, $dev-tint 0, $surface 45%);
+    border-color: $dev-line;
   }
-  .command-chip:nth-child(2) {
-    background: #ebf2e0;
-  }
-  .command-chip.small-play {
-    background: #b5d486;
-    border-color: #96b866;
-  }
-  .small-play svg {
-    fill: #2c4a1c;
-  }
-  .visual-dots {
-    color: #8c9a78;
+  .profession-card.peach {
+    background: linear-gradient(180deg, $test-tint 0, $surface 45%);
+    border-color: $test-line;
   }
 
-  // 02 / Tesztelő: tesztsorok és nagyító
-  .test-line > span {
-    background: #e2d9ce;
+  // Bónuszkártyák: Kódnyomozó lila, Tech radar barack
+  .bonus-card.debug-bonus {
+    background: $make-tint;
+    border-color: $make-line;
   }
-  .test-line:nth-child(2) > span {
-    background: #e8b293;
+  .bonus-card.quiz-bonus {
+    background: $test-tint;
+    border-color: $test-line;
   }
-  .test-check {
-    background: #d3e5b6;
-    color: #44702a;
+  .debug-bonus .bonus-art {
+    color: $make-mid;
   }
-  .test-error {
-    background: #f2c0a2;
-    color: #93461f;
-  }
-  .bug-magnifier {
-    border-color: #cf9a75;
-    background: #fff5ea;
-    box-shadow: 2px 3px rgba(150, 95, 55, 0.18);
-  }
-  .bug-magnifier:after {
-    background: #c48a62;
-  }
-  .bug-magnifier svg {
-    color: #8f5530;
+  .quiz-bonus .bonus-art {
+    color: $test-mid;
+    border-color: $test-mid;
   }
 
-  // 03 / Alkotó: miniapp ablak és kurzor
-  .mini-app {
-    background: #f5f0fe;
-    border-color: #b4a1d6;
-    box-shadow: 3px 4px 0 #d9cdee;
+  // Kiválasztott szint és megszerzett jelvény: telt zöld
+  .difficulty-card.selected {
+    background: $dev-tint;
+    border-color: $dev-mid;
+    box-shadow:
+      inset 0 0 0 1px $dev-line,
+      $shadow;
   }
-  .mini-app-dots {
-    color: #8d76b4;
-    border-color: #ddd1f0;
+  .badge-card.earned {
+    border-color: $dev-line;
+    background: linear-gradient(180deg, $dev-tint 0, $surface 60%);
   }
-  .mini-app-content > span {
-    background: #dacbf0;
-    color: #6c4ea3;
+
+  // Tudástár és tanulási dobozok: zöld tónus, zöld oldalcsík
+  .glossary-example {
+    background: $dev-tint;
+    border-color: $dev-line;
+    border-left: 3px solid $dev-mid;
   }
-  .mini-app-content i {
-    background: #cbbde3;
+  .learning-note,
+  .spec-box {
+    background: $dev-tint;
+    border-color: $dev-line;
   }
-  .mini-app-button {
-    background: #977bc5;
-  }
-  .build-cursor {
-    color: #7f66ad;
+  .knowledge-teaser,
+  .learning-panel,
+  .collection-overview {
+    background: linear-gradient(135deg, $dev-tint 0, $surface 70%);
   }
 }
 
-// Kiemelő színek a sötét téma mintájára: ahol a sötét téma zöldet használ, ott a világos is.
-// (A szöveg alapkontrasztját a generált light-text.css emeli.)
-$accent: #2f5a1c; // mély zöld kiemelés (kb. 8:1 fehéren, az apró címkék miatt)
-$accent-tint: #e6f0d6;
-$accent-line: #79a54b;
-$selected-bg: #1d4733; // teli kiválasztott állapot, mint az aktív küldetéslépés
+// --- Kiemelések és kiválasztott állapotok -----------------------------------
 
 body:not([data-theme='dark']) {
-  --muted: #505651;
-
   .eyebrow,
   .page-intro .eyebrow,
   .glossary-category,
@@ -254,6 +247,13 @@ body:not([data-theme='dark']) {
   .difficulty-tag,
   .section-heading .eyebrow {
     color: $accent;
+  }
+  .card-peach .card-number,
+  .profession-card.peach .eyebrow {
+    color: $test-deep;
+  }
+  .card-purple .card-number {
+    color: $make-deep;
   }
 
   .demo-submit {
@@ -267,25 +267,119 @@ body:not([data-theme='dark']) {
     box-shadow: 0 2px 6px rgba(29, 71, 51, 0.25);
   }
 
-  // Aktív fülek: határozott zöld kontúr és tónus
+  // Aktív fülek és kiválasztott válasz: telt zöld tónus, határozott kontúr
   .level-tab.active,
   .scenario-tab.active,
-  .template-tab.active {
-    background: #d9eabf;
-    border-color: #6f9a45;
-    color: #24451a;
+  .template-tab.active,
+  .report-option.selected {
+    background: #d6e8b8;
+    border-color: $dev-mid;
+    color: #22421a;
+  }
+}
+
+// --- Illusztrációk és ikonok ----------------------------------------------------
+// Ugyanazok az árnyalatok, mint a sötét témában, telítetten és sötétebb vonalakkal.
+
+body:not([data-theme='dark']) {
+  // Ikoncsempék
+  .mission-icon,
+  .profession-card > .mission-icon {
+    background: #d5e8b8;
+    color: $dev-deep;
+  }
+  .card-peach .mission-icon,
+  .profession-card.peach > .mission-icon {
+    background: #f6cfb3;
+    color: $test-deep;
+  }
+  .card-purple .mission-icon {
+    background: #ddd0f3;
+    color: $make-deep;
+  }
+  .difficulty-icon {
+    background: #dcebc6;
+    border-color: $dev-line;
+    color: $dev-deep;
+  }
+  .teaser-icon {
+    border-color: $dev-line;
+    color: $dev-deep;
+  }
+  .badge-emblem {
+    border-color: $line;
+    color: #5d7349;
   }
 
-  // „Például” doboz: zöldes alap, zöld oldalcsík
-  .glossary-example {
-    background: $accent-tint;
-    border-left: 3px solid $accent-line;
+  // 01 / Fejlesztő: parancsgombok
+  .command-chip {
+    background: #dcebc6;
+    border-color: $dev-line;
+    box-shadow: 0 3px 0 $dev-line;
+    color: #2c4f1d;
+  }
+  .command-chip:nth-child(2) {
+    background: #e6f0d6;
+  }
+  .command-chip.small-play {
+    background: #a9cf73;
+    border-color: $dev-mid;
+  }
+  .small-play svg {
+    fill: #23401a;
+  }
+  .visual-dots {
+    color: #7f9068;
   }
 
-  // Tanulási jegyzet és specifikáció: enyhe zöld tónus
-  .learning-note,
-  .spec-box {
-    background: $accent-tint;
-    border-color: #c5d9a8;
+  // 02 / Tesztelő: tesztsorok és nagyító
+  .test-line > span {
+    background: #ddd2c3;
+  }
+  .test-line:nth-child(2) > span {
+    background: $test-mid;
+  }
+  .test-check {
+    background: #cfe3ae;
+    color: #3a6620;
+  }
+  .test-error {
+    background: #f2bb98;
+    color: $test-deep;
+  }
+  .bug-magnifier {
+    border-color: #c98f65;
+    background: #fff3e6;
+    box-shadow: 2px 3px rgba(150, 95, 55, 0.2);
+  }
+  .bug-magnifier:after {
+    background: #bd7f55;
+  }
+  .bug-magnifier svg {
+    color: $test-deep;
+  }
+
+  // 03 / Alkotó: miniapp ablak és kurzor
+  .mini-app {
+    background: #f4eefd;
+    border-color: $make-line;
+    box-shadow: 3px 4px 0 #d5c7ee;
+  }
+  .mini-app-dots {
+    color: #84699f;
+    border-color: #d9cbef;
+  }
+  .mini-app-content > span {
+    background: #d6c5ef;
+    color: $make-deep;
+  }
+  .mini-app-content i {
+    background: #c6b5e3;
+  }
+  .mini-app-button {
+    background: $make-mid;
+  }
+  .build-cursor {
+    color: #7356a8;
   }
 }

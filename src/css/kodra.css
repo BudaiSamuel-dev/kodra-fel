@@ -139,7 +139,7 @@ svg {
   color: #709849;
 }
 .sidebar-label {
-  font-size: 9px;
+  font-size: 11.86px;
   color: #90958c;
   font-weight: 700;
   letter-spacing: 1.8px;
@@ -158,7 +158,7 @@ svg {
   background: 0 0;
   color: #7b827b;
   border-radius: 9px;
-  font-size: 12px;
+  font-size: 12.71px;
   text-align: left;
   font-weight: 600;
   width: 100%;
@@ -193,18 +193,18 @@ svg {
   display: grid;
   place-items: center;
   border-radius: 6px;
-  font-size: 10px;
+  font-size: 12.14px;
   color: #7c8874;
 }
 .sidebar-bottom {
   margin-top: auto;
 }
 .help-link {
-  font-size: 11px;
+  font-size: 12.43px;
   margin: 18px 0 12px;
 }
 .sidebar-foot {
-  font-size: 9px;
+  font-size: 11.86px;
   color: #9b9f95;
   border-top: 1px solid var(--border);
   padding-top: 18px;
@@ -223,7 +223,7 @@ svg {
   background: #fdfdf9;
 }
 .topbar-left {
-  font-size: 9px;
+  font-size: 11.86px;
   font-weight: 700;
   letter-spacing: 1.4px;
   display: flex;
@@ -245,7 +245,7 @@ svg {
 .topbar-sub {
   color: #8b9186;
   letter-spacing: 0;
-  font-size: 10px;
+  font-size: 12.14px;
   font-weight: 500;
 }
 .topbar-right {
@@ -257,7 +257,7 @@ svg {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 11px;
+  font-size: 12.43px;
   color: #6e786e;
 }
 .duration svg {
@@ -283,7 +283,7 @@ main {
   min-height: 393px;
 }
 .eyebrow {
-  font-size: 9px;
+  font-size: 11.86px;
   font-weight: 700;
   letter-spacing: 1.6px;
   color: #77866c;
@@ -339,7 +339,7 @@ main {
   padding: 0 23px;
   border-radius: 9px;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 12.71px;
   transition:
     transform 0.18s,
     background 0.18s,
@@ -385,7 +385,7 @@ main {
   align-items: center;
   gap: 10px;
   padding: 6px 0;
-  font-size: 11px;
+  font-size: 12.43px;
   font-weight: 600;
   color: #61705c;
 }
@@ -401,7 +401,7 @@ main {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 11.86px;
   letter-spacing: 0.2px;
   color: #919587;
   margin-top: 19px;
@@ -820,7 +820,7 @@ main {
   margin-bottom: 20px;
 }
 .eyebrow.small {
-  font-size: 8px;
+  font-size: 11.57px;
   letter-spacing: 1.5px;
   color: #929783;
 }
@@ -836,7 +836,7 @@ main {
   border: 1px solid #e1e5d8;
   padding: 7px 11px;
   border-radius: 30px;
-  font-size: 9px;
+  font-size: 11.86px;
   color: #7d8673;
   white-space: nowrap;
   background: #fbfcf7;
@@ -892,7 +892,7 @@ main {
 .card-number {
   font-family: var(--heading);
   font-weight: 500;
-  font-size: 8px;
+  font-size: 11.57px;
   letter-spacing: 1.2px;
   color: #7b856e;
 }
@@ -1116,7 +1116,7 @@ main {
   margin-top: 11px;
 }
 .mission-card > p {
-  font-size: 11px;
+  font-size: 12.43px;
   line-height: 1.85;
   color: #8b8d80;
   margin-top: 8px;
@@ -1128,7 +1128,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 9px;
+  font-size: 11.86px;
   color: #989b8d;
 }
 .card-bottom > span:first-child {
@@ -1188,21 +1188,21 @@ main {
   letter-spacing: -0.2px;
 }
 .bottom-banner p {
-  font-size: 10px;
+  font-size: 12.14px;
   margin-top: 5px;
   color: #939786;
 }
 .bottom-banner > .text-button {
   margin-left: auto;
   white-space: nowrap;
-  font-size: 10px;
+  font-size: 12.14px;
 }
 footer {
   margin-top: 27px;
   padding-top: 18px;
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 11.57px;
   color: #a5a99b;
 }
 footer > span {
@@ -1223,7 +1223,7 @@ footer svg {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 12.43px;
   font-weight: 600;
   color: #71806b;
   padding: 0;
@@ -1252,7 +1252,7 @@ footer svg {
 }
 .timer-note {
   font-family: var(--font);
-  font-size: 9px;
+  font-size: 11.86px;
   margin-left: 5px;
   color: #949b89;
 }
@@ -1271,7 +1271,7 @@ footer svg {
   display: flex;
   gap: 10px;
   align-items: center;
-  font-size: 10px;
+  font-size: 12.14px;
   font-weight: 600;
   color: #919983;
   text-align: left;
@@ -1289,7 +1289,7 @@ footer svg {
   border: 1px solid #cbd5bc;
   border-radius: 50%;
   font-family: var(--heading);
-  font-size: 10px;
+  font-size: 12.14px;
 }
 .active .step-num {
   background: var(--lime);
@@ -1310,7 +1310,7 @@ footer svg {
 }
 .game-title p {
   color: #7e8975;
-  font-size: 12px;
+  font-size: 12.71px;
   margin-top: 9px;
   max-width: 590px;
   line-height: 1.9;
@@ -1320,7 +1320,7 @@ footer svg {
   white-space: nowrap;
   padding: 8px 13px;
   border-radius: 30px;
-  font-size: 10px;
+  font-size: 12.14px;
   color: #778368;
 }
 .game-layout {
@@ -1346,7 +1346,7 @@ footer svg {
   letter-spacing: -0.3px;
 }
 .panel-tag {
-  font-size: 9px;
+  font-size: 11.86px;
   color: #94a083;
   display: flex;
   align-items: center;
@@ -1445,7 +1445,7 @@ footer svg {
   display: flex;
   gap: 16px;
   justify-content: center;
-  font-size: 9px;
+  font-size: 11.86px;
   margin-top: 15px;
   color: #89947c;
 }
@@ -1468,7 +1468,7 @@ footer svg {
 }
 .panel-description {
   color: #859078;
-  font-size: 11px;
+  font-size: 12.43px;
   line-height: 1.9;
   margin-bottom: 17px;
 }
@@ -1487,7 +1487,7 @@ footer svg {
   flex-direction: column;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 11.86px;
   font-weight: 600;
   color: #617b4f;
   transition:
@@ -1506,14 +1506,14 @@ footer svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
+  font-size: 12.14px;
   font-weight: 700;
   margin-bottom: 9px;
 }
 .queue-label > span {
   font-weight: 400;
   color: #98a08c;
-  font-size: 9px;
+  font-size: 11.86px;
 }
 .command-queue {
   min-height: 96px;
@@ -1529,7 +1529,7 @@ footer svg {
 }
 .queue-empty {
   color: #a5ad98;
-  font-size: 10px;
+  font-size: 12.14px;
   align-self: center;
   text-align: center;
   width: 100%;
@@ -1544,7 +1544,7 @@ footer svg {
   align-items: center;
   gap: 4px;
   padding: 5px 8px;
-  font-size: 9px;
+  font-size: 11.86px;
   position: relative;
 }
 .queue-item svg {
@@ -1568,12 +1568,12 @@ footer svg {
 .game-actions .button {
   padding: 0 17px;
   min-height: 43px;
-  font-size: 10px;
+  font-size: 12.14px;
 }
 .feedback {
   border-radius: 10px;
   padding: 13px 15px;
-  font-size: 11px;
+  font-size: 12.43px;
   line-height: 1.8;
   margin-top: 16px;
   background: #eef3e4;
@@ -1604,7 +1604,7 @@ footer svg {
   padding: 17px 21px;
   border-radius: 11px;
   margin-top: 22px;
-  font-size: 10px;
+  font-size: 12.14px;
   color: #879377;
   line-height: 1.9;
 }
@@ -1628,13 +1628,13 @@ footer svg {
   display: flex;
   justify-content: space-between;
   padding: 11px 17px;
-  font-size: 9px;
+  font-size: 11.86px;
   color: #91a27e;
   align-items: center;
 }
 .test-app-bar > span:first-child {
   letter-spacing: 3px;
-  font-size: 7px;
+  font-size: 11.29px;
 }
 .test-app-body {
   padding: 25px 25px 24px;
@@ -1659,14 +1659,14 @@ footer svg {
   font-size: 16px;
 }
 .test-app-body > p {
-  font-size: 10px;
+  font-size: 12.14px;
   color: #96a089;
   margin-top: 6px;
   margin-bottom: 18px;
 }
 .app-field {
   display: block;
-  font-size: 10px;
+  font-size: 12.14px;
   font-weight: 600;
   color: #6c7a61;
   margin-top: 15px;
@@ -1678,7 +1678,7 @@ footer svg {
   background: #fff;
   border: 1px solid #dce3d0;
   padding: 10px 12px;
-  font-size: 12px;
+  font-size: 12.71px;
   margin-top: 5px;
   color: #4b5b42;
   min-height: 41px;
@@ -1692,7 +1692,7 @@ footer svg {
   color: #425b30;
   min-height: 40px;
   border-radius: 7px;
-  font-size: 11px;
+  font-size: 12.43px;
   font-weight: 700;
   margin-top: 17px;
 }
@@ -1705,7 +1705,7 @@ footer svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 12.71px;
   color: #7c8b6c;
   padding: 10px;
   text-align: center;
@@ -1715,7 +1715,7 @@ footer svg {
   border: 1px solid #e9ecdd;
   border-radius: 9px;
   padding: 15px 17px;
-  font-size: 11px;
+  font-size: 12.43px;
   line-height: 1.9;
   color: #7b896c;
   margin-bottom: 19px;
@@ -1724,7 +1724,7 @@ footer svg {
   color: #58703f;
   display: block;
   margin-bottom: 5px;
-  font-size: 10px;
+  font-size: 12.14px;
 }
 .scenario-tabs {
   display: flex;
@@ -1738,7 +1738,7 @@ footer svg {
   border: 1px solid #e1e6d9;
   color: #91a17c;
   border-radius: 7px;
-  font-size: 10px;
+  font-size: 12.14px;
   font-weight: 600;
 }
 .scenario-tab.active {
@@ -1755,7 +1755,7 @@ footer svg {
   background: #fbfcf7;
   border-radius: 8px;
   padding: 13px 14px;
-  font-size: 11px;
+  font-size: 12.43px;
   text-align: left;
   display: flex;
   gap: 10px;
@@ -1784,11 +1784,11 @@ footer svg {
   box-shadow: 0 0 0 1px #718f4f;
 }
 .report-step-title {
-  font-size: 12px !important;
+  font-size: 12.71px !important;
   margin-bottom: 11px;
 }
 .test-count {
-  font-size: 9px;
+  font-size: 11.86px;
   color: #91a07e;
   margin: 14px 0;
 }
@@ -1797,7 +1797,7 @@ footer svg {
   gap: 21px;
 }
 .field-label {
-  font-size: 11px;
+  font-size: 12.43px;
   font-weight: 700;
   display: block;
   margin-bottom: 9px;
@@ -1834,7 +1834,7 @@ footer svg {
   border: 1px solid #e3e9d9;
   border-radius: 10px;
   color: #7a8e65;
-  font-size: 11px;
+  font-size: 12.43px;
   line-height: 2.8;
 }
 .rule-builder select {
@@ -1845,7 +1845,7 @@ footer svg {
   padding: 6px 8px;
   margin: 0 5px;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 12.43px;
 }
 .phone-preview {
   width: 251px;
@@ -1888,7 +1888,7 @@ footer svg {
   overflow-wrap: anywhere;
 }
 .phone-screen > p {
-  font-size: 10px;
+  font-size: 12.14px;
   color: #99a28a;
   margin-top: 4px;
 }
@@ -1918,7 +1918,7 @@ footer svg {
   color: #4b5c3e;
   margin-top: 17px;
   text-align: center;
-  font-size: 11px;
+  font-size: 12.43px;
   min-height: 66px;
   display: grid;
   place-items: center;
@@ -1927,7 +1927,7 @@ footer svg {
 }
 .preview-caption {
   text-align: center;
-  font-size: 9px;
+  font-size: 11.86px;
   color: #98a48a;
   margin-top: 13px;
 }
@@ -1935,7 +1935,7 @@ footer svg {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  font-size: 10px;
+  font-size: 12.14px;
   color: #92a07e;
   margin-top: 15px;
 }
@@ -1994,7 +1994,7 @@ footer svg {
   max-width: 550px;
   margin: 0 auto;
   color: #a8bea1;
-  font-size: 12px;
+  font-size: 12.71px;
   line-height: 1.9;
 }
 .completion-card .button {
@@ -2016,7 +2016,7 @@ footer svg {
   align-items: center;
   gap: 10px;
   color: #c3d9a8;
-  font-size: 11px;
+  font-size: 12.43px;
 }
 .earned-badge svg {
   width: 22px;
@@ -2034,7 +2034,7 @@ footer svg {
   margin-bottom: 10px;
 }
 .reflection > p {
-  font-size: 12px;
+  font-size: 12.71px;
   color: #8a977c;
 }
 .reflection-options {
@@ -2048,7 +2048,7 @@ footer svg {
   border: 1px solid #dfe6d5;
   background: #f5f8ee;
   border-radius: 8px;
-  font-size: 11px;
+  font-size: 12.43px;
   color: #72875e;
 }
 .reflection-options button.selected {
@@ -2111,7 +2111,7 @@ footer svg {
   margin: 11px 0 17px;
 }
 .profession-card p {
-  font-size: 12px;
+  font-size: 12.71px;
   color: #879479;
   line-height: 1.9;
 }
@@ -2120,7 +2120,7 @@ footer svg {
   margin-top: 25px;
 }
 .profession-card ul {
-  font-size: 11px;
+  font-size: 12.43px;
   padding: 0 0 0 17px;
   line-height: 2.4;
   color: #889875;
@@ -2150,7 +2150,7 @@ footer svg {
   align-items: center;
   gap: 10px;
   color: #6c8557;
-  font-size: 12px;
+  font-size: 12.71px;
 }
 .learning-panel > div svg {
   width: 20px;
@@ -2158,7 +2158,7 @@ footer svg {
 }
 .learning-panel p {
   margin-top: 24px;
-  font-size: 10px;
+  font-size: 12.14px;
   color: #899779;
   max-width: 680px;
 }
@@ -2201,7 +2201,7 @@ dialog h2 {
   margin-bottom: 15px;
 }
 dialog p {
-  font-size: 12px;
+  font-size: 12.71px;
   color: #839173;
   line-height: 1.9;
 }
@@ -2211,11 +2211,11 @@ dialog dl {
 dialog dt {
   font-weight: 700;
   color: #5d7949;
-  font-size: 12px;
+  font-size: 12.71px;
   margin-top: 15px;
 }
 dialog dd {
-  font-size: 11px;
+  font-size: 12.43px;
   color: #8b987d;
   margin: 4px 0 0;
   line-height: 1.8;
@@ -2231,7 +2231,7 @@ dialog .game-actions {
 .how-list li {
   display: flex;
   gap: 12px;
-  font-size: 12px;
+  font-size: 12.71px;
   color: #80916e;
   align-items: flex-start;
   margin: 18px 0;
@@ -2252,11 +2252,11 @@ dialog .game-actions {
 .how-list strong {
   display: block;
   color: #4f6b3a;
-  font-size: 12px;
+  font-size: 12.71px;
   margin-bottom: 4px;
 }
 .how-list span {
-  font-size: 11px;
+  font-size: 12.43px;
   line-height: 1.8;
 }
 #toast {
@@ -2269,7 +2269,7 @@ dialog .game-actions {
   border: 1px solid #668655;
   padding: 12px 20px;
   border-radius: 9px;
-  font-size: 11px;
+  font-size: 12.43px;
   box-shadow: 0 5px 20px #0e2c2826;
   opacity: 0;
   pointer-events: none;
@@ -2303,7 +2303,7 @@ dialog .game-actions {
   color: #737e69;
 }
 .mission-card > p {
-  font-size: 12px;
+  font-size: 12.71px;
 }
 .bottom-banner p,
 .card-bottom,
@@ -2396,7 +2396,7 @@ dialog .game-actions {
     font-size: 22px;
   }
   .mission-card > p {
-    font-size: 12px;
+    font-size: 12.71px;
   }
   .card-visual {
     height: 100px;
@@ -2442,20 +2442,20 @@ dialog .game-actions {
     height: 350px;
   }
   .hero-copy > p {
-    font-size: 12px;
+    font-size: 12.71px;
   }
   .hero-buttons {
     gap: 12px;
   }
   .hero-buttons .button {
     padding: 0 16px;
-    font-size: 11px;
+    font-size: 12.43px;
   }
   .hero-buttons .text-button {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 11.57px;
     letter-spacing: 1px;
   }
   .code-float {
@@ -2479,7 +2479,7 @@ dialog .game-actions {
     transform: scale(0.9) rotate(-8deg);
   }
   .card-number {
-    font-size: 7px;
+    font-size: 11.29px;
     letter-spacing: 0.7px;
   }
   .mission-card {
@@ -2492,14 +2492,14 @@ dialog .game-actions {
     font-size: 17px;
   }
   .mission-card > p {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .command-chip {
     padding: 7px;
     font-size: 9px;
   }
   .card-bottom {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .section-heading h2 {
     font-size: 21px;
@@ -2509,10 +2509,10 @@ dialog .game-actions {
     gap: 12px;
   }
   .bottom-banner h3 {
-    font-size: 12px;
+    font-size: 12.71px;
   }
   .bottom-banner > .text-button {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .test-app-body {
     padding: 21px 18px;
@@ -2569,7 +2569,7 @@ dialog .game-actions {
     height: 72px;
   }
   .topbar-left {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .hero-art {
     height: 344px;
@@ -2581,7 +2581,7 @@ dialog .game-actions {
     gap: 15px;
   }
   .hero-buttons .text-button {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .card-top {
     gap: 8px;
@@ -2591,7 +2591,7 @@ dialog .game-actions {
     height: 31px;
   }
   .card-number {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .mission-card h3 {
     font-size: 16px;
@@ -2615,13 +2615,13 @@ dialog .game-actions {
   .bottom-banner > .text-button {
     max-width: 130px;
     white-space: normal;
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .title-spark {
     display: none;
   }
   .hero-note {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   #toast {
     left: calc(50% + 40px);
@@ -2630,13 +2630,13 @@ dialog .game-actions {
     align-items: flex-start;
   }
   .game-title p {
-    font-size: 11px;
+    font-size: 12.43px;
   }
   .command-palette {
     gap: 5px;
   }
   .command-button {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .game-layout {
     gap: 15px;
@@ -2704,7 +2704,7 @@ dialog .game-actions {
     height: 56px;
   }
   .topbar-left {
-    font-size: 7px;
+    font-size: 11.29px;
     letter-spacing: 1px;
     gap: 7px;
   }
@@ -2717,7 +2717,7 @@ dialog .game-actions {
     gap: 0;
   }
   .duration {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .duration svg {
     width: 14px;
@@ -2736,10 +2736,10 @@ dialog .game-actions {
     letter-spacing: -2.2px;
   }
   .hero .eyebrow {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .hero-copy > p {
-    font-size: 12px;
+    font-size: 12.71px;
   }
   .desktop-br,
   .hero-copy > p br {
@@ -2753,15 +2753,15 @@ dialog .game-actions {
     gap: 22px;
   }
   .hero-buttons .button {
-    font-size: 11px;
+    font-size: 12.43px;
     padding: 0 20px;
   }
   .hero-buttons .text-button {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .hero-note {
     margin-top: 14px;
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .hero-art {
     height: 330px;
@@ -2810,7 +2810,7 @@ dialog .game-actions {
     line-height: 1.3;
   }
   .progress-pill {
-    font-size: 8px;
+    font-size: 11.57px;
     padding: 7px 9px;
     margin-top: 19px;
   }
@@ -2830,7 +2830,7 @@ dialog .game-actions {
     gap: 11px;
   }
   .card-number {
-    font-size: 8px;
+    font-size: 11.57px;
     letter-spacing: 1px;
   }
   .mission-icon {
@@ -2851,13 +2851,13 @@ dialog .game-actions {
     letter-spacing: -0.8px;
   }
   .mission-card > p {
-    font-size: 11px;
+    font-size: 12.43px;
     margin-top: 8px;
     padding-bottom: 20px;
     max-width: 60%;
   }
   .card-bottom {
-    font-size: 9px;
+    font-size: 11.86px;
     padding: 12px 0;
   }
   .visual-code {
@@ -2905,20 +2905,20 @@ dialog .game-actions {
     line-height: 1.5;
   }
   .bottom-banner p {
-    font-size: 10px;
+    font-size: 12.14px;
     line-height: 1.8;
   }
   .bottom-banner > .text-button {
     max-width: none;
     margin-left: 44px;
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .bottom-banner > .text-button svg {
     width: 13px;
     height: 13px;
   }
   footer {
-    font-size: 7px;
+    font-size: 11.29px;
     gap: 10px;
     flex-wrap: wrap;
     line-height: 2;
@@ -2928,10 +2928,10 @@ dialog .game-actions {
     gap: 10px;
   }
   .back-link {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .game-timer {
-    font-size: 11px;
+    font-size: 12.43px;
   }
   .timer-note {
     display: none;
@@ -2948,7 +2948,7 @@ dialog .game-actions {
     justify-content: center;
   }
   .step-num {
-    font-size: 10px;
+    font-size: 12.14px;
     width: 23px;
     height: 23px;
   }
@@ -2958,7 +2958,7 @@ dialog .game-actions {
   }
   .game-step:after {
     content: attr(data-short);
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .game-title-row {
     gap: 10px;
@@ -2970,14 +2970,14 @@ dialog .game-actions {
     max-width: 270px;
   }
   .game-title p {
-    font-size: 11px;
+    font-size: 12.43px;
     line-height: 1.9;
   }
   .game-title .eyebrow {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .sublevel-pill {
-    font-size: 8px;
+    font-size: 11.57px;
     padding: 7px 9px;
     margin-top: 21px;
   }
@@ -3002,28 +3002,28 @@ dialog .game-actions {
     max-height: 31px;
   }
   .board-legend {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .command-palette {
     gap: 8px;
   }
   .command-button {
-    font-size: 10px;
+    font-size: 12.14px;
     padding: 14px 4px;
   }
   .game-actions .button {
-    font-size: 10px;
+    font-size: 12.14px;
     min-height: 43px;
   }
   .queue-empty {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .game-actions {
     gap: 8px;
   }
   .learning-note {
     padding: 15px;
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .test-app-body {
     max-width: 340px;
@@ -3042,14 +3042,14 @@ dialog .game-actions {
     font-size: 30px;
   }
   .completion-card > p {
-    font-size: 11px;
+    font-size: 12.43px;
   }
   .earned-badges {
     gap: 8px;
     margin: 22px 0;
   }
   .earned-badge {
-    font-size: 9px;
+    font-size: 11.86px;
     padding: 12px 15px;
   }
   .earned-badge svg {
@@ -3068,7 +3068,7 @@ dialog .game-actions {
     letter-spacing: -1.5px;
   }
   .profession-intro p {
-    font-size: 12px;
+    font-size: 12.71px;
   }
   .profession-grid {
     grid-template-columns: 1fr;
@@ -3087,7 +3087,7 @@ dialog .game-actions {
   }
   .learning-panel > div {
     grid-template-columns: 1fr;
-    font-size: 11px;
+    font-size: 12.43px;
     gap: 16px;
   }
   #toast {
@@ -3107,7 +3107,7 @@ dialog .game-actions {
     gap: 8px;
   }
   .reflection-options button {
-    font-size: 10px;
+    font-size: 12.14px;
     padding: 12px 15px;
   }
   dialog {
@@ -3147,10 +3147,10 @@ dialog .game-actions {
   }
   .hero-buttons .button {
     padding: 0 16px;
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .hero-buttons .text-button {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .hero-art {
     height: 310px;
@@ -3176,7 +3176,7 @@ dialog .game-actions {
     max-width: 68%;
   }
   .mission-card > p {
-    font-size: 10px;
+    font-size: 12.14px;
     max-width: 62%;
   }
   .command-chip {
@@ -3199,7 +3199,7 @@ dialog .game-actions {
     font-size: 19px;
   }
   .progress-pill {
-    font-size: 7px;
+    font-size: 11.29px;
     gap: 5px;
   }
   .game-panel {
@@ -3209,13 +3209,13 @@ dialog .game-actions {
     font-size: 26px;
   }
   .sublevel-pill {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .game-title .eyebrow {
-    font-size: 6.5px;
+    font-size: 11.14px;
   }
   .game-step:after {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .game-steps {
     gap: 4px;
@@ -3235,7 +3235,7 @@ dialog .game-actions {
   }
   .card-number,
   .hero .eyebrow {
-    font-size: 7px;
+    font-size: 11.29px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3338,7 +3338,7 @@ footer {
   white-space: nowrap;
 }
 .new-mark {
-  font-size: 7px;
+  font-size: 11.29px;
   background: #d4e9b8;
   color: #426326;
   border-radius: 4px;
@@ -3368,7 +3368,7 @@ footer {
   z-index: 2;
 }
 .hero .eyebrow {
-  font-size: 8px;
+  font-size: 11.57px;
   color: #b3c7a0;
   letter-spacing: 1.1px;
 }
@@ -3394,12 +3394,12 @@ footer {
 }
 .hero-copy > p {
   color: #b7c5b0;
-  font-size: 12px;
+  font-size: 12.71px;
   line-height: 1.95;
 }
 .hero .hero-note {
   color: #b2c8a4;
-  font-size: 9px;
+  font-size: 11.86px;
   gap: 8px;
 }
 .hero-note .mini-check {
@@ -3488,7 +3488,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  font-size: 10px;
+  font-size: 12.14px;
   color: #62715a;
   border-right: 1px solid var(--border);
 }
@@ -3513,7 +3513,7 @@ footer {
 }
 .bonus-note,
 .difficulty-note {
-  font-size: 9px;
+  font-size: 11.86px;
   color: #62715a;
   max-width: 220px;
   text-align: right;
@@ -3571,7 +3571,7 @@ footer {
 .difficulty-tag {
   display: block;
   color: #62715a;
-  font-size: 6.5px;
+  font-size: 11.14px;
   font-weight: 700;
   letter-spacing: 0.8px;
   margin-bottom: 4px;
@@ -3586,7 +3586,7 @@ footer {
 }
 .difficulty-body > strong small {
   font-family: var(--font);
-  font-size: 7px;
+  font-size: 11.29px;
   font-weight: 500;
   color: #64765a;
 }
@@ -3594,7 +3594,7 @@ footer {
   display: block;
   margin-top: 5px;
   color: #62715a;
-  font-size: 9px;
+  font-size: 11.86px;
   line-height: 1.7;
 }
 .difficulty-check {
@@ -3608,7 +3608,7 @@ footer {
   border: 1px solid #c7d6b6;
   border-radius: 50%;
   color: #6e865b;
-  font-size: 8px;
+  font-size: 11.57px;
 }
 .selected .difficulty-check {
   background: #8baf5b;
@@ -3619,7 +3619,7 @@ footer {
   position: absolute;
   bottom: 10px;
   right: 17px;
-  font-size: 7px;
+  font-size: 11.29px;
   color: #62715a;
 }
 .mission-section {
@@ -3655,13 +3655,13 @@ footer {
   font-size: 20px;
 }
 .mission-card > p {
-  font-size: 11px;
+  font-size: 12.43px;
 }
 .mission-icon {
   border: 1px solid #b8d38c44;
 }
 .card-number {
-  font-size: 8px;
+  font-size: 11.57px;
 }
 .complete-tick {
   box-shadow: 0 0 0 4px #98bb4c18;
@@ -3728,7 +3728,7 @@ footer {
 }
 .bonus-content .eyebrow {
   color: #605475;
-  font-size: 7px;
+  font-size: 11.29px;
   letter-spacing: 1.1px;
 }
 .bonus-content h3 {
@@ -3738,7 +3738,7 @@ footer {
   color: #383440;
 }
 .bonus-content > span:not(.eyebrow):not(.bonus-cta) {
-  font-size: 10px;
+  font-size: 12.14px;
   color: #6a6373;
   line-height: 1.8;
 }
@@ -3752,7 +3752,7 @@ footer {
   color: #7c674a;
 }
 .bonus-cta {
-  font-size: 10px;
+  font-size: 12.14px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -3765,7 +3765,7 @@ footer {
   height: 14px;
 }
 .xp-reward {
-  font-size: 8px;
+  font-size: 11.57px;
   border: 1px solid #9e87bd44;
   border-radius: 20px;
   padding: 3px 8px;
@@ -3810,11 +3810,11 @@ footer {
 }
 .knowledge-teaser p {
   color: #62715a;
-  font-size: 10px;
+  font-size: 12.14px;
   margin-top: 10px;
 }
 .knowledge-teaser .eyebrow {
-  font-size: 7px;
+  font-size: 11.29px;
 }
 .knowledge-teaser > .button {
   margin-left: auto;
@@ -3851,13 +3851,13 @@ footer {
   height: 17px;
 }
 .player-caption {
-  font-size: 6px;
+  font-size: 11px;
   letter-spacing: 1px;
   color: #62715a;
   display: block;
 }
 .player-rank strong {
-  font-size: 10px;
+  font-size: 12.14px;
   display: block;
   margin-top: 3px;
 }
@@ -3880,7 +3880,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   color: #62715a;
-  font-size: 8px;
+  font-size: 11.57px;
   margin-top: 9px;
 }
 .xp-caption button {
@@ -3906,7 +3906,7 @@ footer {
   border-radius: 7px;
   color: #527335;
   padding: 5px 9px;
-  font-size: 9px;
+  font-size: 11.86px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -3937,7 +3937,7 @@ footer {
   align-items: center;
   gap: 8px;
   margin-left: auto;
-  font-size: 10px;
+  font-size: 12.14px;
   color: #62715a;
 }
 .game-difficulty-label select,
@@ -3947,7 +3947,7 @@ footer {
   border: 1px solid #dbe4cd;
   border-radius: 7px;
   padding: 7px 10px;
-  font-size: 10px;
+  font-size: 12.14px;
   font-weight: 600;
   max-width: 170px;
 }
@@ -3963,7 +3963,7 @@ footer {
 }
 .step-xp {
   margin-left: auto;
-  font-size: 8px;
+  font-size: 11.57px;
   font-weight: 500;
   color: #62715a;
 }
@@ -3974,7 +3974,7 @@ footer {
   font-size: 36px;
 }
 .game-title p {
-  font-size: 12px;
+  font-size: 12.71px;
   max-width: 700px;
 }
 .level-tabs {
@@ -3987,7 +3987,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 9px;
+  font-size: 11.86px;
   padding: 10px 12px;
   border: 1px solid #e1e6d7;
   border-radius: 8px;
@@ -3997,7 +3997,7 @@ footer {
 }
 .level-tab > span {
   font-family: var(--heading);
-  font-size: 9px;
+  font-size: 11.86px;
   background: #e3ebd6;
   border-radius: 5px;
   padding: 2px 5px;
@@ -4021,11 +4021,11 @@ footer {
   gap: 10px;
 }
 .repeat-row label {
-  font-size: 10px;
+  font-size: 12.14px;
   color: #62715a;
 }
 .repeat-row select {
-  font-size: 9px;
+  font-size: 11.86px;
   padding: 5px 7px;
   max-width: 160px;
 }
@@ -4036,7 +4036,7 @@ footer {
   padding: 13px 4px;
 }
 .queue-item b {
-  font-size: 10px;
+  font-size: 12.14px;
   margin-left: 3px;
 }
 .command-queue {
@@ -4093,7 +4093,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 8px;
+  font-size: 11.57px;
   color: #62715a;
 }
 .board-metrics svg {
@@ -4120,7 +4120,7 @@ footer {
 }
 .saved-continue {
   margin-top: 17px;
-  font-size: 10px;
+  font-size: 12.14px;
   padding: 11px 14px;
   min-height: 42px;
 }
@@ -4131,17 +4131,17 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 12.71px;
   margin-bottom: 11px;
 }
 .test-history h3 > span {
-  font-size: 9px;
+  font-size: 11.86px;
   color: #62715a;
   font-family: var(--font);
   font-weight: 500;
 }
 .test-history > div > p {
-  font-size: 10px;
+  font-size: 12.14px;
   color: #62715a;
 }
 .history-entry {
@@ -4150,7 +4150,7 @@ footer {
   gap: 15px;
   padding: 9px 0;
   border-bottom: 1px solid #e8edde;
-  font-size: 9px;
+  font-size: 11.86px;
   color: #62715a;
 }
 .history-entry code {
@@ -4161,7 +4161,7 @@ footer {
   max-width: 130px;
   overflow-wrap: anywhere;
   color: #54763b;
-  font-size: 9px;
+  font-size: 11.86px;
 }
 .history-entry > span {
   margin-left: auto;
@@ -4179,7 +4179,7 @@ footer {
   padding: 6px 12px;
   border: 1px solid #d7e3c8;
   border-radius: 6px;
-  font-size: 10px;
+  font-size: 12.14px;
   background: #f0f5e9;
   color: #5b7943;
 }
@@ -4224,12 +4224,12 @@ footer {
   color: #7c9a56;
 }
 .template-tab strong {
-  font-size: 11px;
+  font-size: 12.43px;
   display: block;
   font-weight: 700;
 }
 .template-tab small {
-  font-size: 8px;
+  font-size: 11.57px;
   display: block;
   margin-top: 4px;
   line-height: 1.6;
@@ -4241,11 +4241,11 @@ footer {
 }
 .rule-builder {
   line-height: 2.8;
-  font-size: 10px;
+  font-size: 12.14px;
 }
 .rule-keyword {
   color: #779548;
-  font-size: 9px;
+  font-size: 11.86px;
   font-weight: 800;
   letter-spacing: 0.6px;
   margin-right: 4px;
@@ -4271,7 +4271,7 @@ footer {
   gap: 6px;
 }
 .mood-button.numeric {
-  font-size: 10px;
+  font-size: 12.14px;
   padding: 0 5px;
   white-space: nowrap;
   min-height: 45px;
@@ -4288,7 +4288,7 @@ footer {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 10px;
+  font-size: 12.14px;
   line-height: 1.9;
   color: #62715a;
 }
@@ -4305,7 +4305,7 @@ footer {
   background: #64874526;
   padding: 6px 18px;
   color: #d0eda7;
-  font-size: 11px;
+  font-size: 12.43px;
   margin-top: 20px;
 }
 .completion-card .eyebrow {
@@ -4368,7 +4368,7 @@ footer {
   margin: 0 auto;
 }
 .puzzle-category {
-  font-size: 9px;
+  font-size: 11.86px;
   font-weight: 700;
   color: #7c8568;
   letter-spacing: 1.1px;
@@ -4389,12 +4389,12 @@ footer {
   margin: 25px 0;
 }
 .code-window-bar {
-  font-size: 8px;
+  font-size: 11.57px;
   color: #a6b698;
   padding-bottom: 17px;
 }
 .code-window-bar > span {
-  font-size: 6px;
+  font-size: 11px;
   letter-spacing: 3px;
   margin-right: 15px;
   color: #a9c380;
@@ -4407,7 +4407,7 @@ footer {
 }
 .code-line > span {
   color: #8ea17e;
-  font-size: 10px;
+  font-size: 12.14px;
   width: 9px;
   flex-shrink: 0;
 }
@@ -4421,7 +4421,7 @@ footer {
   margin: 24px 0;
 }
 .puzzle-options .report-option {
-  font-size: 12px;
+  font-size: 12.71px;
   padding: 14px 17px;
 }
 .puzzle-options .report-option:before {
@@ -4438,7 +4438,7 @@ footer {
   color: #5e7944;
   border-radius: 6px;
   font-family: var(--heading);
-  font-size: 11px;
+  font-size: 12.43px;
 }
 .page-intro {
   max-width: 750px;
@@ -4454,7 +4454,7 @@ footer {
   color: #66844c;
 }
 .page-intro p {
-  font-size: 12px;
+  font-size: 12.71px;
   color: #62715a;
   line-height: 1.9;
   max-width: 560px;
@@ -4485,7 +4485,7 @@ footer {
 }
 .search-field input {
   font: inherit;
-  font-size: 11px;
+  font-size: 12.43px;
   min-width: 0;
   border: 0;
   outline: 0;
@@ -4507,7 +4507,7 @@ footer {
   background: #eff3e7;
 }
 .filter-buttons button {
-  font-size: 9px;
+  font-size: 11.86px;
   padding: 8px 12px;
   background: 0 0;
   color: #62715a;
@@ -4527,7 +4527,7 @@ footer {
   height: 13px;
 }
 .glossary-count {
-  font-size: 10px;
+  font-size: 12.14px;
   color: #62715a;
   margin: 0 0 15px;
 }
@@ -4545,7 +4545,7 @@ footer {
   flex-direction: column;
 }
 .glossary-category {
-  font-size: 7px;
+  font-size: 11.29px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #62715a;
@@ -4556,7 +4556,7 @@ footer {
   margin: 10px 0 13px;
 }
 .glossary-card > p {
-  font-size: 11px;
+  font-size: 12.43px;
   color: #62715a;
   line-height: 1.85;
   margin-bottom: 19px;
@@ -4566,14 +4566,14 @@ footer {
   border-left: 2px solid #aacd7c;
   border-radius: 0 7px 7px 0;
   padding: 12px 13px;
-  font-size: 10px;
+  font-size: 12.14px;
   color: #62715a;
   line-height: 1.8;
   margin-top: auto;
 }
 .glossary-example > span {
   display: block;
-  font-size: 6px;
+  font-size: 11px;
   letter-spacing: 1px;
   color: #617e44;
   font-weight: 800;
@@ -4592,7 +4592,7 @@ footer {
 }
 .empty-search p {
   color: #62715a;
-  font-size: 12px;
+  font-size: 12.71px;
   margin: 15px 0;
 }
 .collection-overview {
@@ -4626,7 +4626,7 @@ footer {
   color: #70845d;
 }
 .collection-overview > div > span {
-  font-size: 10px;
+  font-size: 12.14px;
   color: #62715a;
 }
 .badge-grid {
@@ -4673,12 +4673,12 @@ footer {
   height: 23px;
   border-radius: 50%;
   background: #6e9545;
-  font-size: 11px;
+  font-size: 12.43px;
   color: #fff;
   font-style: normal;
 }
 .badge-tier {
-  font-size: 8px;
+  font-size: 11.57px;
   color: #62715a;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -4689,7 +4689,7 @@ footer {
   margin: 8px 0 10px;
 }
 .badge-card p {
-  font-size: 10px;
+  font-size: 12.14px;
   color: #62715a;
   line-height: 1.8;
 }
@@ -4700,7 +4700,7 @@ footer {
   gap: 6px;
   margin-top: 17px;
   color: #577c37;
-  font-size: 9px;
+  font-size: 11.86px;
   font-weight: 700;
 }
 .badge-status svg {
@@ -4709,10 +4709,10 @@ footer {
 }
 .badge-card .text-button {
   margin-top: 12px;
-  font-size: 10px;
+  font-size: 12.14px;
 }
 .collection-note {
-  font-size: 10px;
+  font-size: 12.14px;
   text-align: center;
   color: #62715a;
   margin: 20px auto;
@@ -4773,14 +4773,14 @@ footer {
   font-size: 16px;
 }
 .day-timeline p {
-  font-size: 11px;
+  font-size: 12.43px;
   color: #62715a;
   margin-top: 7px;
   line-height: 1.9;
   max-width: 690px;
 }
 .section-note {
-  font-size: 9px;
+  font-size: 11.86px;
   color: #62715a;
   line-height: 1.8;
   margin-top: 12px;
@@ -4813,7 +4813,7 @@ footer {
   margin: 17px 0 9px;
 }
 .roadmap-grid p {
-  font-size: 11px;
+  font-size: 12.43px;
   color: #62715a;
   line-height: 1.9;
 }
@@ -4839,7 +4839,7 @@ footer {
 }
 .project-grid p {
   color: #62715a;
-  font-size: 11px;
+  font-size: 12.43px;
   line-height: 1.9;
 }
 .career-faq > h2 {
@@ -4859,7 +4859,7 @@ footer {
   gap: 15px;
   cursor: pointer;
   list-style: none;
-  font-size: 12px;
+  font-size: 12.71px;
   font-weight: 700;
   padding: 18px 0;
 }
@@ -4875,7 +4875,7 @@ footer {
   transform: rotate(45deg);
 }
 .career-faq details p {
-  font-size: 11px;
+  font-size: 12.43px;
   line-height: 1.95;
   color: #62715a;
   max-width: 850px;
@@ -5782,10 +5782,10 @@ body[data-theme='dark'] .complete-tick {
     font-size: 19px;
   }
   .difficulty-body > span:last-child {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .difficulty-tag {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .bonus-card {
     padding: 30px;
@@ -5798,7 +5798,7 @@ body[data-theme='dark'] .complete-tick {
     font-size: 26px;
   }
   .bonus-content > span:not(.eyebrow):not(.bonus-cta) {
-    font-size: 11px;
+    font-size: 12.43px;
   }
 }
 @media (max-width: 1200px) {
@@ -5811,10 +5811,10 @@ body[data-theme='dark'] .complete-tick {
     letter-spacing: -2px;
   }
   .hero-copy > p {
-    font-size: 11px;
+    font-size: 12.43px;
   }
   .hero .eyebrow {
-    font-size: 6.5px;
+    font-size: 11.14px;
   }
   .hero .title-spark {
     display: none;
@@ -5847,11 +5847,11 @@ body[data-theme='dark'] .complete-tick {
     gap: 12px;
   }
   .hero-buttons .button {
-    font-size: 10px;
+    font-size: 12.14px;
     padding: 0 16px;
   }
   .hero-buttons .text-button {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .difficulty-card {
     padding: 15px 12px;
@@ -5863,7 +5863,7 @@ body[data-theme='dark'] .complete-tick {
     gap: 4px;
   }
   .difficulty-body > strong small {
-    font-size: 6px;
+    font-size: 11px;
   }
   .difficulty-icon {
     width: 27px;
@@ -5874,20 +5874,20 @@ body[data-theme='dark'] .complete-tick {
     height: 15px;
   }
   .difficulty-tag {
-    font-size: 6px;
+    font-size: 11px;
   }
   .difficulty-body > span:last-child {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .difficulty-check {
     right: 9px;
     top: 13px;
     width: 16px;
     height: 16px;
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .difficulty-track {
-    font-size: 6.5px;
+    font-size: 11.14px;
     right: 12px;
   }
   .mission-card h3 {
@@ -5905,10 +5905,10 @@ body[data-theme='dark'] .complete-tick {
     font-size: 21px;
   }
   .bonus-content .eyebrow {
-    font-size: 6px;
+    font-size: 11px;
   }
   .bonus-content > span:not(.eyebrow):not(.bonus-cta) {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .quiz-bonus .bonus-art {
     width: 49px;
@@ -5925,10 +5925,10 @@ body[data-theme='dark'] .complete-tick {
     font-size: 22px;
   }
   .knowledge-teaser p {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .knowledge-teaser .button {
-    font-size: 10px;
+    font-size: 12.14px;
     padding: 0 16px;
   }
   .teaser-icon {
@@ -5948,7 +5948,7 @@ body[data-theme='dark'] .complete-tick {
     font-size: 15px;
   }
   .roadmap-grid p {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .project-grid article {
     padding: 20px;
@@ -5957,7 +5957,7 @@ body[data-theme='dark'] .complete-tick {
     font-size: 18px;
   }
   .level-tab {
-    font-size: 8px;
+    font-size: 11.57px;
     padding: 10px;
   }
   .phone-preview {
@@ -5967,10 +5967,10 @@ body[data-theme='dark'] .complete-tick {
     padding: 12px;
   }
   .template-tab strong {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .template-tab small {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .game-heading .timer-note {
     display: none;
@@ -5985,7 +5985,7 @@ body[data-theme='dark'] .complete-tick {
     margin-top: 40px;
   }
   .topbar-left {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .hero h1 {
     font-size: 42px;
@@ -6003,20 +6003,20 @@ body[data-theme='dark'] .complete-tick {
     padding: 10px 13px;
   }
   .hero-copy > p {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .hero .hero-note {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .hero .eyebrow {
-    font-size: 6px;
+    font-size: 11px;
   }
   .hero-buttons {
     gap: 12px;
   }
   .hero-art .art-bottom,
   .hero-buttons .text-button {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .section-heading h2 {
     font-size: 21px;
@@ -6032,7 +6032,7 @@ body[data-theme='dark'] .complete-tick {
     font-size: 17px;
   }
   .difficulty-body > span:last-child {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .difficulty-check {
     right: 10px;
@@ -6042,7 +6042,7 @@ body[data-theme='dark'] .complete-tick {
     padding-right: 6px;
   }
   .lab-stats > span {
-    font-size: 9px;
+    font-size: 11.86px;
     gap: 7px;
   }
   .lab-stats strong {
@@ -6059,10 +6059,10 @@ body[data-theme='dark'] .complete-tick {
     font-size: 23px;
   }
   .bonus-content > span:not(.eyebrow):not(.bonus-cta) {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .bonus-content .eyebrow {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .knowledge-teaser {
     gap: 20px;
@@ -6081,13 +6081,13 @@ body[data-theme='dark'] .complete-tick {
   }
   .game-difficulty-label,
   .game-difficulty-label select {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .step-xp {
     display: none;
   }
   .level-tab {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .template-tab {
     gap: 8px;
@@ -6097,10 +6097,10 @@ body[data-theme='dark'] .complete-tick {
     height: 17px;
   }
   .template-tab small {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .template-tab strong {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .puzzle-panel > h2 {
     font-size: 22px;
@@ -6134,7 +6134,7 @@ body[data-theme='dark'] .complete-tick {
     z-index: 50;
   }
   .sidebar .main-nav .nav-item {
-    font-size: 7px;
+    font-size: 11.29px;
     line-height: 1.4;
     font-weight: 600;
     display: flex;
@@ -6176,7 +6176,7 @@ body[data-theme='dark'] .complete-tick {
     padding: 0 20px;
   }
   .topbar-left {
-    font-size: 6.5px;
+    font-size: 11.14px;
     gap: 6px;
     letter-spacing: 0.7px;
   }
@@ -6184,7 +6184,7 @@ body[data-theme='dark'] .complete-tick {
     gap: 9px;
   }
   .xp-chip {
-    font-size: 8px;
+    font-size: 11.57px;
     padding: 4px 6px;
     gap: 3px;
   }
@@ -6193,7 +6193,7 @@ body[data-theme='dark'] .complete-tick {
     height: 10px;
   }
   .duration {
-    font-size: 8px;
+    font-size: 11.57px;
     gap: 4px;
   }
   .duration svg {
@@ -6223,12 +6223,12 @@ body[data-theme='dark'] .complete-tick {
     margin: 21px 0 18px;
   }
   .hero .eyebrow {
-    font-size: 6px;
+    font-size: 11px;
     letter-spacing: 0.75px;
     white-space: nowrap;
   }
   .hero-copy > p {
-    font-size: 11px;
+    font-size: 12.43px;
     line-height: 1.9;
     max-width: 420px;
   }
@@ -6238,16 +6238,16 @@ body[data-theme='dark'] .complete-tick {
   }
   .hero-buttons .button {
     padding: 0 17px;
-    font-size: 10px;
+    font-size: 12.14px;
     min-height: 44px;
     gap: 10px;
   }
   .hero-buttons .text-button {
-    font-size: 8px;
+    font-size: 11.57px;
     gap: 6px;
   }
   .hero .hero-note {
-    font-size: 8px;
+    font-size: 11.57px;
     margin-top: 15px;
   }
   .hero-art {
@@ -6307,7 +6307,7 @@ body[data-theme='dark'] .complete-tick {
     gap: 12px 0;
   }
   .lab-stats > span {
-    font-size: 9px;
+    font-size: 11.86px;
     justify-content: flex-start;
     padding-left: 17px;
     gap: 8px;
@@ -6335,7 +6335,7 @@ body[data-theme='dark'] .complete-tick {
     line-height: 1.25;
   }
   .difficulty-note {
-    font-size: 8px;
+    font-size: 11.57px;
     max-width: 120px;
     line-height: 1.7;
   }
@@ -6368,14 +6368,14 @@ body[data-theme='dark'] .complete-tick {
     gap: 10px;
   }
   .difficulty-body > strong small {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .difficulty-tag {
-    font-size: 6px;
+    font-size: 11px;
     margin-bottom: 3px;
   }
   .difficulty-body > span:last-child {
-    font-size: 9px;
+    font-size: 11.86px;
     margin-top: 3px;
   }
   .difficulty-check {
@@ -6383,12 +6383,12 @@ body[data-theme='dark'] .complete-tick {
     height: 20px;
     right: 15px;
     top: 18px;
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .difficulty-track {
     bottom: 10px;
     right: 15px;
-    font-size: 6.5px;
+    font-size: 11.14px;
   }
   .mission-section {
     margin-top: 32px;
@@ -6401,7 +6401,7 @@ body[data-theme='dark'] .complete-tick {
     font-size: 20px;
   }
   .mission-card > p {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .card-visual {
     right: 19px;
@@ -6413,13 +6413,13 @@ body[data-theme='dark'] .complete-tick {
     right: 15px;
   }
   .progress-pill {
-    font-size: 7px;
+    font-size: 11.29px;
     padding: 6px 9px;
     margin-top: 17px;
     gap: 5px;
   }
   .card-number {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .bonus-section {
     margin-top: 32px;
@@ -6447,17 +6447,17 @@ body[data-theme='dark'] .complete-tick {
     font-size: 23px;
   }
   .bonus-content .eyebrow {
-    font-size: 6px;
+    font-size: 11px;
   }
   .bonus-content > span:not(.eyebrow):not(.bonus-cta) {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .bonus-cta {
-    font-size: 9px;
+    font-size: 11.86px;
     margin-top: 16px;
   }
   .bonus-note {
-    font-size: 7px;
+    font-size: 11.29px;
     max-width: 100px;
     line-height: 1.8;
   }
@@ -6473,17 +6473,17 @@ body[data-theme='dark'] .complete-tick {
     margin-top: 11px;
   }
   .knowledge-teaser .eyebrow {
-    font-size: 6px;
+    font-size: 11px;
     letter-spacing: 1px;
   }
   .knowledge-teaser p {
-    font-size: 10px;
+    font-size: 12.14px;
     line-height: 1.9;
     margin-top: 12px;
   }
   .knowledge-teaser > .button {
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 12.14px;
     min-height: 44px;
   }
   .bottom-banner {
@@ -6491,10 +6491,10 @@ body[data-theme='dark'] .complete-tick {
     padding: 18px;
   }
   .bottom-banner h3 {
-    font-size: 12px;
+    font-size: 12.71px;
   }
   .bottom-banner p {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .bottom-banner > .text-button {
     margin-left: 44px;
@@ -6505,7 +6505,7 @@ body[data-theme='dark'] .complete-tick {
     flex-wrap: wrap;
   }
   .game-heading > .back-link {
-    font-size: 8px;
+    font-size: 11.57px;
     gap: 5px;
     max-width: 150px;
   }
@@ -6519,13 +6519,13 @@ body[data-theme='dark'] .complete-tick {
     gap: 0;
   }
   .game-difficulty-label select {
-    font-size: 8px;
+    font-size: 11.57px;
     padding: 7px;
     max-width: 108px;
     border-radius: 6px;
   }
   .game-timer {
-    font-size: 9px;
+    font-size: 11.86px;
     gap: 4px;
     margin-left: 3px;
   }
@@ -6543,7 +6543,7 @@ body[data-theme='dark'] .complete-tick {
     gap: 5px;
   }
   .game-step:after {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .game-step .step-xp {
     display: none;
@@ -6558,16 +6558,16 @@ body[data-theme='dark'] .complete-tick {
     max-width: none;
   }
   .game-title p {
-    font-size: 11px;
+    font-size: 12.43px;
     margin-top: 12px;
     line-height: 1.9;
   }
   .game-title .eyebrow {
-    font-size: 6px;
+    font-size: 11px;
     letter-spacing: 1px;
   }
   .sublevel-pill {
-    font-size: 6px;
+    font-size: 11px;
     padding: 7px 9px;
     max-width: 100px;
     text-align: center;
@@ -6578,14 +6578,14 @@ body[data-theme='dark'] .complete-tick {
     margin-bottom: 17px;
   }
   .level-tab {
-    font-size: 6.5px;
+    font-size: 11.14px;
     padding: 9px 7px;
     gap: 5px;
     line-height: 1.6;
     align-items: flex-start;
   }
   .level-tab > span {
-    font-size: 8px;
+    font-size: 11.57px;
     padding: 1px 4px;
     margin-top: 1px;
   }
@@ -6620,12 +6620,12 @@ body[data-theme='dark'] .complete-tick {
     height: 4px;
   }
   .board-legend {
-    font-size: 7px;
+    font-size: 11.29px;
     gap: 11px;
     margin-top: 12px;
   }
   .board-metrics > span {
-    font-size: 7px;
+    font-size: 11.29px;
     gap: 4px;
   }
   .board-metrics svg {
@@ -6637,17 +6637,17 @@ body[data-theme='dark'] .complete-tick {
     margin-bottom: 12px;
   }
   .repeat-row label {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .repeat-row select {
-    font-size: 8px;
+    font-size: 11.57px;
     max-width: 140px;
   }
   .command-button {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .game-actions .button {
-    font-size: 9px;
+    font-size: 11.86px;
     gap: 8px;
     padding: 0 14px;
   }
@@ -6659,23 +6659,23 @@ body[data-theme='dark'] .complete-tick {
     min-height: 98px;
   }
   .queue-label {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .queue-label > span {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .queue-item {
-    font-size: 8px;
+    font-size: 11.57px;
     padding: 5px 7px;
   }
   .panel-heading h2 {
     font-size: 17px;
   }
   .panel-tag {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .panel-description {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .template-tabs {
     gap: 6px;
@@ -6692,11 +6692,11 @@ body[data-theme='dark'] .complete-tick {
     height: 19px;
   }
   .template-tab strong {
-    font-size: 8px;
+    font-size: 11.57px;
     line-height: 1.6;
   }
   .template-tab small {
-    font-size: 6.5px;
+    font-size: 11.14px;
     margin-top: 3px;
     line-height: 1.6;
   }
@@ -6708,61 +6708,61 @@ body[data-theme='dark'] .complete-tick {
     padding: 22px 16px;
   }
   .mood-button.numeric {
-    font-size: 9px;
+    font-size: 11.86px;
     min-height: 43px;
   }
   .miniapp-fact {
-    font-size: 9px;
+    font-size: 11.86px;
     margin-top: 22px;
     max-width: 260px;
   }
   .rule-builder {
-    font-size: 9px;
+    font-size: 11.86px;
     line-height: 2.8;
     padding: 14px;
   }
   .rule-builder select {
-    font-size: 9px;
+    font-size: 11.86px;
     margin: 4px;
   }
   .rule-keyword {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .probe-chips button {
-    font-size: 9px;
+    font-size: 11.86px;
     padding: 7px 11px;
   }
   .report-option,
   .spec-box {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .test-history h3 {
-    font-size: 12px;
+    font-size: 12.71px;
   }
   .history-entry {
-    font-size: 9px;
+    font-size: 11.86px;
     gap: 10px;
   }
   .history-entry code {
-    font-size: 8px;
+    font-size: 11.57px;
     min-width: 60px;
     max-width: 95px;
   }
   .test-count {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .completion-card h1 {
     font-size: 30px;
   }
   .completion-card .eyebrow {
-    font-size: 7px;
+    font-size: 11.29px;
     letter-spacing: 1.1px;
   }
   .completion-actions {
     gap: 10px;
   }
   .completion-actions .button {
-    font-size: 10px;
+    font-size: 12.14px;
     min-height: 44px;
     padding: 0 17px;
   }
@@ -6770,11 +6770,11 @@ body[data-theme='dark'] .complete-tick {
     gap: 8px;
   }
   .earned-badge {
-    font-size: 8px;
+    font-size: 11.57px;
     padding: 12px;
   }
   .earned-xp {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .next-adventure {
     padding: 23px;
@@ -6790,7 +6790,7 @@ body[data-theme='dark'] .complete-tick {
     line-height: 1.5;
   }
   .puzzle-category {
-    font-size: 7px;
+    font-size: 11.29px;
     letter-spacing: 1px;
   }
   .code-window {
@@ -6798,20 +6798,20 @@ body[data-theme='dark'] .complete-tick {
     margin: 22px 0;
   }
   .code-line {
-    font-size: 11px;
+    font-size: 12.43px;
     gap: 12px;
   }
   .code-window-bar {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .puzzle-options .report-option {
-    font-size: 11px;
+    font-size: 12.43px;
     padding: 12px;
   }
   .option-letter {
     width: 21px;
     height: 21px;
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .page-intro {
     padding: 0 0 17px;
@@ -6823,11 +6823,11 @@ body[data-theme='dark'] .complete-tick {
     margin: 18px 0;
   }
   .page-intro p {
-    font-size: 11px;
+    font-size: 12.43px;
     line-height: 1.9;
   }
   .page-intro .eyebrow {
-    font-size: 7px;
+    font-size: 11.29px;
     letter-spacing: 1.3px;
   }
   .glossary-toolbar {
@@ -6840,18 +6840,18 @@ body[data-theme='dark'] .complete-tick {
     padding: 0 12px;
   }
   .search-field input {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .glossary-toolbar .filter-buttons {
     margin-top: 12px;
     justify-content: space-between;
   }
   .filter-buttons button {
-    font-size: 8px;
+    font-size: 11.57px;
     padding: 8px 10px;
   }
   .glossary-count {
-    font-size: 9px;
+    font-size: 11.86px;
     margin-top: 18px;
   }
   .glossary-grid {
@@ -6865,13 +6865,13 @@ body[data-theme='dark'] .complete-tick {
     font-size: 25px;
   }
   .glossary-card > p {
-    font-size: 11px;
+    font-size: 12.43px;
   }
   .glossary-example {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .glossary-category {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .collection-overview {
     padding: 20px 10px;
@@ -6885,10 +6885,10 @@ body[data-theme='dark'] .complete-tick {
     font-size: 28px;
   }
   .collection-overview strong > span {
-    font-size: 12px;
+    font-size: 12.71px;
   }
   .collection-overview > div > span {
-    font-size: 7px;
+    font-size: 11.29px;
     line-height: 1.8;
     margin-top: 4px;
   }
@@ -6910,22 +6910,22 @@ body[data-theme='dark'] .complete-tick {
     height: 25px;
   }
   .badge-tier {
-    font-size: 6px;
+    font-size: 11px;
   }
   .badge-card h2 {
     font-size: 16px;
     line-height: 1.3;
   }
   .badge-card p {
-    font-size: 8px;
+    font-size: 11.57px;
     line-height: 1.9;
   }
   .badge-card .text-button,
   .badge-status {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .collection-note {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .day-section {
     margin-top: 34px;
@@ -6938,7 +6938,7 @@ body[data-theme='dark'] .complete-tick {
     margin-top: 17px;
   }
   .day-section .filter-buttons button {
-    font-size: 9px;
+    font-size: 11.86px;
     padding: 9px 12px;
   }
   .day-timeline {
@@ -6956,7 +6956,7 @@ body[data-theme='dark'] .complete-tick {
     font-size: 15px;
   }
   .day-timeline p {
-    font-size: 10px;
+    font-size: 12.14px;
     line-height: 1.9;
   }
   .timeline-dot {
@@ -6969,7 +6969,7 @@ body[data-theme='dark'] .complete-tick {
     height: 120px !important;
   }
   .section-note {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .career-faq,
   .learning-roadmap,
@@ -6997,7 +6997,7 @@ body[data-theme='dark'] .complete-tick {
     margin-top: 13px;
   }
   .roadmap-grid p {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .project-grid {
     grid-template-columns: 1fr;
@@ -7011,17 +7011,17 @@ body[data-theme='dark'] .complete-tick {
     margin-top: 18px;
   }
   .project-grid p {
-    font-size: 11px;
+    font-size: 12.43px;
   }
   .career-faq details {
     padding: 0 17px;
   }
   .career-faq summary {
-    font-size: 11px;
+    font-size: 12.43px;
     padding: 17px 0;
   }
   .career-faq details p {
-    font-size: 10px;
+    font-size: 12.14px;
     line-height: 1.9;
   }
   .profession-intro h1 {
@@ -7029,7 +7029,7 @@ body[data-theme='dark'] .complete-tick {
   }
   .profession-card p,
   .profession-intro p {
-    font-size: 11px;
+    font-size: 12.43px;
   }
   .profession-card h2 {
     font-size: 24px;
@@ -7038,13 +7038,13 @@ body[data-theme='dark'] .complete-tick {
     gap: 8px;
   }
   .learning-panel .game-actions .button {
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .empty-search {
     padding: 30px 20px;
   }
   .empty-search p {
-    font-size: 11px;
+    font-size: 12.43px;
   }
   body[data-theme='dark'] .sidebar .main-nav {
     background: #18291ff2;
@@ -7068,21 +7068,21 @@ body[data-theme='dark'] .complete-tick {
     letter-spacing: -1.8px;
   }
   .hero .eyebrow {
-    font-size: 5.5px;
+    font-size: 11px;
     letter-spacing: 0.6px;
   }
   .hero-copy > p {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .hero-buttons {
     gap: 14px;
   }
   .hero-buttons .button {
     padding: 0 14px;
-    font-size: 9px;
+    font-size: 11.86px;
   }
   .hero-buttons .text-button {
-    font-size: 7.5px;
+    font-size: 11.43px;
   }
   .hero-art {
     height: 270px;
@@ -7117,7 +7117,7 @@ body[data-theme='dark'] .complete-tick {
     font-size: 17px;
   }
   .difficulty-body > span:last-child {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .difficulty-card {
     padding: 15px;
@@ -7128,7 +7128,7 @@ body[data-theme='dark'] .complete-tick {
   }
   .difficulty-note {
     max-width: 112px;
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .section-heading h2 {
     font-size: 19px;
@@ -7137,7 +7137,7 @@ body[data-theme='dark'] .complete-tick {
     font-size: 18px;
   }
   .mission-card > p {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .card-visual {
     right: 12px;
@@ -7160,22 +7160,22 @@ body[data-theme='dark'] .complete-tick {
     line-height: 55px;
   }
   .xp-reward {
-    font-size: 7px;
+    font-size: 11.29px;
     padding: 3px 6px;
   }
   .bonus-cta {
     gap: 5px;
   }
   .game-heading > .back-link {
-    font-size: 7px;
+    font-size: 11.29px;
     gap: 4px;
   }
   .game-difficulty-label select {
-    font-size: 7.5px;
+    font-size: 11.43px;
     padding: 6px;
   }
   .game-timer {
-    font-size: 8px;
+    font-size: 11.57px;
     gap: 3px;
   }
   .game-timer svg {
@@ -7189,28 +7189,28 @@ body[data-theme='dark'] .complete-tick {
     font-size: 26px;
   }
   .game-title .eyebrow {
-    font-size: 5.5px;
+    font-size: 11px;
     letter-spacing: 0.7px;
   }
   .game-title p {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .level-tab {
-    font-size: 6px;
+    font-size: 11px;
     padding: 8px 5px;
     gap: 4px;
   }
   .level-tab > span {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .template-tab {
     padding: 11px 7px;
   }
   .template-tab strong {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .template-tab small {
-    font-size: 6px;
+    font-size: 11px;
   }
   .puzzle-panel > h2 {
     font-size: 19px;
@@ -7219,7 +7219,7 @@ body[data-theme='dark'] .complete-tick {
     padding: 21px;
   }
   .puzzle-options .report-option {
-    font-size: 10px;
+    font-size: 12.14px;
   }
   .page-intro h1 {
     font-size: 31px;
@@ -7231,27 +7231,27 @@ body[data-theme='dark'] .complete-tick {
     gap: 7px;
   }
   .topbar-left {
-    font-size: 6px;
+    font-size: 11px;
   }
   .duration,
   .xp-chip {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .badge-card h2 {
     font-size: 14px;
   }
   .badge-card p {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .progress-pill {
-    font-size: 6px;
+    font-size: 11px;
     padding: 6px 7px;
   }
   .hero .hero-note {
-    font-size: 7px;
+    font-size: 11.29px;
   }
   .lab-stats > span {
-    font-size: 8px;
+    font-size: 11.57px;
   }
   .knowledge-teaser h2 {
     font-size: 22px;
@@ -7283,7 +7283,7 @@ body[data-theme='dark'] .complete-tick {
     bottom: 94px;
   }
   .panel-tag > #run-status {
-    font-size: 7px;
+    font-size: 11.29px;
   }
 }
 body[data-theme='light'] .collection-overview strong > span,
@@ -7311,7 +7311,7 @@ body[data-theme='light'] .roadmap-grid > article > span {
     scale: 0.8;
   }
   .hero .eyebrow {
-    font-size: 5.5px;
+    font-size: 11px;
     letter-spacing: 0.7px;
   }
 }
