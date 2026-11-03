@@ -633,3 +633,62 @@ body:not([data-theme='dark']) .option-letter {
   border-color: $control-line;
   color: #1d3d15;
 }
+
+// --- Kitöltések gépi összevetés alapján ----------------------------------------------------------------
+// Sötétben ezek kitöltése egy lépéssel elüt a környezetétől (1,35–2,05), világosban alig (1,01–1,2).
+// Tükörkép: a környezeténél egy lépéssel sötétebb, telt tónus.
+body:not([data-theme='dark']) {
+  // Aktív fülek és kiválasztott szint: a zsálya oldalháttéren ülnek, a halvány tónus beleolvadt
+  .level-tab.active,
+  .scenario-tab.active,
+  .template-tab.active {
+    background: #bcd994;
+    border-color: $dev-deep;
+    color: #183512;
+  }
+  .difficulty-card.selected {
+    background: #d2e6b2;
+  }
+
+  // Iránygombok és témaváltó: a felületnél egy lépéssel sötétebb
+  .command-button:not(:disabled) {
+    background: #e4eed4;
+    &:hover {
+      background: #d9eac0;
+    }
+  }
+  .theme-toggle.icon-button {
+    background: #d9eac0;
+  }
+
+  // Ikoncsempék, címkék
+  .mission-icon,
+  .profession-card > .mission-icon,
+  .teaser-icon,
+  .banner-icon,
+  .player-emblem {
+    background: #cfe4ad;
+  }
+  .card-peach .mission-icon,
+  .profession-card.peach > .mission-icon {
+    background: #f3c5a6;
+  }
+  .card-purple .mission-icon {
+    background: #d6c6f0;
+  }
+  .new-mark {
+    background: #c3dd9c;
+    color: #1d3d15;
+  }
+  .sublevel-pill {
+    border-color: $control-line;
+  }
+
+  // Elsődleges (lime) gomb: a márkaszín marad, finom keret adja a határozott szélét a világos felületen
+  .button.primary {
+    box-shadow: inset 0 0 0 1px #8fbf4f;
+  }
+  .legend-box.start {
+    border: 1px solid $dev-mid;
+  }
+}
