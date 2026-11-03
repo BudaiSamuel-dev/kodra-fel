@@ -179,10 +179,14 @@ body:not([data-theme='dark']) {
     border: 1px solid $line-soft;
     background: $surface;
   }
+  // Másodlagos gomb: sötétben telt kitöltés (#30432a, a panelnél világosabb). Tükörkép: a felületnél
+  // egy lépéssel sötétebb telt zöld, zöld keret, mélyzöld felirat.
   .button.secondary {
-    background: $surface;
+    background: #d9eac0;
     border: 1px solid $control-line;
-    &:hover {
+    color: #1d3d15;
+    &:hover:not(:disabled) {
+      background: #cde3ae;
       border-color: $control-hover;
     }
   }
