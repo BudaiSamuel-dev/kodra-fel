@@ -444,3 +444,29 @@ body:not([data-theme='dark']) {
     box-shadow: 0 0 0 3px rgba(134, 179, 81, 0.25);
   }
 }
+
+// --- Fejléc: XP-jelvény és kerek ikongombok (témaváltó, ablakbezáró, program törlése) ---
+// A 2.0-ban a keret a kitöltéssel azonos árnyalatú volt (#dfe9d2 a #ecf2e2-n), az ikongomb keret nélküli:
+// a sötét téma mintájára zöld kontúr és telt tónus.
+body:not([data-theme='dark']) {
+  .xp-chip {
+    background: $dev-tint;
+    border-color: $control-line;
+    color: #1d3d15;
+    &:hover {
+      border-color: $control-hover;
+    }
+  }
+  .xp-chip svg {
+    color: $dev-deep;
+  }
+  .icon-button {
+    background: #e6eed9;
+    border: 1px solid $control-line;
+    color: $dev-deep;
+    &:hover:not(:disabled) {
+      background: $dev-tint;
+      border-color: $control-hover;
+    }
+  }
+}
