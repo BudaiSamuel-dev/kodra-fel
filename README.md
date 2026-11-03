@@ -41,8 +41,8 @@ npm run lint
 - [x] Robotjáték (+ E2E teszt mind a 9 pályára)
 - [x] Tesztelő küldetés (+ E2E teszt mind a 9 helyzetre)
 - [x] Miniapp-építő + export (+ E2E teszt a letöltött appra is)
-- [ ] Bónuszok, tudástár, szakma, jelvények
-- [ ] Playwright E2E tesztek
+- [x] Bónuszok, eredményoldal, tudástár, szakma, jelvények
+- [x] Playwright E2E tesztek (teljes kaland 1905 XP-ig, 5 szélesség × 2 téma)
 - [ ] CSS összevonás és tisztítás
 
 A haladás a böngésző helyi tárhelyén marad (`kodra-fel-v2` kulcs, a 2.0 mentései átjönnek); az alkalmazás nem küld adatot külső szolgáltatásnak.

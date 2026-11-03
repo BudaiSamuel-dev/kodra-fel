@@ -1,10 +1,7 @@
-import { readFileSync } from 'node:fs'
-import { runInNewContext } from 'node:vm'
 import { expect, test } from '@playwright/test'
-import { chooseDifficulty, enterProgram, route } from './helpers'
+import { chooseDifficulty, enterProgram, legacy, route } from './helpers'
 
-// A pályák adatai a 2.0 forrásából: ha az új app eltérne, a teszt elbukna.
-const LEVELS = runInNewContext(readFileSync('legacy/dist/content.js', 'utf8') + ';ROBOT_LEVELS')
+const LEVELS = legacy('ROBOT_LEVELS')
 
 test('mind a 9 robotpálya végigjátszható, XP és jelvény jár érte', async ({ page }) => {
   const errors = []

@@ -21,3 +21,12 @@ p { margin: 0; }
 *::after {
   box-sizing: content-box;
 }
+
+// A Quasar minden [disabled] elemet .6-ra halványít !important-tal.
+// A 2.0-ban csak a gombok halványulnak, .48-ra; a tiltott select/input nem.
+button:disabled {
+  opacity: 0.48 !important;
+}
+[disabled]:not(button) {
+  opacity: 1 !important;
+}

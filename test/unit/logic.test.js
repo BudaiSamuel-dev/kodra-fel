@@ -76,3 +76,13 @@ describe('XP és mentés', () => {
     expect(loadGame(storage)).toMatchObject({ difficulty: 'expert', theme: 'light' })
   })
 })
+
+describe('tudástár keresés', () => {
+  it('ékezet- és kisbetű-független, kategóriával szűrhető', async () => {
+    const { GLOSSARY } = await import('data/glossary')
+    const { searchGlossary } = await import('logic/search')
+    expect(searchGlossary(GLOSSARY, 'HATARERTEK').map((g) => g[0])).toEqual(['Határérték'])
+    expect(searchGlossary(GLOSSARY, '', 'tesztelés')).toHaveLength(4)
+    expect(searchGlossary(GLOSSARY, 'határérték', 'fejlesztés')).toHaveLength(0)
+  })
+})

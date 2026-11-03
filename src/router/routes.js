@@ -10,6 +10,18 @@ const routes = [
         component: () => import('pages/MissionPage.vue'),
         meta: { section: 'missions' }
       },
+      {
+        path: 'eredmeny',
+        name: 'results',
+        component: () => import('pages/ResultsPage.vue'),
+        meta: { section: 'missions' }
+      },
+      {
+        path: 'bonusz/:kind(kodnyomozo|techradar)',
+        name: 'bonus',
+        component: () => import('pages/BonusPage.vue'),
+        meta: { section: 'missions' }
+      },
       { path: 'szakma', name: 'profession', component: () => import('pages/ProfessionPage.vue') },
       { path: 'tudastar', name: 'learn', component: () => import('pages/LearnPage.vue') },
       { path: 'jelvenyek', name: 'badges', component: () => import('pages/BadgesPage.vue') }

@@ -32,8 +32,7 @@ watch(() => store.game.difficulty, () => (completion.value = null))
 
 function complete() {
   const first = store.completeMission(mission.value)
-  // Az eredményoldal még átírás alatt áll; amíg nincs meg, a jelvénykártya jelenik meg.
-  if (store.profile.completed.length === 3 && router.hasRoute('results')) return router.push('/eredmeny')
+  if (store.profile.completed.length === 3) return router.push('/eredmeny')
   completion.value = { first }
   celebrate()
   scrollTop()

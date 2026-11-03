@@ -1,8 +1,6 @@
 import { expect, test } from '@playwright/test'
 import { readFileSync, unlinkSync } from 'node:fs'
-import { chooseDifficulty } from './helpers'
-
-const DIFFICULTIES = ['explorer', 'challenger', 'expert']
+import { chooseDifficulty, DIFFICULTIES } from './helpers'
 
 test('mindhárom miniapp elkészíthető, újratesztelés kell szabályváltás után, és az export működik', async ({ page, browser }, testInfo) => {
   const errors = []

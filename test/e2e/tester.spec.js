@@ -1,9 +1,7 @@
-import { readFileSync } from 'node:fs'
-import { runInNewContext } from 'node:vm'
 import { expect, test } from '@playwright/test'
-import { chooseDifficulty } from './helpers'
+import { chooseDifficulty, legacy } from './helpers'
 
-const SCENARIOS = runInNewContext(readFileSync('legacy/dist/content.js', 'utf8') + ';TEST_SCENARIOS')
+const SCENARIOS = legacy('TEST_SCENARIOS')
 // Az utolsó próba után a demóapp kimenetében ennek kell szerepelnie (a 2.0 smoke tesztjéből).
 const EXPECTED = {
   explorer: ['2 000', 'Sikeres', 'Legalább'],
