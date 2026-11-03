@@ -100,6 +100,9 @@ const PROPS = {
   'background-color': transformBackground
 }
 
+const BACKGROUND_LONGHAND =
+  /^(-webkit-)?background-(clip|origin|size|position|position-x|position-y|repeat|attachment|image|color|blend-mode)$/
+
 const prefix = (selectors) =>
   selectors.map((s) => (s.startsWith('body') ? s.replace(/^body/, LIGHT) : `${LIGHT} ${s}`)).join(',\n')
 
@@ -122,13 +125,23 @@ function generate() {
       const changedSelectors = rule.selectors.filter(eligible)
       const kept = rule.selectors.filter((s) => !eligible(s))
 
+      // A background rövidítés alapértékre állítja a többi háttér-tulajdonságot (pl. background-clip: text
+      // a gradiens szövegnél), ezért azokat is visszük vele, különben a másolat elrontaná az eredetit.
+      const companions =
+        decl.prop === 'background'
+          ? rule.nodes
+              .slice(rule.nodes.indexOf(decl) + 1) // csak az utána állók: az előtte lévőket az eredetiben is felülírja
+              .filter((n) => n.type === 'decl' && BACKGROUND_LONGHAND.test(n.prop))
+          : []
+      const copyRule = (selectors, value) =>
+        postcss
+          .rule({ selector: prefix(selectors) })
+          .append({ prop: decl.prop, value }, ...companions.map((n) => ({ prop: n.prop, value: n.value })))
+
       const copies = []
-      if (kept.length)
-        copies.push(postcss.rule({ selector: prefix(kept) }).append({ prop: decl.prop, value: decl.value }))
+      if (kept.length) copies.push(copyRule(kept, decl.value))
       if (changedSelectors.length) {
-        copies.push(
-          postcss.rule({ selector: prefix(changedSelectors) }).append({ prop: decl.prop, value: transformed })
-        )
+        copies.push(copyRule(changedSelectors, transformed))
         changed[decl.prop === 'color' ? 'color' : 'background'] += changedSelectors.length
       }
       for (const copy of copies) {

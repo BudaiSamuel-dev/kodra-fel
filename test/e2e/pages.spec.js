@@ -91,3 +91,20 @@ for (const theme of ['dark', 'light'])
       }
     }
   })
+
+// Regresszió: a világos téma generált CSS-e egyszer felülírta a background-clip: text beállítást,
+// és a gradiens felirat („alkotóvá.”) zöld téglalappá vált.
+for (const theme of ['dark', 'light'])
+  test(`a gradiens feliratok szövegre vágva jelennek meg (${theme})`, async ({ page }) => {
+    await page.addInitScript((t) => localStorage.setItem('kodra-fel-v2', JSON.stringify({ theme: t })), theme)
+    await page.goto('/')
+    await expect(page.locator('.hero h1')).toBeVisible()
+    const clipped = await page.evaluate(() =>
+      [...document.querySelectorAll('#main *')]
+        .filter((el) => getComputedStyle(el).backgroundImage.includes('gradient'))
+        .filter((el) => getComputedStyle(el).webkitTextFillColor === 'rgba(0, 0, 0, 0)')
+        .map((el) => getComputedStyle(el).webkitBackgroundClip)
+    )
+    expect(clipped.length).toBeGreaterThan(0)
+    expect(clipped.every((c) => c === 'text')).toBe(true)
+  })
