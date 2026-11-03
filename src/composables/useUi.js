@@ -1,4 +1,4 @@
-import { reactive } from 'vue'
+import { nextTick, reactive } from 'vue'
 
 // Az egész appban közös felületi állapot: értesítés (toast) és párbeszédablak.
 export const ui = reactive({ toast: '', toastVisible: false, dialog: null })
@@ -33,3 +33,12 @@ export function celebrate(count = 25) {
 }
 
 export const scrollTop = () => window.scrollTo({ top: 0, behavior: 'instant' })
+
+// Tartalomváltás után a fókusz az új címre kerül (képernyőolvasóknak).
+export async function focusHeading() {
+  await nextTick()
+  const h1 = document.querySelector('#main h1')
+  if (!h1) return
+  h1.tabIndex = -1
+  h1.focus({ preventScroll: true })
+}

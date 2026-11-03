@@ -30,6 +30,7 @@ Futás közben nincs szükség internetre: a betűkészletek és az ikonok a pro
 
 ```sh
 npm run test:unit   # Vitest
+npm run test:e2e    # Playwright (a /usr/bin/chromium böngészővel; másik útvonal: CHROMIUM_PATH)
 npm run lint
 ```
 
@@ -37,7 +38,7 @@ npm run lint
 
 - [x] Váz, layout, téma, főoldal
 - [x] Adat- és logikaréteg + unit tesztek
-- [ ] Robotjáték
+- [x] Robotjáték (+ E2E teszt mind a 9 pályára)
 - [ ] Tesztelő küldetés
 - [ ] Miniapp-építő + export
 - [ ] Bónuszok, tudástár, szakma, jelvények
