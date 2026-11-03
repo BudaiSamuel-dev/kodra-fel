@@ -598,3 +598,20 @@ body:not([data-theme='dark']) {
     color: $dev-deep;
   }
 }
+
+// Bónuszkártyák nagy ikonja: sötétben határozott eltolt árnyék (3D hatás), világosban #c9bedc55 volt,
+// szinte láthatatlan. A szerep mélyebb árnyalatában kap térhatású árnyékot.
+body:not([data-theme='dark']) {
+  // Mint sötétben: a jel kontrasztos, az árnyéka tömör és a háttérnél sötétebb (nem áttetsző szellemkép)
+  .debug-bonus .bonus-art {
+    color: #7a5bb8;
+    text-shadow: 4px 5px #c6b4e8;
+  }
+  .debug-bonus .bonus-art > span {
+    color: #a387d8;
+  }
+  .quiz-bonus .bonus-art {
+    background: #fff3e8;
+    box-shadow: 6px 6px 0 rgba(138, 68, 33, 0.3);
+  }
+}
