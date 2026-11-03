@@ -126,3 +126,110 @@ body:not([data-theme='dark']) {
     border-color: #bcc8ad;
   }
 }
+
+// Illusztrációk és ikonok világos módban.
+// A 2.0 itt halvány pasztell színeket használt fehér alapon (pl. #f0eae3 tesztsor, #9d89bb ikon #eee8f8-on),
+// ezért a kártyák rajzai kifakultak. Ugyanazok az árnyalatok, de telítettebben és sötétebb vonalakkal,
+// a sötét mód kontrasztjához igazítva. Zöld = fejlesztő, barack = tesztelő, lila = alkotó.
+body:not([data-theme='dark']) {
+  // Ikoncsempék
+  .mission-icon,
+  .profession-card > .mission-icon {
+    background: #dcebc4;
+    color: #3f6b2a;
+  }
+  .card-peach .mission-icon,
+  .profession-card.peach > .mission-icon {
+    background: #f8d6c0;
+    color: #94532f;
+  }
+  .card-purple .mission-icon {
+    background: #e3d8f5;
+    color: #66509a;
+  }
+  .difficulty-icon {
+    background: #e2eed0;
+    border-color: #bfd3a3;
+    color: #3f6b2a;
+  }
+  .teaser-icon {
+    border-color: #b8cc9a;
+    color: #4f7a2c;
+  }
+  .badge-emblem {
+    border-color: #c9d6b8;
+    color: #6f8559;
+  }
+
+  // 01 / Fejlesztő: parancsgombok
+  .command-chip {
+    background: #e2edd2;
+    border-color: #b5c99a;
+    box-shadow: 0 3px 0 #b5c99a;
+    color: #3a5c2b;
+  }
+  .command-chip:nth-child(2) {
+    background: #ebf2e0;
+  }
+  .command-chip.small-play {
+    background: #b5d486;
+    border-color: #96b866;
+  }
+  .small-play svg {
+    fill: #2c4a1c;
+  }
+  .visual-dots {
+    color: #8c9a78;
+  }
+
+  // 02 / Tesztelő: tesztsorok és nagyító
+  .test-line > span {
+    background: #e2d9ce;
+  }
+  .test-line:nth-child(2) > span {
+    background: #e8b293;
+  }
+  .test-check {
+    background: #d3e5b6;
+    color: #44702a;
+  }
+  .test-error {
+    background: #f2c0a2;
+    color: #93461f;
+  }
+  .bug-magnifier {
+    border-color: #cf9a75;
+    background: #fff5ea;
+    box-shadow: 2px 3px rgba(150, 95, 55, 0.18);
+  }
+  .bug-magnifier:after {
+    background: #c48a62;
+  }
+  .bug-magnifier svg {
+    color: #8f5530;
+  }
+
+  // 03 / Alkotó: miniapp ablak és kurzor
+  .mini-app {
+    background: #f5f0fe;
+    border-color: #b4a1d6;
+    box-shadow: 3px 4px 0 #d9cdee;
+  }
+  .mini-app-dots {
+    color: #8d76b4;
+    border-color: #ddd1f0;
+  }
+  .mini-app-content > span {
+    background: #dacbf0;
+    color: #6c4ea3;
+  }
+  .mini-app-content i {
+    background: #cbbde3;
+  }
+  .mini-app-button {
+    background: #977bc5;
+  }
+  .build-cursor {
+    color: #7f66ad;
+  }
+}
