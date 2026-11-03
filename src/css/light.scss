@@ -548,14 +548,13 @@ body:not([data-theme='dark']) {
 }
 
 // Menü számláló/pipa doboza: a #e2e7dd keret az aktív menüpont zöld hátterén szinte eltűnt.
+// A sötét téma mintájára nincs saját kitöltése, és aktív/nem aktív menüpontban ugyanúgy néz ki:
+// egy keretszín, ami mindkét háttéren látszik (elefántcsonton 4,7:1, az aktív zöldön 3,5:1).
 body:not([data-theme='dark']) {
   .nav-count {
-    border-color: $control-line;
+    background: transparent;
+    border-color: $control-hover;
     color: $dev-deep;
-  }
-  .nav-item.active .nav-count {
-    border-color: $control-hover; // 3,5:1 az aktív menüpont zöld hátterén
-    background: rgba(248, 248, 240, 0.6);
   }
 }
 
