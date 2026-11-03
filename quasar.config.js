@@ -4,7 +4,7 @@ const dir = (path) => fileURLToPath(new URL(path, import.meta.url))
 export default () => ({
   boot: ['components'],
   // Sorrend számít: reset → a Kódra fel! stílusa → saját kiegészítések
-  css: ['fonts.css', 'reset.scss', 'kodra.css', 'light-generated.css', 'light.scss', 'app.scss'],
+  css: ['fonts.css', 'reset.scss', 'kodra.css', 'light-generated.css', 'light.scss', 'dark.scss', 'app.scss'],
   extras: [],
   build: {
     target: { browser: ['es2022', 'firefox115', 'chrome115', 'safari14'] },

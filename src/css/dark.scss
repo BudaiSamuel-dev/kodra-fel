@@ -1,0 +1,84 @@
+// Sötét téma — a világos téma szerepszínei sötétre hangolva.
+//
+// A világos témában (light.scss) a három szerep színe a kártyákon is megjelenik: felülről beúszó tónus,
+// színes keret, színes címke. A 2.0 sötét témájában a küldetés- és szakmakártyák egyformán sötétzöldek
+// voltak; ez a réteg ugyanazokat a hatásokat adja meg sötét tónusokkal. Zöld = fejlesztő, barack =
+// tesztelő, lila = alkotó. A bónuszkártyák, jelvények és „Például” dobozok már a 2.0-ban színesek voltak.
+
+// Sötét felületek (a 2.0 sötét témájából)
+$mission-surface: #19291f;
+$card-surface: #1c2b20;
+
+// Szerepszínek sötéten: tónus (háttér), keret, hover-keret, felirat
+$dev-tint: #27411f;
+$dev-line: #4f7a36;
+$dev-line-hover: #6f9a4c;
+$dev-text: #b9dc8a;
+
+$test-tint: #45301f;
+$test-line: #8f5b38;
+$test-line-hover: #b8794e;
+$test-text: #f2b48a;
+
+$make-tint: #352c4b;
+$make-line: #75609c;
+$make-line-hover: #9a82c6;
+$make-text: #cbb6f0;
+
+body[data-theme='dark'] {
+  // Küldetéskártyák: a szerep színe felülről beúszik, a keret is színezett
+  .mission-card.card-green {
+    background: linear-gradient(180deg, $dev-tint 0, $mission-surface 58%);
+    border-color: $dev-line;
+    &:hover {
+      border-color: $dev-line-hover;
+    }
+  }
+  .mission-card.card-peach {
+    background: linear-gradient(180deg, $test-tint 0, $mission-surface 58%);
+    border-color: $test-line;
+    &:hover {
+      border-color: $test-line-hover;
+    }
+  }
+  .mission-card.card-purple {
+    background: linear-gradient(180deg, $make-tint 0, $mission-surface 58%);
+    border-color: $make-line;
+    &:hover {
+      border-color: $make-line-hover;
+    }
+  }
+  .card-peach .card-number {
+    color: $test-text;
+  }
+  .card-purple .card-number {
+    color: $make-text;
+  }
+
+  // Szakmakártyák: fejlesztő zöld, tesztelő barack
+  .profession-card {
+    background: linear-gradient(180deg, $dev-tint 0, $card-surface 45%);
+    border-color: $dev-line;
+  }
+  .profession-card.peach {
+    background: linear-gradient(180deg, $test-tint 0, $card-surface 45%);
+    border-color: $test-line;
+  }
+  .profession-card.peach .eyebrow {
+    color: $test-text;
+  }
+
+  // Tanulási és összesítő panelek: zöld átmenet a sarokból
+  .knowledge-teaser {
+    background: linear-gradient(135deg, $dev-tint 0, #1b2b20 70%);
+    border-color: $dev-line;
+  }
+  .learning-panel {
+    background: linear-gradient(135deg, $dev-tint 0, #20321f 70%);
+    border-color: $dev-line;
+  }
+  .collection-overview {
+    background: linear-gradient(135deg, $dev-tint 0, #21351f 70%);
+    border-color: $dev-line;
+  }
+}
