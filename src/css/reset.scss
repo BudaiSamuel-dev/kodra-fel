@@ -1,0 +1,16 @@
+// A Quasar alapstílusa Material-méretű címsorokat és Roboto betűt ad.
+// Ezeket visszaállítjuk böngésző-alapra, hogy a Kódra fel! saját stílusa érvényesüljön.
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: normal;
+  font-weight: 600;
+  line-height: 1.2;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+p { margin: 0; }

@@ -1,0 +1,8 @@
+// Új, 3.0-s kiegészítések a régi stílus fölé.
+
+// A router-link gombok ugyanúgy nézzenek ki, mint a <button>-ök.
+a.button,
+a.text-button,
+a.xp-chip {
+  cursor: pointer;
+}

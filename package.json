@@ -1,0 +1,40 @@
+{
+  "name": "kodra-fel",
+  "version": "3.0.0",
+  "description": "Kódra fel! – pályaorientációs tech-játszótér szoftverfejlesztő és -tesztelő technikus képzés iránt érdeklődőknek",
+  "productName": "Kódra fel!",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{js,cjs,mjs,vue}\"",
+    "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "postinstall": "quasar prepare"
+  },
+  "engines": {
+    "node": "^30 || ^28 || ^26 || ^24 || ^22.22.0",
+    "npm": ">= 6.13.4"
+  },
+  "dependencies": {
+    "pinia": "^4.1.0",
+    "quasar": "^2.35.2",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@quasar/app-vite": "^3.10.3",
+    "@vue/test-utils": "^2.5.1",
+    "eslint": "^10.14.0",
+    "eslint-plugin-vue": "^10.12.0",
+    "globals": "^17.14.0",
+    "jsdom": "^30.1.3",
+    "prettier": "^3.9.10",
+    "sass-embedded": "^1.107.1",
+    "vitest": "^5.1.0"
+  }
+}
