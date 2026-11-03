@@ -103,3 +103,75 @@ body[data-theme] .profession-card.peach .button {
     transform: none;
   }
 }
+
+// Küldetéskártyák nyíl-köre: alaphelyzetben a kártya szerepszínét kapja (keret + nyíl), rámutatáskor vagy
+// billentyűzetes fókusznál a szakmakártyák gombjaival azonos átmenettel kitöltődik, és a nyíl előrébb csúszik.
+body[data-theme] .mission-card {
+  .card-arrow {
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+  .card-arrow svg {
+    color: inherit;
+  }
+  &:hover .card-arrow,
+  &:focus-visible .card-arrow {
+    transform: translateX(3px);
+  }
+}
+// Alapszínek: világos téma
+body:not([data-theme='dark']) {
+  .mission-card.card-green .card-arrow {
+    border-color: #86b351;
+    color: #2f5d1e;
+  }
+  .mission-card.card-peach .card-arrow {
+    border-color: #dc8a5c;
+    color: #8a4421;
+  }
+  .mission-card.card-purple .card-arrow {
+    border-color: #9a7cd2;
+    color: #573a91;
+  }
+}
+// Alapszínek: sötét téma
+body[data-theme='dark'] {
+  .mission-card.card-green .card-arrow {
+    border-color: #6f9a4c;
+    color: #b9dc8a;
+  }
+  .mission-card.card-peach .card-arrow {
+    border-color: #b8794e;
+    color: #f2b48a;
+  }
+  .mission-card.card-purple .card-arrow {
+    border-color: #9a82c6;
+    color: #cbb6f0;
+  }
+}
+// Kitöltés rámutatáskor/fókuszkor: mindkét témában ugyanaz (mint a szakmakártyák gombjai)
+body[data-theme] .mission-card {
+  &.card-green:is(:hover, :focus-visible) .card-arrow {
+    background: linear-gradient(135deg, #dcf9a3 0%, #a6d46a 100%);
+    border-color: #86b351;
+    color: #183512;
+  }
+  &.card-peach:is(:hover, :focus-visible) .card-arrow {
+    background: linear-gradient(135deg, #ffdcc2 0%, #f0a070 100%);
+    border-color: #dc8a5c;
+    color: #4f240c;
+  }
+  &.card-purple:is(:hover, :focus-visible) .card-arrow {
+    background: linear-gradient(135deg, #ece3fc 0%, #a98ce0 100%);
+    border-color: #9a7cd2;
+    color: #2b1655;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body[data-theme] .mission-card .card-arrow {
+    transform: none !important;
+  }
+}
