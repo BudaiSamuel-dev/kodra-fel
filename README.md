@@ -40,7 +40,7 @@ npm run lint
 - [x] Adat- és logikaréteg + unit tesztek
 - [x] Robotjáték (+ E2E teszt mind a 9 pályára)
 - [x] Tesztelő küldetés (+ E2E teszt mind a 9 helyzetre)
-- [ ] Miniapp-építő + export
+- [x] Miniapp-építő + export (+ E2E teszt a letöltött appra is)
 - [ ] Bónuszok, tudástár, szakma, jelvények
 - [ ] Playwright E2E tesztek
 - [ ] CSS összevonás és tisztítás

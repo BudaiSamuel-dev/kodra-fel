@@ -16,6 +16,15 @@ export function downloadBlob(content, name, type) {
   setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
 
+// Mi hiányzik még a kiadáshoz? Üres szöveg, ha az app kész.
+export function appProblem(template, app) {
+  if (!app.name.trim()) return 'Adj nevet az appodnak!'
+  if (app.tests.length < template.tests.length) return 'Előbb próbáld ki az összes gombot az előnézetben!'
+  if (app.rule !== template.correct)
+    return `Még nem teljesül a feladat: ${template.prompt} Ellenőrizd a HA feltételt, javítsd, majd próbáld ki újra az összes esetet!`
+  return ''
+}
+
 // A kész miniapp önálló HTML-fájlként, külső függőség nélkül.
 export function miniappHTML(template, app) {
   const config = JSON.stringify({
