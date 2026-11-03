@@ -692,3 +692,11 @@ body:not([data-theme='dark']) {
     border: 1px solid $dev-mid;
   }
 }
+
+// Teljesített küldetés pipája: sötétben a lime pipa a sötét kártyán „ragyog”, világosban a 9%-os gyűrű
+// elveszett. Zöld gyűrű és lágy fény.
+body:not([data-theme='dark']) .complete-tick {
+  box-shadow:
+    0 0 0 4px rgba(134, 179, 81, 0.3),
+    0 0 14px 2px rgba(134, 179, 81, 0.55);
+}
