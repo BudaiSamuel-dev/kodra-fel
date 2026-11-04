@@ -1,5 +1,5 @@
 node_modules/
-dist/
+/dist/
 .quasar/
 .DS_Store
 test-results/
