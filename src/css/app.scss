@@ -185,3 +185,62 @@ body[data-theme] .mission-card {
 .release-checks .passed {
   font-weight: 700;
 }
+
+// Bónuszjátékok: a rossz válasz piros (kiválasztott válasz, visszajelzés, haladássáv szakasza);
+// felfedés után a helyes válasz zölden is látszik.
+body:not([data-theme='dark']) {
+  .puzzle-options .report-option.wrong {
+    background: #fbe3df;
+    border-color: #c94a3d;
+    color: #6e1d14;
+  }
+  .puzzle-options .report-option.wrong .option-letter {
+    background: #f2b2a8;
+    border-color: #c94a3d;
+    color: #6e1d14;
+  }
+  .puzzle-options .report-option.right {
+    background: #d6e8b8;
+    border-color: #6a8e50;
+    color: #1d3d15;
+  }
+  .feedback.wrong {
+    background: #fbe3df;
+    border: 1px solid #c94a3d;
+    color: #6e1d14;
+  }
+  .feedback.wrong strong {
+    color: #a32a1e;
+  }
+  .bonus-progress span.wrong {
+    background: #d4574a;
+  }
+}
+body[data-theme='dark'] {
+  .puzzle-options .report-option.wrong {
+    background: #4a2421;
+    border-color: #e06a5b;
+    color: #ffd9d2;
+  }
+  .puzzle-options .report-option.wrong .option-letter {
+    background: #6e2f29;
+    border-color: #e06a5b;
+    color: #ffe3dd;
+  }
+  .puzzle-options .report-option.right {
+    background: #39562b;
+    border-color: #a7c878;
+    color: #e7f4d2;
+  }
+  .feedback.wrong {
+    background: #432220;
+    border: 1px solid #c8574a;
+    color: #ffd9d2;
+  }
+  .feedback.wrong strong {
+    color: #ff9c8f;
+  }
+  .bonus-progress span.wrong {
+    background: #e06a5b;
+  }
+}

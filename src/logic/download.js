@@ -1,6 +1,6 @@
 import { COLORS } from 'data/appTemplates'
 import { DIFFICULTIES } from 'data/difficulties'
-import { totalXP } from './xp'
+import { quizStatus, totalXP } from './xp'
 
 export const escapeHTML = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
@@ -48,7 +48,7 @@ export function progressText(game) {
 ${levels}
 
 Kódnyomozó: ${game.bonus.debug.length}/3
-Tech radar: ${game.bonus.quiz.filter(Boolean).length}/6
+Tech radar: ${quizStatus(game).best ?? 0}/6 helyes válasz${quizStatus(game).passed ? '' : ' (a jelvényhez legalább 2 kell)'}
 Összesen: ${totalXP(game)} XP
 
 Ez egy játékos felfedezés összegzése, nem osztályzat vagy pályaalkalmassági eredmény.

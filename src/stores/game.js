@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { computed, reactive, watch } from 'vue'
 import { DIFFICULTIES } from 'data/difficulties'
+import { QUIZ } from 'data/quiz'
 import { freshGame, loadGame, saveGame } from 'logic/storage'
 import { rankFor, totalXP } from 'logic/xp'
 
@@ -40,6 +41,17 @@ export const useGameStore = defineStore('game', () => {
     solveDebug: (i) => addOnce(game.bonus.debug, i),
     answerQuiz(i, answer, correct) {
       if (!game.bonus.quiz[i]) game.bonus.quiz[i] = { answer, correct }
+    },
+    // Befejezett próbálkozás: a legjobb eredmény marad meg (XP, jelvény ebből számol).
+    finishQuiz() {
+      const answers = game.bonus.quiz.filter(Boolean)
+      if (answers.length < QUIZ.length) return
+      const correct = answers.filter((v) => v.correct).length
+      game.bonus.quizBest = Math.max(game.bonus.quizBest ?? 0, correct)
+    },
+    // Új próbálkozás: a válaszok törlődnek, a legjobb eredmény megmarad.
+    retryQuiz() {
+      game.bonus.quiz = []
     },
     tick() {
       profile.value.elapsed++

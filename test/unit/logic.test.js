@@ -3,7 +3,7 @@ import { TEST_SCENARIOS } from 'data/testScenarios'
 import { APP_TEMPLATES } from 'data/appTemplates'
 import { testOutput, probeLabel } from 'logic/testOutput'
 import { appResult } from 'logic/appResult'
-import { MAX_XP, rankFor, totalXP } from 'logic/xp'
+import { MAX_XP, quizStatus, rankFor, totalXP } from 'logic/xp'
 import { freshGame, loadGame, normalizeGame, STORE_KEY } from 'logic/storage'
 import { miniappHTML } from 'logic/download'
 
@@ -54,6 +54,7 @@ describe('XP és mentés', () => {
     }
     game.bonus.debug = [0, 1, 2]
     game.bonus.quiz = Array(6).fill({ answer: 0, correct: true })
+    game.bonus.quizBest = 6
     expect(totalXP(game)).toBe(MAX_XP)
     expect(rankFor(MAX_XP).name).toBe('Digitális alkotó')
     expect(rankFor(0)).toMatchObject({ name: 'Kíváncsi újonc', next: 300 })
@@ -84,5 +85,28 @@ describe('tudástár keresés', () => {
     expect(searchGlossary(GLOSSARY, 'HATARERTEK').map((g) => g[0])).toEqual(['Határérték'])
     expect(searchGlossary(GLOSSARY, '', 'tesztelés')).toHaveLength(4)
     expect(searchGlossary(GLOSSARY, 'határérték', 'fejlesztés')).toHaveLength(0)
+  })
+})
+
+describe('Tech radar: 33%-os határ', () => {
+  const withBest = (best) => ({ ...freshGame(), bonus: { debug: [], quiz: [], quizBest: best } })
+  it('még nem fejezte be: nincs XP, nincs jelvény', () => {
+    expect(quizStatus(withBest(null))).toMatchObject({ passed: false, xp: 0 })
+  })
+  it('33% alatt (0 vagy 1 helyes): arányos XP, nincs jelvény', () => {
+    expect(quizStatus(withBest(0))).toMatchObject({ passed: false, xp: 0 })
+    expect(quizStatus(withBest(1))).toMatchObject({ passed: false, xp: 20 })
+  })
+  it('legalább 2/6 (33%): jelvény és teljes 120 XP', () => {
+    expect(quizStatus(withBest(2))).toMatchObject({ passed: true, xp: 120 })
+    expect(quizStatus(withBest(6))).toMatchObject({ passed: true, xp: 120 })
+  })
+  it('régi mentés (quizBest nélkül) a megválaszolt kérdésekből számol', async () => {
+    const { QUIZ } = await import('data/quiz')
+    // csak az első válasz helyes, a többi szándékosan rossz
+    const answers = QUIZ.map((q, i) => ({ answer: i === 0 ? q.correct : (q.correct + 1) % 3 }))
+    const game = normalizeGame({ bonus: { quiz: answers } })
+    expect(game.bonus.quizBest).toBe(1)
+    expect(quizStatus(game)).toMatchObject({ passed: false, xp: 20 })
   })
 })

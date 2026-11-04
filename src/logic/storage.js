@@ -26,7 +26,7 @@ export function freshGame() {
     difficulty: 'explorer',
     theme: 'dark',
     profiles: Object.fromEntries(DIFFICULTIES.map((d) => [d.id, freshProfile(d.id)])),
-    bonus: { debug: [], quiz: [] }
+    bonus: { debug: [], quiz: [], quizBest: null } // quizBest: a legjobb befejezett Tech radar próbálkozás
   }
 }
 
@@ -74,6 +74,11 @@ export function normalizeGame(saved) {
             : null
         )
     : []
+  const best = saved.bonus?.quizBest
+  if (Number.isInteger(best) && best >= 0 && best <= QUIZ.length) game.bonus.quizBest = best
+  // Korábbi mentés: ha mind a 6 kérdés megválaszolva, az lesz a legjobb próbálkozás
+  else if (game.bonus.quiz.filter(Boolean).length === QUIZ.length)
+    game.bonus.quizBest = game.bonus.quiz.filter((v) => v?.correct).length
   return game
 }
 

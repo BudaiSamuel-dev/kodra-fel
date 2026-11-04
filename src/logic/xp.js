@@ -1,4 +1,5 @@
 import { DIFFICULTIES } from 'data/difficulties'
+import { QUIZ } from 'data/quiz'
 
 export const XP = { robotLevel: 20, testScenario: 15, bonus: 120 }
 
@@ -10,8 +11,18 @@ export function totalXP(game) {
   return (
     missions +
     (game.bonus.debug.length === 3 ? XP.bonus : 0) +
-    (game.bonus.quiz.filter(Boolean).length === 6 ? XP.bonus : 0)
+    quizStatus(game).xp
   )
+}
+
+// Tech radar: a jelvényhez és a teljes jutalomhoz a kérdések legalább harmada (6-ból 2) kell helyes legyen.
+// Alatta arányos XP jár (kérdésenként 20), és újra lehet próbálni. A legjobb befejezett próbálkozás számít.
+export function quizStatus(game) {
+  const total = QUIZ.length
+  const best = game.bonus.quizBest ?? null // helyes válaszok száma a legjobb befejezett próbálkozásban
+  const passed = best !== null && best * 3 >= total
+  const xp = best === null ? 0 : passed ? XP.bonus : Math.round((XP.bonus * best) / total)
+  return { total, best, passed, xp }
 }
 
 export const MAX_XP = 1905

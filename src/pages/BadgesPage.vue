@@ -43,6 +43,7 @@
 import { computed } from 'vue'
 import { DIFFICULTIES } from 'data/difficulties'
 import { downloadBlob, progressText } from 'logic/download'
+import { quizStatus } from 'logic/xp'
 import { useGameStore } from 'stores/game'
 import { openDialog } from 'src/composables/useUi'
 import { useNavigation } from 'src/composables/useNavigation'
@@ -86,8 +87,8 @@ const badges = computed(() => [
     icon: 'spark',
     name: 'Tech radar',
     tier: 'Bónusz',
-    desc: 'Hat kérdés és magyarázat felfedezése.',
-    earned: store.game.bonus.quiz.filter(Boolean).length === 6,
+    desc: 'Hat kérdés, legalább 2 helyes válasszal.',
+    earned: quizStatus(store.game).passed,
     open: () => openBonus('quiz')
   }
 ])
