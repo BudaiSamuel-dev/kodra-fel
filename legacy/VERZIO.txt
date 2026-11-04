@@ -1,0 +1,14 @@
+Kódra fel! 2.0 – teljes alkalmazásforrás
+Mentett változat: 2
+Forráscommit: ebed82d06272a010a2bbc022737cd6eb3d380f9c
+
+Ez a három nehézségi szintes, 9 robotpályás, 9 teszthelyzetes 2.0 változat.
+A későbbi Hackerlab és böngészős AI fejlesztések nem részei ennek a csomagnak.
+
+Indítás a kicsomagolt projekt mappájában:
+  python -m http.server 4173 --directory dist
+Böngészőben: http://localhost:4173
+
+A források, statikus erőforrások, betűkészletek, licencek, README, tesztek és csomagoló szkript megtalálhatók a ZIP-ben.
+A kész offline ZIP újragenerálható: python scripts/package-offline.py
+A telepítéshez kötött Sites-azonosítót és Git-metaadatokat a hordozható csomag nem tartalmazza.

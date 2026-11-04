@@ -7,6 +7,7 @@
     <main id="main" tabindex="-1">
       <router-view :key="$route.path" />
     </main>
+    <HandControls />
   </div>
   <InfoDialog />
   <div id="toast" :class="{ visible: ui.toastVisible }" role="status" aria-live="polite">{{ ui.toast }}</div>
@@ -21,6 +22,7 @@ import SvgSprite from 'components/layout/SvgSprite.vue'
 import AppSidebar from 'components/layout/AppSidebar.vue'
 import AppTopbar from 'components/layout/AppTopbar.vue'
 import InfoDialog from 'components/layout/InfoDialog.vue'
+import HandControls from 'components/layout/HandControls.vue'
 
 const store = useGameStore()
 
