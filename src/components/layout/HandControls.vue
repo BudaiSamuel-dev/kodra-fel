@@ -767,6 +767,66 @@ onBeforeUnmount(() => {
   background: transparent;
   pointer-events: none;
 }
+/* Témák. A 2.0-s AR panel színei be voltak égetve (sötétzöld panel, lime kurzor), így világos módban is
+   sötét maradt, a lime kurzor pedig világos háttéren alig látszott. A kamera-előnézet mindkét témában sötét. */
+:global(body[data-theme='dark'] .hand-launcher) {
+  background: linear-gradient(135deg, #27411f 0, #1b2b20 70%);
+  border-color: #4f7a36;
+}
+:global(body[data-theme='dark'] .hand-eyebrow) {
+  color: #b9dc8a;
+}
+:global(body:not([data-theme='dark']) .hand-launcher) {
+  background: linear-gradient(135deg, #e3efcf 0, #f8f8f0 70%);
+  border-color: #98aa8a;
+  box-shadow:
+    0 1px 2px rgba(38, 56, 30, 0.07),
+    0 8px 22px -12px rgba(38, 56, 30, 0.22);
+}
+:global(body:not([data-theme='dark']) .hand-eyebrow) {
+  color: #2f5d1e;
+}
+:global(body:not([data-theme='dark']) .hand-panel) {
+  background: #f8f8f0;
+  border-color: #6a8e50;
+  color: #1d3d15;
+  box-shadow: 0 14px 40px rgba(38, 56, 30, 0.25);
+}
+:global(body:not([data-theme='dark']) .hand-stop) {
+  background: #d9eac0;
+  border-color: #6a8e50;
+  color: #1d3d15;
+}
+:global(body:not([data-theme='dark']) .hand-status) {
+  color: #2f5d1e;
+}
+:global(body:not([data-theme='dark']) .hand-light-warning) {
+  background: #fdf0dc;
+  border-color: #c98f40;
+  color: #6b3f0c;
+}
+:global(body:not([data-theme='dark']) .hand-camera-options input),
+:global(body:not([data-theme='dark']) .hand-calibration-progress) {
+  accent-color: #4f7a2c;
+}
+/* Világos kurzor: mélyzöld gyűrű fehér körvonallal, hogy világos oldalon is jól látsszon */
+:global(body:not([data-theme='dark']) .hand-cursor-ring) {
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 1px #fff);
+}
+:global(body:not([data-theme='dark']) .hand-cursor-track) {
+  fill: rgba(47, 93, 30, 0.14);
+  stroke: rgba(47, 93, 30, 0.5);
+}
+:global(body:not([data-theme='dark']) .hand-cursor-progress),
+:global(body:not([data-theme='dark']) .hand-cursor-check) {
+  stroke: #2f7a1e;
+}
+:global(body:not([data-theme='dark']) .hand-cursor-dot) {
+  fill: #2f5d1e;
+}
+:global(body:not([data-theme='dark']) .hand-cursor[data-state='blocked'] .hand-cursor-track) {
+  stroke: #c26f41;
+}
 @media (max-width: 760px) {
   .hand-launcher {
     margin: 20px 16px;
@@ -799,5 +859,9 @@ onBeforeUnmount(() => {
 .hand-hovered {
   outline: 3px solid #80ae45 !important;
   outline-offset: 4px;
+}
+/* Világos témában sötétebb kiemelés, hogy a célzott elem jól látsszon */
+body:not([data-theme='dark']) .hand-hovered {
+  outline-color: #4f7a2c !important;
 }
 </style>

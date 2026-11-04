@@ -39,6 +39,11 @@ export function classifyHand(points) {
   return 'rest'
 }
 
+// Kattintás időzítése (ms). A stabil célzás szűri a tenyérnyitás közben átmenetileg felismert három ujjat,
+// a tartás alatt töltődik fel a kurzor gyűrűje. (Korábban 180 + 400 ms; gyorsabb kattintásért csökkentve.)
+export const CLICK_AIM_MS = 120
+export const CLICK_HOLD_MS = 200
+
 // A háromujjas jel egyet kattint, stabil kétujjas célzás után. Rövid
 // tartási idő szűri a tenyérnyitás közben átmenetileg felismert három ujjat.
 // Újabb kattintáshoz ismét stabilan két ujjal kell célozni.
@@ -81,7 +86,7 @@ export function createClickGate() {
       }
       if (gesture === 'click') {
         if (pressed) return false
-        if (!armed || !hovered || hovered !== target || (clickSince === null && now - since < 180)) {
+        if (!armed || !hovered || hovered !== target || (clickSince === null && now - since < CLICK_AIM_MS)) {
           pressed = true
           progress = 0
           phase = 'blocked'
@@ -89,7 +94,7 @@ export function createClickGate() {
         }
         if (clickSince === null) clickSince = now
         phase = 'holding'
-        progress = clamp((now - clickSince) / 400, 0, 1)
+        progress = clamp((now - clickSince) / CLICK_HOLD_MS, 0, 1)
         if (progress < 1) return false
         pressed = true
         phase = 'clicked'
