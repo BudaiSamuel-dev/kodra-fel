@@ -9,6 +9,7 @@ A 2.0 változat újraírása **Vue 3 + Quasar** alapon, átlátható, bővíthet
 - **3 miniapp**, amelyek önálló HTML-fájlként letölthetők
 - **2 bónuszjáték**, **15 fogalmas tudástár**, szakmabemutató, **11 jelvény**, legfeljebb **1905 XP**
 - Sötét/világos téma, mobilos navigáció, billentyűzettel is kezelhető, csökkentett mozgás támogatása
+- Külön bekapcsolható, webkamerás AR kézvezérlés minden oldal alján
 
 ## Indítás
 
@@ -18,6 +19,27 @@ npm run dev      # http://localhost:4173
 ```
 
 Futás közben nincs szükség internetre: a betűkészletek és az ikonok a projektben vannak.
+
+## AR kézvezérlés
+
+Az oldal alján az **AR kézvezérlés bekapcsolása** gomb indítja a kamerát. HTTPS (fejlesztéskor localhost), kameraengedély és WebAssemblyt támogató, naprakész böngésző szükséges; elsősorban asztali Chrome/Edge használata ajánlott. Az AR előnézet a tükrözött kameraképre rajzolja a kéz 21 követési pontját. Egy kézzel, jó megvilágításban használd.
+
+- **Két ujj (mutató- és középső):** a képernyőkurzor mozgatása; a célba vett kezelőelem zöld keretet kap. A hüvelyk-, gyűrűs- és kisujj maradjon behajlítva.
+- **Három ujj (hüvelyk-, mutató- és középső):** legalább 180 ms kétujjas rámutatás után nyújtsd ki oldalra a hüvelykujjadat, és tartsd meg, amíg a kurzor körüli gyűrű feltöltődik (400 ms). A gyűrűs- és kisujj maradjon behajlítva. A kurzor ilyenkor rögzül; a tartott jel egyszer kattint. A teljes gyűrű és a pipa a végrehajtott kattintást jelzi. Újabb kattintáshoz hajtsd vissza a hüvelykujjadat, és ismét legalább 180 ms-ig két ujjal célozz. A felismerés mindkét kézzel működik; tartsd a tenyered a kamera felé. Célpontváltás vagy követésvesztés megszakítja a feltöltést.
+- **Nyitott tenyér:** a felmutatás helyéhez képest fel/le mozgatva görget; középen holtzóna segít megállni. Görgethető ablakban az ablak tartalma mozog.
+- **Ököl / kéz kivétele a képből:** nem hajt végre műveletet.
+- **Leállítás / Esc:** a kamera és a felismerés leáll. Másik böngészőlapra váltáskor szintén leáll; nincs automatikus újraindítás. Oldalon belüli navigáció közben megmarad.
+- A panel **− / +** gombja összecsukja/kinyitja az előnézetet és az útmutatót, miközben a kézvezérlés folytatódik.
+
+A **Személyes kalibráció** résznél a **Kalibrálás indítása** gombbal két kényelmes sarokpont mérhető: előbb a bal felső, majd a jobb alsó. Két ujjal mutass addig, ameddig kényelmesen eléred, és mindkét helyzetet tartsd meg kb. egy másodpercig. A rendszer csak stabil, megfelelően távoli pontokat fogad el; a kéz elvesztése újraindítja az aktuális pont mérését. Kalibrálás közben nincs gesztusos kattintás vagy görgetés. Megszakításkor megmarad a korábbi tartomány, sikeres méréskor az új tartomány tölti ki a teljes képernyőt. A **Kurzor sebessége** csúszka 0,5–2× között állítja a követés gyorsaságát, időalapú simítással; a teljes képernyő mindegyik beállítással elérhető. A tartomány és a sebesség a böngészőben marad (`kodra-ar-controls-v1`), képkocka és kézpont nem kerül mentésre. Letiltott helyi tárhelynél az aktuális munkamenetben működnek a beállítások. Közös gépen az **Alapbeállítások** gombbal törölhető a saját kalibráció és visszaállítható a sebesség; kamera vagy ülőhely változásakor kalibrálj újra.
+
+A **Kamerakép és fény** résznél nagyítható az előnézet. Az alkalmazás 1280×720 körüli, lehetőleg vágás nélküli kameraképet kér, támogatott kamerán a legkisebb zoomot állítja be, és a kamera tényleges képarányát követi az előnézetben és a kézváz rajzán. A felbontás és a képarány nem növeli az objektív fizikai látószögét; ez a hardvertől függ. Nagyobb területhez távolabb elhelyezett vagy széles látószögű kamera szükséges. A böngésző a rendelkezésre álló legközelebbi képmódot adhatja.
+
+Ellenfényhez támogatott kamerán automatikus expozíciót kérünk, és **Kamera fényessége** csúszka jelenik meg, ha a kamera valódi expozíciókompenzációt kínál. Az elutasított beállítás nem állítja le a követést. A rendszer 750 ms-onként, kis felbontású helyi mintából becsüli a fényviszonyokat, két egyező minta után sötétségre vagy ellenfény gyanújára figyelmeztet. Felismert kéznél a kéz területét, egyébként a kép közepét vizsgálja; ez tájékoztató becslés. A fényvizsgálat sem rögzít vagy tölt fel képet. Erős háttérfénynél a kezet elölről, a kamera mögül szórt fénnyel világítsd meg, és kerüld az ablakot a felhasználó háta mögött. A kiégett vagy teljesen sötét kézből szoftveresen nem állíthatók helyre megbízhatóan a részletek.
+
+A kattintás a meglévő gombokat, linkeket és beviteli mezőket kezeli; szövegbevitelhez és natív legördülőkhöz továbbra is billentyűzet/egér szükséges. Ez kísérleti funkció: a követés pontossága és sebessége a kamerától, fénytől és eszköztől függ.
+
+A képek helyben, a böngészőben kerülnek feldolgozásra, hangot nem kérünk, felvétel és képfeltöltés nincs. A MediaPipe kódja, WASM-fájljai és modellje saját eredetről, csak bekapcsoláskor töltődnek be. Az `npm install`/`npm ci` postinstall lépése a rögzített `@mediapipe/tasks-vision` csomag WASM-fájljait a `public/hand-tracking/wasm/` mappába másolja; a modell a repó része. Telepítés után a funkcióhoz sincs szükség külső CDN-re. A tárhelyen a `.wasm` és `.task` fájlokat is ki kell szolgálni; a felismerő erőforrásai összesen kb. 20 MB-ot töltenek be indításkor.
 
 ## Szerkezet
 
