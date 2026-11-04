@@ -79,9 +79,12 @@
       <h1>Majdnem! Próbáld újra.</h1>
       <p>
         {{ attemptCorrect }} / 6 kérdésre válaszoltál jól. A jelvényhez legalább 2 helyes válasz kell (33%).
-        Most {{ quiz.xp }} XP jár, és nyugodtan újrapróbálhatod — a legjobb eredményed számít.
+        {{ quiz.passed ? 'Nyugodtan' : `Most ${quiz.xp} XP jár, és nyugodtan` }} újrapróbálhatod — a legjobb
+        eredményed számít.
       </p>
-      <span class="earned-xp">{{ quiz.xp }} XP · a jelvény még vár rád</span>
+      <span class="earned-xp">{{
+        quiz.passed ? 'A jelvényed és a 120 XP korábbról megmaradt' : `${quiz.xp} XP · a jelvény még vár rád`
+      }}</span>
     </template>
     <div class="completion-actions">
       <button v-if="!debug && !attemptPassed" class="button primary" data-test="quiz-retry" @click="retry">
@@ -113,8 +116,9 @@ const items = computed(() => (debug.value ? DEBUG_PUZZLES : QUIZ))
 const isDone = (i) => (debug.value ? store.game.bonus.debug.includes(i) : Boolean(store.game.bonus.quiz[i]))
 const quiz = computed(() => quizStatus(store.game))
 
-// Ha az előző Tech radar próbálkozás 33% alatt maradt, megnyitáskor új próbálkozás indul (a legjobb eredmény marad).
-if (!debug.value && store.game.bonus.quiz.filter(Boolean).length === QUIZ.length && !quiz.value.passed) store.retryQuiz()
+// Befejezett Tech radar újranyitásakor új próbálkozás indul, így a felső sáv az aktuális válaszokat mutatja
+// (a legjobb eredmény, a jelvény és az XP megmarad).
+if (!debug.value && store.game.bonus.quiz.filter(Boolean).length === QUIZ.length) store.retryQuiz()
 
 // Ott folytatjuk, ahol a diák abbahagyta.
 const index = ref(Math.max(0, items.value.findIndex((_, i) => !isDone(i))))

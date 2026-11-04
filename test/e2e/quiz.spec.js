@@ -49,7 +49,12 @@ test('Tech radar: 33% alatt nincs jelvény, csak arányos XP, és újra lehet pr
   await expect(page.locator('#total-xp')).toHaveText('120 XP')
   expect(await quizBadgeEarned(page)).toBe(true)
 
-  // Sikeres eredmény után egy rosszabb újrajátszás nem vesz el semmit
-  await page.reload()
+  // Sikeres eredmény után újranyitva is új próbálkozás indul: a sáv a mostani rossz válaszokat mutatja pirosan,
+  // és egy rosszabb újrajátszás nem vesz el semmit
+  await page.goto('/bonusz/techradar')
+  await expect(page.locator('.bonus-progress span.wrong')).toHaveCount(0)
+  await attempt(page, 0)
+  await expect(page.locator('.completion-card')).toContainText('A jelvényed és a 120 XP korábbról megmaradt')
   await expect(page.locator('#total-xp')).toHaveText('120 XP')
+  expect(await quizBadgeEarned(page)).toBe(true)
 })
