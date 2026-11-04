@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Ne csak használd. Alkosd meg! Próbáld ki a szoftverfejlesztő és -tesztelő szakmát három nehézségi szinten, bónuszjátékokkal és tudástárral, előismeret nélkül.">
+  <title>Kódra fel! — Az első tech-kalandod</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="upgrade.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="explore.js" defer></script>
+</head>
+<body data-theme="dark">
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4c5-5 9 5 15 0v11c-6 5-10-5-15 0"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.6 6.4L21 12l-6.4 2.6L12 21l-2.6-6.4L3 12l6.4-2.6L12 3Zm8-1v4m-2-2h4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.2 9a3 3 0 0 1 5.7 1c0 2-3 2-3 4m.1 3h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-bug" viewBox="0 0 24 24"><rect x="7" y="6" width="10" height="15" rx="5"/><path d="m9 3 2 3m4-3-2 3M7 10H3m14 0h4M7 15H3m14 0h4m-14 4-3 2m14-2 3 2M12 10v7"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M14 4c3-2 7-1 7-1s1 4-1 7l-8 8-6-6 8-8Zm-3 3-5 1-4 5 5 1m10-1-1 5-5 4-1-5M5 17l-2 4 4-2"/><circle cx="16" cy="8" r="1.5"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M17 3a4 4 0 0 1 0 8m2 4a6 6 0 0 1 3 6"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c-6-15 15-16 15-16s3 21-12 16M4 22 16 9"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 10 7-10 7Z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 1 7M3 4v6h6"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-8l1-7Z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V6a4 4 0 0 1 8 0v4m-4 4v3"/></symbol>
+  <symbol id="i-light" viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4M8 14a7 7 0 1 1 8 0c-1 1-1 3-1 4H9c0-1 0-3-1-4Z"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5c-3-3-8-2-10-1v15c4-2 7-1 10 1 3-2 6-3 10-1V4c-2-1-7-2-10 1Zm0 0v15"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 13A9 9 0 0 1 11 3a9 9 0 1 0 10 10Z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol><symbol id="i-cup" viewBox="0 0 24 24"><path d="M7 3h10v6a5 5 0 0 1-10 0V3Zm10 1h4v3a4 4 0 0 1-4 4M7 4H3v3a4 4 0 0 0 4 4m5 3v7m-5 0h10"/></symbol>
+</defs></svg>
+<a class="skip-link" href="#main">Ugrás a tartalomra</a>
+<aside class="sidebar" aria-label="Oldalsáv">
+  <a href="#" class="brand" data-action="home" aria-label="Kódra fel! Főoldal"><span class="brand-icon">&gt;_</span><span>kódra fel<span class="brand-dot">!</span></span></a>
+  <div class="sidebar-label">TECH LAB / 2.0</div>
+  <nav class="main-nav" aria-label="Fő navigáció">
+    <button class="nav-item active" data-action="home" id="nav-home"><svg><use href="#i-grid"/></svg>Felfedezés<span class="nav-dot"></span></button>
+    <button class="nav-item" data-action="missions" id="nav-missions"><svg><use href="#i-flag"/></svg>Küldetések<span class="nav-count" id="nav-count">3</span></button>
+    <button class="nav-item" data-action="professions"><svg><use href="#i-people"/></svg>A szakmáról</button>
+    <button class="nav-item" data-action="learn" id="nav-learn"><svg><use href="#i-book"/></svg>Tudástár<span class="new-mark">ÚJ</span></button>
+    <button class="nav-item" data-action="badges" id="nav-badges"><svg><use href="#i-cup"/></svg>Jelvényeim</button>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="player-card"><div class="player-rank"><span class="player-emblem"><svg><use href="#i-bolt"/></svg></span><div><span class="player-caption">A TE SZINTED</span><strong id="player-rank">Kíváncsi újonc</strong></div></div><div class="xp-bar"><span id="xp-fill"></span></div><div class="xp-caption"><span id="xp-caption">0 / 300 XP</span><button data-action="badges" aria-label="Jelvényeim megtekintése"><svg><use href="#i-arrow"/></svg></button></div></div>
+    <button class="nav-item help-link" data-action="help"><svg><use href="#i-help"/></svg>Egy kis segítség</button>
+    <div class="sidebar-foot">Pályaorientáció, újragondolva.</div>
+  </div>
+</aside>
+<div class="workspace">
+  <header class="topbar"><div class="topbar-left"><span class="live-dot"></span>PÁLYAORIENTÁCIÓS NAP <span class="topbar-separator">/</span><span class="topbar-sub">A jövőd itt kezdődik</span></div><div class="topbar-right"><span class="duration"><svg><use href="#i-clock"/></svg>5–10 perc</span><span class="header-line"></span><button class="xp-chip" data-action="badges"><svg><use href="#i-bolt"/></svg><span id="total-xp">0 XP</span></button><button class="theme-toggle icon-button" data-action="theme" aria-label="Világos megjelenés bekapcsolása"><svg><use href="#i-sun"/></svg></button></div></header>
+  <main id="main" tabindex="-1">
+    <div id="home-view">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy"><div class="eyebrow"><span></span>BELÉPÉS A KULISSZÁK MÖGÉ // 0 ELŐISMERET</div><h1 id="hero-title">Válts játékosból<br><span>alkotóvá.</span><span class="title-spark" aria-hidden="true">✳</span></h1><p>Irányíts robotot. Vadássz hibákra. Építs saját appot.<br> Fedezd fel a fejlesztés és tesztelés világát —<br class="desktop-br"> a következő nagy ötlet lehet a tiéd.</p><div class="hero-buttons"><button class="button primary" data-action="start" id="start-button">Induljon a kaland<svg><use href="#i-arrow"/></svg></button><button class="text-button" data-action="how">Hogyan működik?<svg><use href="#i-arrow"/></svg></button></div><div class="hero-note"><span class="mini-check"><svg><use href="#i-check"/></svg></span>3 szint · saját tempó · végtelen próbálkozás</div></div>
+        <div class="hero-art">
+          <div class="art-top"><span><span class="art-status"></span>JÁTÉKMÓD: FELFEDEZÉS</span><svg><use href="#i-spark"/></svg></div>
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="code-float code-one"><span class="code-purple">ha</span> kíváncsi_vagy:<br><span class="code-indent">kaland.<span class="code-lime">indul</span>()</span></div>
+          <div class="iso-board" aria-hidden="true"><div class="iso-tiles"></div><span class="iso-path path-1"></span><span class="iso-path path-2"></span><span class="iso-path path-3"></span><span class="iso-path path-4"></span><span class="iso-block block-1"></span><span class="iso-block block-2"></span><span class="iso-goal">✦</span></div>
+          <div class="big-bot" aria-hidden="true"><div class="bot-aerial"></div><div class="bot-ear left"></div><div class="bot-ear right"></div><div class="bot-head"><div class="bot-face"><i></i><i></i><b></b></div><span class="bot-shine"></span></div><div class="bot-body"><span></span></div><div class="bot-foot foot-left"></div><div class="bot-foot foot-right"></div></div>
+          <button class="art-tag" data-action="bit-message"><svg><use href="#i-bolt"/></svg>Szia, Bit vagyok! Kattints rám.</button>
+          <div class="art-bottom"><span class="art-key">&lt;/&gt;</span><span>Kis lépésekből<br><strong>nagy dolgok születnek.</strong></span><span class="art-cursor"><svg><use href="#i-arrow"/></svg></span></div>
+        </div>
+      </section>
+      <div class="lab-stats" aria-label="Felfedezhető tartalmak"><span><strong>09</strong> robotpálya</span><span><strong>09</strong> tesztelési helyzet</span><span><strong>03</strong> miniapp</span><span><strong>02</strong> bónuszjáték</span></div>
+      <section class="difficulty-section" aria-labelledby="difficulty-title"><div class="section-heading"><div><div class="eyebrow small">TE VÁLASZTOD A TEMPÓT</div><h2 id="difficulty-title">Mennyire csavarjuk fel?</h2></div><span class="difficulty-note">Bármikor válthatsz. A haladásod megmarad.</span></div><div class="difficulty-grid" id="difficulty-grid" role="group" aria-label="Nehézségi szint"></div></section>
+      <section class="mission-section" id="missions" aria-labelledby="missions-title"><div class="section-heading"><div><div class="eyebrow small">PRÓBÁLD KI MAGAD</div><h2 id="missions-title">A következő lépés a tiéd.</h2></div><span class="progress-pill"><span class="progress-ring" id="home-ring"></span><span id="home-progress">0 / 3 teljesítve</span></span></div>
+        <div class="mission-cards">
+          <button class="mission-card card-green" data-action="mission" data-mission="0"><div class="card-top"><span class="mission-icon"><svg><use href="#i-code"/></svg></span><span class="card-number">01 <span>/</span> FEJLESZTŐ</span><span class="complete-tick" id="tick-0" hidden>✓</span></div><div class="card-visual visual-code" aria-hidden="true"><span class="command-chip">↑ előre</span><span class="command-chip">→ jobbra</span><span class="command-chip small-play"><svg><use href="#i-play"/></svg></span><span class="visual-dots">···</span></div><h3>Tanítsd be a robotot!</h3><p>Te tervezed az útvonalat.<br>A robot követi az utasításaidat.</p><div class="card-bottom"><span><svg><use href="#i-clock"/></svg>2–3 perc<span class="level-dot"></span>Logika</span><span class="card-arrow"><svg><use href="#i-arrow"/></svg></span></div></button>
+          <button class="mission-card card-peach" data-action="mission" data-mission="1"><div class="card-top"><span class="mission-icon"><svg><use href="#i-bug"/></svg></span><span class="card-number">02 <span>/</span> TESZTELŐ</span><span class="complete-tick" id="tick-1" hidden>✓</span></div><div class="card-visual visual-bug" aria-hidden="true"><div class="test-line"><span></span><i class="test-check">✓</i></div><div class="test-line"><span></span><i class="test-error">!</i></div><div class="test-line"><span></span><i class="test-check">✓</i></div><span class="bug-magnifier"><svg><use href="#i-bug"/></svg></span></div><h3>Kapd el a hibát!</h3><p>Valami nem stimmel az appban.<br>A te szemed kiszúrja?</p><div class="card-bottom"><span><svg><use href="#i-clock"/></svg>2–3 perc<span class="level-dot"></span>Figyelem</span><span class="card-arrow"><svg><use href="#i-arrow"/></svg></span></div></button>
+          <button class="mission-card card-purple" data-action="mission" data-mission="2"><div class="card-top"><span class="mission-icon"><svg><use href="#i-rocket"/></svg></span><span class="card-number">03 <span>/</span> ALKOTÓ</span><span class="complete-tick" id="tick-2" hidden>✓</span></div><div class="card-visual visual-build" aria-hidden="true"><div class="mini-app"><div class="mini-app-dots">● ● ●</div><div class="mini-app-content"><span>✦</span><div><i></i><i></i></div></div><span class="mini-app-button"></span></div><span class="build-spark">✳</span><span class="build-cursor"><svg viewBox="0 0 32 38" aria-hidden="true"><path d="M5 3v27l7-7 6 12 6-3-6-11h10L5 3Z" fill="currentColor" stroke="#fff" stroke-width="2"/></svg></span></div><h3>Ötletből miniapp.</h3><p>Egy jó ötlet, néhány döntés.<br>És már működik is!</p><div class="card-bottom"><span><svg><use href="#i-clock"/></svg>1–2 perc<span class="level-dot"></span>Kreativitás</span><span class="card-arrow"><svg><use href="#i-arrow"/></svg></span></div></button>
+        </div>
+      </section>
+      <section class="bonus-section" aria-labelledby="bonus-title"><div class="section-heading"><div><div class="eyebrow small">MÉG EGY KÖR?</div><h2 id="bonus-title">Extra pályák a kíváncsiaknak.</h2></div><span class="bonus-note">Opcionális · az alapjátékon túl</span></div><div class="bonus-grid"><button class="bonus-card debug-bonus" data-action="bonus" data-bonus="debug"><span class="bonus-art" aria-hidden="true">&lt;<span>/</span>&gt;</span><span class="bonus-content"><span class="eyebrow">KÓDNYOMOZÓ · 2–3 PERC</span><h3>Egy apró hiba.<br>Egy nagy felismerés.</h3><span>Javítsd ki a sorrendet és a feltételeket!<br>3 rövid fejtörő, előismeret nélkül.</span><span class="bonus-cta">Megfejtem <svg><use href="#i-arrow"/></svg><span class="xp-reward">+120 XP</span></span></span></button><button class="bonus-card quiz-bonus" data-action="bonus" data-bonus="quiz"><span class="bonus-art" aria-hidden="true">?</span><span class="bonus-content"><span class="eyebrow">TECH RADAR · 2–3 PERC</span><h3>Már most többet<br>tudsz, mint hinnéd.</h3><span>6 kérdés a tech világából.<br>Minden válasz mögött egy új ötlet.</span><span class="bonus-cta">Kipróbálom <svg><use href="#i-arrow"/></svg><span class="xp-reward">+120 XP</span></span></span></button></div></section>
+      <section class="knowledge-teaser"><span class="teaser-icon"><svg><use href="#i-book"/></svg></span><div><span class="eyebrow">NEM KELL MINDENT FEJBŐL TUDNOD</span><h2>Bug? Ciklus? Frontend?<br>Mindjárt érteni fogod.</h2><p>15 fogalom, hétköznapi példák és egy szakma, ami több a kódolásnál.</p></div><button class="button secondary" data-action="learn">Irány a tudástár<svg><use href="#i-arrow"/></svg></button></section>
+      <section class="bottom-banner"><div class="banner-icon"><svg><use href="#i-light"/></svg></div><div><h3>Nem kell tudnod, mivel kezdj. Elég, ha elkezded.</h3><p>Itt szabad próbálkozni. A hibák is a kaland részei.</p></div><button class="text-button" data-action="professions">Ismerd meg a szakmát<svg><use href="#i-arrow"/></svg></button></section>
+      <footer><span>kódra fel! <span class="footer-dot">·</span> A jövőt valakinek meg kell alkotnia.</span><span>Akár neked. <svg><use href="#i-spark"/></svg></span></footer>
+    </div>
+    <section id="game-view" hidden aria-label="Küldetés"><div class="game-heading"><button class="back-link" data-action="home"><svg><use href="#i-left"/></svg>Vissza a felfedezéshez</button><label class="game-difficulty-label">Szint<select id="game-difficulty" aria-label="Játék nehézsége"></select></label><span class="game-timer"><svg><use href="#i-clock"/></svg><span id="timer">00:00</span><span class="timer-note">a te tempódban</span></span></div><div class="game-steps" id="game-steps"></div><div id="game-content"></div></section>
+    <section id="profession-view" hidden aria-labelledby="profession-title"><button class="back-link" data-action="home"><svg><use href="#i-left"/></svg>Vissza a felfedezéshez</button><div class="profession-intro"><div class="eyebrow">A KÉPERNYŐ MÖGÖTT</div><h1 id="profession-title">Egy ötlet.<br><span>Két szuperképesség.</span></h1><p>A szoftverfejlesztő és -tesztelő technikus képzésben mindkét gondolkodásmódot megismerheted.</p></div><div class="profession-grid"><article class="profession-card"><span class="mission-icon"><svg><use href="#i-code"/></svg></span><span class="eyebrow small">A FEJLESZTŐ</span><h2>„Hogyan csináljuk meg?”</h2><p>Ötletekből működő alkalmazásokat készít. Kisebb lépésekre bontja a feladatot, utasításokat ír a számítógépnek, és javítja a megoldását.</p><h3>Ezt már most is használod:</h3><ul><li>Logikus gondolkodás</li><li>Kreativitás és problémamegoldás</li><li>Kitartás, amikor elsőre nem sikerül</li></ul><button class="button primary" data-action="mission" data-mission="0">Kipróbálom<svg><use href="#i-arrow"/></svg></button></article><article class="profession-card peach"><span class="mission-icon"><svg><use href="#i-bug"/></svg></span><span class="eyebrow small">A TESZTELŐ</span><h2>„Biztosan jól működik?”</h2><p>Úgy próbálja ki az alkalmazást, ahogy a felhasználók tennék. Szokatlan helyzeteket is ellenőriz, és pontosan leírja, ha hibát talál.</p><h3>Ezt már most is használod:</h3><ul><li>Figyelem a részletekre</li><li>Kíváncsiság: „És mi történik, ha…?”</li><li>Világos, érthető kommunikáció</li></ul><button class="button dark" data-action="mission" data-mission="1">Kipróbálom<svg><use href="#i-arrow"/></svg></button></article></div><div class="learning-panel"><h2>Mit tanulhatsz a technikumban?</h2><div><span><svg><use href="#i-code"/></svg>Programozási alapok</span><span><svg><use href="#i-grid"/></svg>Weboldalak és alkalmazások</span><span><svg><use href="#i-bug"/></svg>Szoftvertesztelés</span><span><svg><use href="#i-people"/></svg>Közös projektmunka</span></div><p>A pontos tantervről, felvételiről és iskolai projektekről kérdezd a pályaorientációs nap tanárait és diákjait!</p></div></section>
+    <section id="learn-view" hidden aria-label="Tudástár"></section>
+    <section id="badges-view" hidden aria-label="Jelvényeim"></section>
+  </main>
+</div>
+<dialog id="info-dialog" aria-labelledby="dialog-title"><button class="dialog-close icon-button" data-action="close-dialog" aria-label="Ablak bezárása"><svg><use href="#i-close"/></svg></button><div id="dialog-content"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
