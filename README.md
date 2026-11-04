@@ -9,6 +9,7 @@ A 2.0 változat újraírása **Vue 3 + Quasar** alapon, átlátható, bővíthet
 - **3 miniapp**, amelyek önálló HTML-fájlként letölthetők
 - **2 bónuszjáték**, **15 fogalmas tudástár**, szakmabemutató, **11 jelvény**, legfeljebb **1905 XP**
 - Sötét/világos téma, mobilos navigáció, billentyűzettel is kezelhető, csökkentett mozgás támogatása
+- Külön bekapcsolható, webkamerás AR kézvezérlés minden oldal alján
 
 ## Indítás
 
@@ -18,6 +19,21 @@ npm run dev      # http://localhost:4173
 ```
 
 Futás közben nincs szükség internetre: a betűkészletek és az ikonok a projektben vannak.
+
+## AR kézvezérlés
+
+Az oldal alján az **AR kézvezérlés bekapcsolása** gomb indítja a kamerát. HTTPS (fejlesztéskor localhost), kameraengedély és WebAssemblyt támogató, naprakész böngésző szükséges; elsősorban asztali Chrome/Edge használata ajánlott. Az AR előnézet a tükrözött kameraképre rajzolja a kéz 21 követési pontját. Egy kézzel, jó megvilágításban használd.
+
+- **Mutatóujj:** a képernyőkurzor mozgatása; a célba vett kezelőelem zöld keretet kap.
+- **Csippentés:** legalább 180 ms rámutatás után érintsd össze a hüvelyk- és mutatóujjad a kattintáshoz. Újabb kattintáshoz engedd szét őket. A kurzor csippentés alatt rögzül.
+- **Nyitott tenyér:** a felmutatás helyéhez képest fel/le mozgatva görget; középen holtzóna segít megállni. Görgethető ablakban az ablak tartalma mozog.
+- **Ököl / kéz kivétele a képből:** nem hajt végre műveletet.
+- **Leállítás / Esc:** a kamera és a felismerés leáll. Másik böngészőlapra váltáskor szintén leáll; nincs automatikus újraindítás. Oldalon belüli navigáció közben megmarad.
+- A panel **− / +** gombja összecsukja/kinyitja az előnézetet és az útmutatót, miközben a kézvezérlés folytatódik.
+
+A kattintás a meglévő gombokat, linkeket és beviteli mezőket kezeli; szövegbevitelhez és natív legördülőkhöz továbbra is billentyűzet/egér szükséges. Ez kísérleti funkció: a követés pontossága és sebessége a kamerától, fénytől és eszköztől függ.
+
+A képek helyben, a böngészőben kerülnek feldolgozásra, hangot nem kérünk, felvétel és képfeltöltés nincs. A MediaPipe kódja, WASM-fájljai és modellje saját eredetről, csak bekapcsoláskor töltődnek be. Az `npm install`/`npm ci` postinstall lépése a rögzített `@mediapipe/tasks-vision` csomag WASM-fájljait a `public/hand-tracking/wasm/` mappába másolja; a modell a repó része. Telepítés után a funkcióhoz sincs szükség külső CDN-re. A tárhelyen a `.wasm` és `.task` fájlokat is ki kell szolgálni; a felismerő erőforrásai összesen kb. 20 MB-ot töltenek be indításkor.
 
 ## Szerkezet
 
