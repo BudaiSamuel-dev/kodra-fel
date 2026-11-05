@@ -162,12 +162,38 @@
         <li><strong>Ököl:</strong> pihenő · <strong>Esc:</strong> leállítás</li>
       </ul>
       <p v-show="!compact" class="hand-note">
-        Egy kéz, jó fény, kb. karnyújtásnyi távolság. Szövegbevitelhez és legördülőkhöz használd az egeret
-        vagy a billentyűzetet.
+        Egy kéz, jó fény, kb. karnyújtásnyi távolság. Szövegbevitelhez használd az egeret vagy a
+        billentyűzetet.
       </p>
     </aside>
   </Teleport>
   <Teleport :to="cursorHost">
+    <!-- A natív legördülőt a böngésző nem nyitja meg programból, és a listáját a kurzor sem látja:
+         kézi kattintásra saját, nagy gombos választó nyílik a helyén. -->
+    <div
+      v-if="picker"
+      class="hand-select-menu"
+      role="listbox"
+      :aria-label="picker.label"
+      data-test="hand-select-menu"
+      :style="picker.style"
+    >
+      <span class="hand-select-label">{{ picker.label }}</span>
+      <button
+        v-for="option in picker.options"
+        :key="option.value"
+        type="button"
+        role="option"
+        class="hand-select-option"
+        :class="{ current: option.value === picker.value }"
+        :aria-selected="option.value === picker.value"
+        :disabled="option.disabled"
+        :data-value="option.value"
+        @click="choose(option.value)"
+      >
+        {{ option.label }}
+      </button>
+    </div>
     <div
       ref="cursor"
       class="hand-cursor"
@@ -224,6 +250,8 @@ const canvas = ref(null)
 const cursor = ref(null)
 const clickProgress = ref(0)
 const clickPhase = ref('idle')
+const picker = ref(null)
+let pickerSelect = null
 const calibration = useHandCalibration(resetHand)
 const {
   calibrating,
@@ -282,6 +310,71 @@ function setHovered(target) {
   hovered?.classList.add('hand-hovered')
 }
 
+function selectLabel(select) {
+  return (
+    select.getAttribute('aria-label') ||
+    select.labels?.[0]?.textContent.trim() ||
+    select.closest('label')?.textContent.trim() ||
+    'Válassz'
+  )
+}
+
+// A menü a legördülő alá (helyhiány esetén fölé) kerül, a képernyőn belül.
+function pickerStyle(select) {
+  const rect = select.getBoundingClientRect()
+  const width = Math.min(Math.max(rect.width, 240), window.innerWidth - 16)
+  const left = Math.min(Math.max(8, rect.left), window.innerWidth - width - 8)
+  const below = window.innerHeight - rect.bottom - 8
+  const above = rect.top - 8
+  const placeBelow = below >= 220 || below >= above
+  return {
+    left: `${left}px`,
+    width: `${width}px`,
+    maxHeight: `${Math.max(120, placeBelow ? below - 6 : above - 6)}px`,
+    ...(placeBelow ? { top: `${rect.bottom + 6}px` } : { bottom: `${window.innerHeight - rect.top + 6}px` })
+  }
+}
+
+function openPicker(select) {
+  pickerSelect = select
+  picker.value = {
+    label: selectLabel(select),
+    value: select.value,
+    options: [...select.options].map((o) => ({
+      value: o.value,
+      label: o.textContent.trim(),
+      disabled: o.disabled
+    })),
+    style: pickerStyle(select)
+  }
+}
+
+function closePicker() {
+  picker.value = null
+  pickerSelect = null
+}
+
+// Görgetéskor a menü a legördülővel együtt mozog; ha a legördülő eltűnt vagy letiltották, bezárjuk.
+function followPicker() {
+  if (!picker.value) return
+  if (!pickerSelect?.isConnected || pickerSelect.disabled) return closePicker()
+  const style = pickerStyle(pickerSelect)
+  if (JSON.stringify(style) !== JSON.stringify(picker.value.style)) picker.value.style = style
+}
+
+// Ugyanúgy állítjuk be az értéket, mint a böngésző: a v-model és a @change is értesül róla.
+function choose(value) {
+  const select = pickerSelect
+  closePicker()
+  if (!select?.isConnected || select.disabled) return
+  select.focus({ preventScroll: true })
+  if (select.value !== value) {
+    select.value = value
+    select.dispatchEvent(new Event('input', { bubbles: true }))
+    select.dispatchEvent(new Event('change', { bubbles: true }))
+  }
+}
+
 function stop(message = '') {
   session++
   active.value = false
@@ -301,6 +394,7 @@ function stop(message = '') {
   calibration.cancel('')
   cursor.value?.hidePopover?.()
   resetHand()
+  closePicker()
   notice.value = message
 }
 
@@ -323,6 +417,7 @@ function onCursorContextChange() {
   if (calibrating.value)
     calibration.cancel('A kalibrálás megszakadt az ablakváltás miatt. A korábbi beállítás maradt érvényben.')
   resetHand()
+  closePicker()
 }
 
 async function start() {
@@ -510,8 +605,13 @@ function tick(now) {
             status.value = 'Kattintva! Újabb kattintáshoz hajtsd vissza a hüvelykujjad.'
         }
         if (clicked) {
-          target.focus({ preventScroll: true })
-          target.click()
+          // A menün kívüli kattintás bezárja a nyitott választót (mint a natív legördülőnél).
+          if (picker.value && !target.closest('.hand-select-menu')) closePicker()
+          if (target.matches('select')) openPicker(target)
+          else {
+            target.focus({ preventScroll: true })
+            target.click()
+          }
         }
         if (next === 'scroll') {
           if (previous !== 'scroll') scrollOrigin = points[9].y
@@ -523,6 +623,7 @@ function tick(now) {
         } else scrollOrigin = null
       }
     }
+    followPicker()
     if (active.value) frame = requestAnimationFrame(tick)
   } catch {
     stop('A kézkövetés megszakadt. A kamera leállt; a lenti gombbal újrapróbálhatod.')
@@ -530,23 +631,30 @@ function tick(now) {
 }
 
 function onKey(event) {
+  if (event.key === 'Escape' && picker.value) return closePicker()
   if (event.key === 'Escape' && (busy.value || active.value)) stop('A kézvezérlés és a kamera leállt.')
 }
 function onHidden() {
   if (document.hidden && (busy.value || active.value))
     stop('A kézvezérlés leállt, mert elhagytad a lapot. A lenti gombbal újraindíthatod.')
 }
+// Egérrel a menün kívülre kattintva is bezárul.
+function onPointerDown(event) {
+  if (picker.value && !event.target.closest?.('.hand-select-menu')) closePicker()
+}
 function onPageHide() {
   stop()
 }
 onMounted(() => {
   window.addEventListener('keydown', onKey)
+  window.addEventListener('pointerdown', onPointerDown, true)
   window.addEventListener('pagehide', onPageHide)
   document.addEventListener('visibilitychange', onHidden)
 })
 onBeforeUnmount(() => {
   stop()
   window.removeEventListener('keydown', onKey)
+  window.removeEventListener('pointerdown', onPointerDown, true)
   window.removeEventListener('pagehide', onPageHide)
   document.removeEventListener('visibilitychange', onHidden)
 })
@@ -852,6 +960,74 @@ onBeforeUnmount(() => {
   .hand-panel .hand-note {
     font-size: 11px;
   }
+}
+
+/* Kézi választómenü a natív legördülő helyett */
+.hand-select-menu {
+  position: fixed;
+  z-index: 2147483000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  overflow-y: auto;
+  border: 2px solid #80ae45;
+  border-radius: 16px;
+  background: #142a20;
+  color: #eef5e4;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+.hand-select-label {
+  padding: 2px 4px 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #b9d68f;
+}
+.hand-select-option {
+  min-height: 52px;
+  padding: 12px 16px;
+  border: 1px solid #4d6f3c;
+  border-radius: 12px;
+  background: #1d3a2b;
+  color: inherit;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+.hand-select-option:hover,
+.hand-select-option.hand-hovered {
+  background: #2a4f37;
+}
+.hand-select-option.current {
+  background: linear-gradient(110deg, #d4f796, #a9df68);
+  border-color: #a9df68;
+  color: #132a12;
+}
+:global(body:not([data-theme='dark']) .hand-select-menu) {
+  border-color: #6a8e50;
+  background: #f8f8f0;
+  color: #1d3d15;
+  box-shadow: 0 18px 40px rgba(47, 93, 30, 0.28);
+}
+:global(body:not([data-theme='dark']) .hand-select-label) {
+  color: #2f5d1e;
+}
+:global(body:not([data-theme='dark']) .hand-select-option) {
+  border-color: #98aa8a;
+  background: #fff;
+}
+:global(body:not([data-theme='dark']) .hand-select-option:hover),
+:global(body:not([data-theme='dark']) .hand-select-option.hand-hovered) {
+  background: #e3efcf;
+}
+:global(body:not([data-theme='dark']) .hand-select-option.current) {
+  background: linear-gradient(110deg, #86b351, #5f9a34);
+  border-color: #2f5d1e;
+  color: #fff;
 }
 </style>
 

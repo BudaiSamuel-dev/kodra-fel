@@ -517,3 +517,44 @@ test('háttérbe kerüléskor leáll, keskeny nézetben sem lóg ki', async ({ p
     true
   )
 })
+
+test('a legördülőre kattintva kézzel is választható menü nyílik, és az érték átkerül a játékba', async ({
+  page
+}) => {
+  await mockTracker(page)
+  await page.goto('/kuldetes/robot')
+  await start(page)
+  const select = page.locator('#repeat-count')
+  await select.scrollIntoViewIfNeeded()
+  await expect(select).toHaveValue('1')
+
+  // Célzás és kattintás a legördülőre: a natív lista helyett a saját menü nyílik meg
+  const point = await aimAt(page, select)
+  await page.waitForTimeout(250)
+  await setHand(page, 'click', point)
+  const menu = page.locator('[data-test="hand-select-menu"]')
+  await expect(menu).toBeVisible()
+  await expect(menu.getByRole('option')).toHaveCount(await select.locator('option').count())
+  await expect(menu.locator('[aria-selected="true"]')).toHaveAttribute('data-value', '1')
+
+  // A menü egyik elemére célozva és kattintva az érték beáll, a menü bezárul
+  const option = menu.locator('[data-value="3"]')
+  const optionPoint = await aimAt(page, option)
+  await page.waitForTimeout(250)
+  await setHand(page, 'click', optionPoint)
+  await expect(menu).toBeHidden()
+  await expect(select).toHaveValue('3')
+  // A v-model is megkapta: az új utasítás háromszoros ismétléssel kerül a sorba
+  await page.locator('[data-direction="up"]').click()
+  await expect(page.locator('.queue-item').first()).toContainText('3')
+
+  // Újranyitva a menün kívülre kattintva bezárul, és az érték nem változik
+  const again = await aimAt(page, select)
+  await page.waitForTimeout(250)
+  await setHand(page, 'click', again)
+  await expect(menu).toBeVisible()
+  await expect(menu.locator('[aria-selected="true"]')).toHaveAttribute('data-value', '3')
+  await page.mouse.click(5, 300)
+  await expect(menu).toBeHidden()
+  await expect(select).toHaveValue('3')
+})
